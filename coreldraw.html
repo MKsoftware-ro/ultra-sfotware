@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CorelDRAW</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'DM Sans', sans-serif; margin: 0; background: #f9fafb; color: #2f2f55; }
+    .topbar {
+      display: flex; justify-content: flex-end; align-items: center;
+      padding: 1rem; gap: 1rem; background-color: #fff;
+    }
+    .topbar select, .topbar a {
+      padding: 0.4rem 0.75rem; font-size: 0.9rem; border-radius: 6px;
+      border: 1px solid #ccc; text-decoration: none; color: #000; background-color: #fff;
+    }
+    .container {
+      max-width: 1000px; margin: 2rem auto; padding: 1rem;
+      background-color: #fff; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    }
+    .header-flex {
+      display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem;
+      justify-content: center;
+    }
+    img.logo {
+      max-width: 180px;
+    }
+    .description {
+      flex: 1;
+      font-size: 1rem;
+      max-width: 600px;
+    }
+    .video-container {
+      position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 2rem;
+    }
+    .video-container iframe {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    }
+    h1 {
+      font-size: 2.2rem; text-align: center; margin-bottom: 0.5rem;
+    }
+    .button-container {
+      text-align: center;
+    }
+    a.button {
+      display: inline-block; margin: 0.5rem auto; padding: 0.6rem 1.4rem;
+      background-color: #caa227; color: #fff; text-decoration: none;
+      border-radius: 8px; font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a id="backBtn" href="software.html?lang=ro" data-i18n="back">Înapoi</a>
+    <a id="blogBtn" href="blog-software.html?lang=ro" data-i18n="blog">Blog</a>
+    <select id="languageSelect">
+      <option value="ro">Română</option>
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+      <option value="es">Español</option>
+      <option value="de">Deutsch</option>
+      <option value="it">Italiano</option>
+    </select>
+  </div>
+
+  <div class="container">
+    <div class="header-flex">
+      <img src="img/coreldraw-logo.png" alt="CorelDRAW" class="logo" />
+      <div class="description" data-i18n="description">
+        CorelDRAW este un software de design grafic vectorial utilizat pe scară largă în publicitate, branding, ilustrație și tipar. Oferă un pachet complet de unelte pentru desen, layout, editare foto și tipografie, totul într-un mediu intuitiv. Este alegerea preferată de designeri pentru viteza, precizia și compatibilitatea sa cu formate comerciale și industriale.
+      </div>
+    </div>
+
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/lQxlKXZdeA4" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <h1 data-i18n="title">CorelDRAW</h1>
+    <div class="button-container">
+      <a href="https://www.coreldraw.com/en/pages/affiliates/" class="button" target="_blank" data-i18n="affiliateBtn">Vezi afiliere</a>
+    </div>
+  </div>
+
+<script>
+  const translations = {
+    ro: {
+      back: "Înapoi",
+      blog: "Blog",
+      title: "CorelDRAW",
+      description: "CorelDRAW este un software de design grafic vectorial utilizat pe scară largă în publicitate, branding, ilustrație și tipar. Oferă un pachet complet de unelte pentru desen, layout, editare foto și tipografie, totul într-un mediu intuitiv. Este alegerea preferată de designeri pentru viteza, precizia și compatibilitatea sa cu formate comerciale și industriale.",
+      affiliateBtn: "Vezi afiliere"
+    },
+    en: {
+      back: "Back",
+      blog: "Blog",
+      title: "CorelDRAW",
+      description: "CorelDRAW is a powerful vector graphic design software widely used in advertising, branding, illustration, and printing. It offers a full suite of tools for drawing, layout, photo editing, and typography, all within an intuitive workspace. Designers value it for its speed, accuracy, and compatibility with commercial and industrial formats.",
+      affiliateBtn: "View Affiliate"
+    },
+    fr: {
+      back: "Retour",
+      blog: "Blog",
+      title: "CorelDRAW",
+      description: "CorelDRAW est un logiciel de conception graphique vectorielle largement utilisé dans la publicité, le branding, l'illustration et l'impression. Il propose un ensemble complet d'outils de dessin, de mise en page, de retouche photo et de typographie. Apprécié pour sa rapidité et sa compatibilité professionnelle.",
+      affiliateBtn: "Voir l'affiliation"
+    },
+    de: {
+      back: "Zurück",
+      blog: "Blog",
+      title: "CorelDRAW",
+      description: "CorelDRAW ist eine umfassende Software für Vektorgrafikdesign, weit verbreitet in Werbung, Illustration und Druck. Mit leistungsstarken Tools für Layout, Fotobearbeitung und Typografie ist es bei Designern für Geschwindigkeit und Kompatibilität beliebt.",
+      affiliateBtn: "Partnerlink ansehen"
+    },
+    es: {
+      back: "Atrás",
+      blog: "Blog",
+      title: "CorelDRAW",
+      description: "CorelDRAW es un software de diseño gráfico vectorial muy usado en publicidad, ilustración y edición. Ofrece herramientas completas para dibujo, maquetación, edición de imágenes y tipografía. Muy valorado por su velocidad y precisión.",
+      affiliateBtn: "Ver afiliado"
+    },
+    it: {
+      back: "Indietro",
+      blog: "Blog",
+      title: "CorelDRAW",
+      description: "CorelDRAW è un software di grafica vettoriale utilizzato in pubblicità, illustrazione e stampa. Offre strumenti completi per disegno, layout, foto e tipografia, tutto in un'interfaccia intuitiva. Scelto dai designer per velocità e compatibilità professionale.",
+      affiliateBtn: "Vedi affiliazione"
+    }
+  };
+
+  function updateLanguage(lang) {
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if (translations[lang] && translations[lang][key]) {
+        el.textContent = translations[lang][key];
+      }
+    });
+    document.getElementById("backBtn").href = `software-cad.html?lang=${lang}`;
+    document.getElementById("blogBtn").href = `blog-software.html?lang=${lang}`;
+  }
+
+  const currentLang = new URLSearchParams(window.location.search).get("lang") || "ro";
+  document.getElementById("languageSelect").value = currentLang;
+  updateLanguage(currentLang);
+
+  document.getElementById("languageSelect").addEventListener("change", (e) => {
+    const selected = e.target.value;
+    const url = new URL(window.location.href);
+    url.searchParams.set("lang", selected);
+    window.location.href = url.toString();
+  });
+</script>
+</body>
+</html>

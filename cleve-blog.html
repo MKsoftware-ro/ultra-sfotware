@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cleve AI – Automatizare inteligentă în biroul tău</title>
+  <meta name="description" content="Descoperă cum Cleve AI poate revoluționa rutina ta zilnică la birou prin automatizare inteligentă și asistență digitală.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background-color: #f8f8fc;
+      color: #2a2a2a;
+    }
+    .topbar {
+      background-color: #ffffff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+    }
+    .topbar select, .topbar a {
+      font-size: 1rem;
+      padding: 0.4rem 1rem;
+      border-radius: 6px;
+      border: none;
+      font-weight: bold;
+    }
+    .topbar a {
+      background-color: #caa227;
+      color: white;
+      text-decoration: none;
+    }
+    header {
+      background: url('img/javier-miranda-MrWOCGKFVDg-unsplash.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+    p {
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <a id="backButton" href="#">Înapoi la Cleve</a>
+  <select id="languageSelect">
+    <option value="ro">Română</option>
+    <option value="en">English</option>
+    <option value="fr">Français</option>
+    <option value="de">Deutsch</option>
+    <option value="es">Español</option>
+    <option value="it">Italiano</option>
+  </select>
+</div>
+
+<header>
+  <h1 id="pageTitle">Cleve AI – Automatizare inteligentă în biroul tău</h1>
+</header>
+
+<main id="content">
+  <p>
+    Într-o lume în care timpul devine tot mai prețios, Cleve AI vine ca o soluție salvatoare pentru profesioniștii ocupați.
+    Fie că gestionezi emailuri, programări sau rapoarte repetitive, Cleve învață din comportamentele tale și le automatizează.
+    În loc să pierzi ore cu sarcini administrative, ai mai mult timp să creezi, să inovezi și să te concentrezi pe ceea ce contează cu adevărat.
+    Este ca și cum ai avea un asistent virtual dedicat, disponibil 24/7.
+  </p>
+</main>
+
+<script>
+  const translations = {
+    ro: {
+      title: "Cleve AI – Automatizare inteligentă în biroul tău",
+      content: `Într-o lume în care timpul devine tot mai prețios, Cleve AI vine ca o soluție salvatoare pentru profesioniștii ocupați.
+        Fie că gestionezi emailuri, programări sau rapoarte repetitive, Cleve învață din comportamentele tale și le automatizează.
+        În loc să pierzi ore cu sarcini administrative, ai mai mult timp să creezi, să inovezi și să te concentrezi pe ceea ce contează cu adevărat.
+        Este ca și cum ai avea un asistent virtual dedicat, disponibil 24/7.`,
+      back: "Înapoi la Cleve"
+    },
+    en: {
+      title: "Cleve AI – Intelligent Automation for Your Office",
+      content: `In a world where time is becoming increasingly valuable, Cleve AI is a lifesaver for busy professionals.
+        Whether you're handling emails, appointments, or repetitive reports, Cleve learns from your behavior and automates it.
+        Instead of wasting hours on admin tasks, you gain more time to create, innovate, and focus on what truly matters.
+        It’s like having a dedicated virtual assistant available 24/7.`,
+      back: "Back to Cleve"
+    },
+    fr: {
+      title: "Cleve AI – Automatisation intelligente pour le bureau",
+      content: `Dans un monde où le temps devient précieux, Cleve AI est une solution précieuse pour les professionnels débordés.
+        Qu'il s'agisse d'e-mails, de rendez-vous ou de rapports, Cleve apprend et automatise vos tâches.
+        Vous gagnez un temps précieux pour vous concentrer sur ce qui compte vraiment.`,
+      back: "Retour à Cleve"
+    },
+    de: {
+      title: "Cleve AI – Intelligente Büroautomatisierung",
+      content: `In einer Welt, in der Zeit immer wertvoller wird, ist Cleve AI eine Rettung für vielbeschäftigte Profis.
+        Cleve lernt aus deinem Verhalten und automatisiert wiederkehrende Aufgaben.
+        So bleibt mehr Zeit für Kreativität und Innovation.`,
+      back: "Zurück zu Cleve"
+    },
+    es: {
+      title: "Cleve AI – Automatización inteligente para oficinas",
+      content: `En un mundo donde el tiempo es cada vez más valioso, Cleve AI es la solución ideal para profesionales ocupados.
+        Automatiza tareas repetitivas y te libera tiempo para lo importante.`,
+      back: "Volver a Cleve"
+    },
+    it: {
+      title: "Cleve AI – Automazione intelligente per l'ufficio",
+      content: `In un mondo dove il tempo è prezioso, Cleve AI è l’assistente ideale per i professionisti impegnati.
+        Impara da te e automatizza i processi noiosi, lasciandoti più tempo per creare e innovare.`,
+      back: "Torna a Cleve"
+    }
+  };
+
+  const currentLang = new URLSearchParams(window.location.search).get("lang") || "ro";
+  const t = translations[currentLang];
+  document.getElementById("languageSelect").value = currentLang;
+  document.getElementById("pageTitle").innerText = t.title;
+  document.getElementById("content").innerHTML = `<p>${t.content}</p>`;
+  document.getElementById("backButton").innerText = t.back;
+  document.getElementById("backButton").href = `cleve.html?lang=${currentLang}`;
+
+  document.getElementById("languageSelect").addEventListener("change", function (e) {
+    const newLang = e.target.value;
+    const url = new URL(window.location.href);
+    url.searchParams.set("lang", newLang);
+    window.location.href = url.toString();
+  });
+</script>
+
+</body>
+</html>

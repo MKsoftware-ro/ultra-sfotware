@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index - AI Tools & Software</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f8fc;
+            color: #1a1a1a;
+        }
+        header {
+            background-image: url('img/javier-miranda-MrWOCGKFVDg-unsplash.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 20px 120px;
+            text-align: center;
+            position: relative;
+        }
+        .topbar {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        .topbar button, .topbar select {
+            background-color: #ffff;
+            border: none;
+            padding: 8px 16px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .topbar select {
+            color: #000;
+        }
+        h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+        p {
+            font-size: 18px;
+        }
+        .section-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 40px 20px;
+            flex-wrap: wrap;
+        }
+        .section-box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            width: 320px;
+            text-align: center;
+        }
+        .section-box h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .section-box p {
+            margin-bottom: 20px;
+        }
+        .section-box a {
+            text-decoration: none;
+            background-color: #d4aa27;
+            padding: 10px 20px;
+            color: white;
+            border-radius: 5px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="topbar">
+            <select id="languageSelect" onchange="changeLanguage(this.value)">
+                <option value="ro">Română</option>
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+                <option value="es">Español</option>
+                <option value="it">Italiano</option>
+            </select>
+        </div>
+        <h1 id="main_heading">Explorează cele mai bune instrumente</h1>
+        <p id="main_subheading">AI Tools și Software pentru eficiență și creativitate</p>
+    </header>
+
+    <main class="section-container">
+        <div class="section-box">
+            <h2 id="ai_section_title">AI Tools</h2>
+            <p id="ai_section_desc">Tool-uri inteligente pentru scris, organizare și automatizare.</p>
+            <a id="ai_cta" href="pagina-afiliere.html?lang=ro">Vezi AI Tools</a>
+        </div>
+        <div class="section-box">
+            <h2 id="software_section">Software</h2>
+            <p id="software_desc">Software profesional pentru orice industrie.</p>
+            <a href="software.html?lang=ro">Vezi Software</a>
+        </div>
+    </main>
+
+    <script>
+        const translations = {
+            ro: {
+                main_heading: "Explorează cele mai bune instrumente",
+                main_subheading: "AI Tools și Software pentru eficiență și creativitate",
+                ai_section_title: "AI Tools",
+                ai_section_desc: "Tool-uri inteligente pentru scris, organizare și automatizare.",
+                ai_cta: "Vezi AI Tools",
+                software_section: "Software",
+                software_desc: "Software profesional pentru orice industrie."
+            },
+            en: {
+                main_heading: "Explore the best tools",
+                main_subheading: "AI Tools and Software for efficiency and creativity",
+                ai_section_title: "AI Tools",
+                ai_section_desc: "Smart tools for writing, organization, and automation.",
+                ai_cta: "See AI Tools",
+                software_section: "Software",
+                software_desc: "Professional software for every industry."
+            },
+            fr: {
+                main_heading: "Découvrez les meilleurs outils",
+                main_subheading: "Outils d'IA et logiciels pour l'efficacité et la créativité",
+                ai_section_title: "Outils d'IA",
+                ai_section_desc: "Outils intelligents pour l'écriture, l'organisation et l'automatisation.",
+                ai_cta: "Voir les outils d'IA",
+                software_section: "Logiciels",
+                software_desc: "Logiciels professionnels pour tous les secteurs."
+            },
+            de: {
+                main_heading: "Entdecke die besten Tools",
+                main_subheading: "KI-Tools und Software für Effizienz und Kreativität",
+                ai_section_title: "KI-Tools",
+                ai_section_desc: "Intelligente Tools zum Schreiben, Organisieren und Automatisieren.",
+                ai_cta: "KI-Tools ansehen",
+                software_section: "Software",
+                software_desc: "Professionelle Software für jede Branche."
+            },
+            es: {
+                main_heading: "Explora las mejores herramientas",
+                main_subheading: "Herramientas de IA y software para eficiencia y creatividad",
+                ai_section_title: "Herramientas de IA",
+                ai_section_desc: "Herramientas inteligentes para escribir, organizar y automatizar.",
+                ai_cta: "Ver herramientas de IA",
+                software_section: "Software",
+                software_desc: "Software profesional para cada industria."
+            },
+            it: {
+                main_heading: "Esplora i migliori strumenti",
+                main_subheading: "Strumenti AI e software per efficienza e creatività",
+                ai_section_title: "Strumenti AI",
+                ai_section_desc: "Strumenti intelligenti per scrittura, organizzazione e automazione.",
+                ai_cta: "Vedi strumenti AI",
+                software_section: "Software",
+                software_desc: "Software professionale per ogni settore."
+            }
+        };
+
+        function changeLanguage(lang) {
+            const t = translations[lang];
+            if (!t) return;
+            document.getElementById("main_heading").textContent = t.main_heading;
+            document.getElementById("main_subheading").textContent = t.main_subheading;
+            document.getElementById("ai_section_title").textContent = t.ai_section_title;
+            document.getElementById("ai_section_desc").textContent = t.ai_section_desc;
+            document.getElementById("ai_cta").textContent = t.ai_cta;
+            document.getElementById("software_section").textContent = t.software_section;
+            document.getElementById("software_desc").textContent = t.software_desc;
+
+            // Update links with lang param
+            document.querySelectorAll("a[href*='pagina-afiliere.html']").forEach(link => {
+                link.href = `pagina-afiliere.html?lang=${lang}`;
+            });
+            document.querySelectorAll("a[href*='software.html']").forEach(link => {
+                link.href = `software.html?lang=${lang}`;
+            });
+        }
+
+        const langParam = new URLSearchParams(window.location.search).get('lang') || 'ro';
+        document.getElementById("languageSelect").value = langParam;
+        changeLanguage(langParam);
+    </script>
+</body>
+</html>

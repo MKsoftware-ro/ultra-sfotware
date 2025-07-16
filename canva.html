@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Canva Pro</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'DM Sans', sans-serif; margin: 0; background: #f9fafb; color: #2f2f55; }
+    .topbar { display: flex; justify-content: flex-end; align-items: center; padding: 1rem; gap: 1rem; background: #fff; }
+    .topbar select, .topbar a { padding: 0.4rem 0.75rem; font-size: 0.9rem; border-radius: 6px; border: 1px solid #ccc; text-decoration: none; color: #000; background: #fff; }
+    .container { max-width: 1000px; margin: 2rem auto; padding: 1rem; background: #fff; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.06); }
+    .header-flex { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem; justify-content: center; }
+    img.logo { max-width: 180px; }
+    .description { flex: 1; font-size: 1rem; max-width: 600px; }
+    .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 2rem; }
+    .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    h1 { font-size: 2.2rem; text-align: center; margin-bottom: 0.5rem; }
+    .button-container { text-align: center; }
+    a.button { display: inline-block; margin: 0.5rem auto; padding: 0.6rem 1.4rem; background: #caa227; color: #fff; text-decoration: none; border-radius: 8px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a id="backBtn" href="software-design.html?lang=ro" data-i18n="back">Înapoi</a>
+    <a id="blogBtn" href="blog-software.html?lang=ro" data-i18n="blog">Blog</a>
+    <select id="languageSelect">
+      <option value="ro">Română</option>
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+      <option value="es">Español</option>
+      <option value="de">Deutsch</option>
+      <option value="it">Italiano</option>
+    </select>
+  </div>
+
+  <div class="container">
+    <div class="header-flex">
+      <img src="img/canva-logo.png" alt="Canva Pro" class="logo" />
+      <div class="description" data-i18n="description">
+        Canva Pro este platforma ideală pentru design grafic intuitiv, creată pentru freelanceri, echipe și afaceri care doresc să creeze conținut vizual profesional fără efort. Cu mii de template-uri, funcții de colaborare, instrumente AI și posibilitatea de brand kit, Canva Pro accelerează procesul creativ și oferă rezultate impresionante fără cunoștințe tehnice avansate.
+      </div>
+    </div>
+
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/bNi7yGZQ0rI" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <h1 data-i18n="title">Canva Pro</h1>
+    <div class="button-container">
+      <a href="https://www.canva.com/affiliates/" class="button" target="_blank" data-i18n="affiliateBtn">Vezi afiliere</a>
+    </div>
+  </div>
+
+<script>
+  const translations = {
+    ro: {
+      back: "Înapoi",
+      blog: "Blog",
+      title: "Canva Pro",
+      description: "Canva Pro este platforma ideală pentru design grafic intuitiv, creată pentru freelanceri, echipe și afaceri care doresc să creeze conținut vizual profesional fără efort. Cu mii de template-uri, funcții de colaborare, instrumente AI și posibilitatea de brand kit, Canva Pro accelerează procesul creativ și oferă rezultate impresionante fără cunoștințe tehnice avansate.",
+      affiliateBtn: "Vezi afiliere"
+    },
+    en: {
+      back: "Back",
+      blog: "Blog",
+      title: "Canva Pro",
+      description: "Canva Pro is the ultimate intuitive design platform for freelancers, teams, and businesses. With thousands of templates, AI-powered tools, and brand kits, it empowers users to create stunning visuals without technical skills.",
+      affiliateBtn: "View Affiliate"
+    },
+    fr: {
+      back: "Retour",
+      blog: "Blog",
+      title: "Canva Pro",
+      description: "Canva Pro est la plateforme idéale de conception pour les indépendants et entreprises. Avec des modèles, outils AI et options de marque, elle facilite la création de designs professionnels.",
+      affiliateBtn: "Voir l'affiliation"
+    },
+    de: {
+      back: "Zurück",
+      blog: "Blog",
+      title: "Canva Pro",
+      description: "Canva Pro ist die intuitive Designplattform mit Vorlagen, AI-Werkzeugen und Branding-Features – ideal für Freelancer und Teams, die professionelle Inhalte erstellen wollen.",
+      affiliateBtn: "Partnerlink ansehen"
+    },
+    es: {
+      back: "Atrás",
+      blog: "Blog",
+      title: "Canva Pro",
+      description: "Canva Pro es la plataforma ideal para diseñadores intuitivos. Ofrece plantillas, colaboración y herramientas AI para crear fácilmente contenido visual profesional.",
+      affiliateBtn: "Ver afiliado"
+    },
+    it: {
+      back: "Indietro",
+      blog: "Blog",
+      title: "Canva Pro",
+      description: "Canva Pro è la piattaforma ideale per la grafica semplice e veloce. Con modelli, strumenti AI e branding kit, permette a tutti di creare design professionali.",
+      affiliateBtn: "Vedi affiliazione"
+    }
+  };
+
+  function updateLanguage(lang) {
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if (translations[lang] && translations[lang][key]) {
+        el.textContent = translations[lang][key];
+      }
+    });
+    document.getElementById("backBtn").href = `software-design.html?lang=${lang}`;
+    document.getElementById("blogBtn").href = `blog-software.html?lang=${lang}`;
+  }
+
+  const currentLang = new URLSearchParams(window.location.search).get("lang") || "ro";
+  document.getElementById("languageSelect").value = currentLang;
+  updateLanguage(currentLang);
+
+  document.getElementById("languageSelect").addEventListener("change", e => {
+    const url = new URL(window.location.href);
+    url.searchParams.set("lang", e.target.value);
+    window.location.href = url.toString();
+  });
+</script>
+</body>
+</html>

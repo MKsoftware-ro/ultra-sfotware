@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog Software</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+    }
+    header {
+      background-image: url('img/javier-miranda-MrWOCGKFVDg-unsplash.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .topbar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+    .topbar select, .topbar button {
+      margin-left: 10px;
+      padding: 6px 10px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    h1 {
+      font-size: 36px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    .entry {
+      background: #fff;
+      padding: 15px 20px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      border-left: 5px solid #0077cc;
+    }
+    .entry a {
+      font-size: 18px;
+      text-decoration: none;
+      color: #0077cc;
+    }
+    .entry a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <button id="backButton">⬅️ <span data-i18n="back">Înapoi</span></button>
+    <select id="languageSelect">
+      <option value="ro">Română</option>
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+      <option value="es">Español</option>
+      <option value="de">Deutsch</option>
+      <option value="it">Italiano</option>
+    </select>
+  </div>
+  <header>
+    <h1 data-i18n="pageTitle">Blog Software</h1>
+  </header>
+  <div class="container">
+    <div class="entry"><a class="blog-link" href="sketchup-blog.html?lang=ro">SketchUp</a></div>
+    <div class="entry"><a class="blog-link" href="coreldraw-blog.html?lang=ro">CorelDRAW</a></div>
+    <div class="entry"><a class="blog-link" href="lumion-blog.html?lang=ro">Lumion</a></div>
+    <div class="entry"><a class="blog-link" href="archicad-blog.html?lang=ro">ArchiCAD</a></div>
+    <div class="entry"><a class="blog-link" href="nordvpn-blog.html?lang=ro">NordVPN</a></div>
+    <div class="entry"><a class="blog-link" href="surfshark-blog.html?lang=ro">Surfshark</a></div>
+    <div class="entry"><a class="blog-link" href="expressvpn-blog.html?lang=ro">ExpressVPN</a></div>
+    <div class="entry"><a class="blog-link" href="bitdefender-blog.html?lang=ro">Bitdefender</a></div>
+    <div class="entry"><a class="blog-link" href="nortonantivirus-blog.html?lang=ro">Norton Antivirus</a></div>
+    <div class="entry"><a class="blog-link" href="kaspersky-blog.html?lang=ro">Kaspersky</a></div>
+    <div class="entry"><a class="blog-link" href="malwarebytes-blog.html?lang=ro">Malwarebytes</a></div>
+    <div class="entry"><a class="blog-link" href="adobe-blog.html?lang=ro">Adobe Creative Cloud</a></div>
+    <div class="entry"><a class="blog-link" href="canva-blog.html?lang=ro">Canva Pro</a></div>
+    <div class="entry"><a class="blog-link" href="filmora-blog.html?lang=ro">Filmora</a></div>
+    <div class="entry"><a class="blog-link" href="movavi-blog.html?lang=ro">Movavi</a></div>
+    <div class="entry"><a class="blog-link" href="microsoft-blog.html?lang=ro">Microsoft 365</a></div>
+    <div class="entry"><a class="blog-link" href="grammarly-blog.html?lang=ro">Grammarly</a></div>
+    <div class="entry"><a class="blog-link" href="evernote-blog.html?lang=ro">Evernote</a></div>
+    <div class="entry"><a class="blog-link" href="clickup-blog.html?lang=ro">ClickUp</a></div>
+    <div class="entry"><a class="blog-link" href="mondaycom-blog.html?lang=ro">Monday.com</a></div>
+    <div class="entry"><a class="blog-link" href="trello-blog.html?lang=ro">Trello</a></div>
+    <div class="entry"><a class="blog-link" href="freshbooks-blog.html?lang=ro">FreshBooks</a></div>
+    <div class="entry"><a class="blog-link" href="quickbooks-blog.html?lang=ro">QuickBooks</a></div>
+    <div class="entry"><a class="blog-link" href="wave-blog.html?lang=ro">Wave</a></div>
+    <div class="entry"><a class="blog-link" href="xero-blog.html?lang=ro">Xero</a></div>
+    <div class="entry"><a class="blog-link" href="payoneer-blog.html?lang=ro">Payoneer</a></div>
+    <div class="entry"><a class="blog-link" href="jetbrains-blog.html?lang=ro">JetBrains</a></div>
+    <div class="entry"><a class="blog-link" href="acronis-blog.html?lang=ro">Acronis</a></div>
+    <div class="entry"><a class="blog-link" href="parallels-blog.html?lang=ro">Parallels Desktop</a></div>
+    <div class="entry"><a class="blog-link" href="gitkraken-blog.html?lang=ro">GitKraken</a></div>
+  </div>
+  <script>
+    const translations = {
+      ro: {
+        back: "Înapoi",
+        pageTitle: "Blog Software"
+      },
+      en: {
+        back: "Back",
+        pageTitle: "Software Blog"
+      },
+      fr: {
+        back: "Retour",
+        pageTitle: "Blog Logiciel"
+      },
+      es: {
+        back: "Atrás",
+        pageTitle: "Blog de Software"
+      },
+      de: {
+        back: "Zurück",
+        pageTitle: "Software-Blog"
+      },
+      it: {
+        back: "Indietro",
+        pageTitle: "Blog Software"
+      }
+    };
+
+    let currentLang = new URLSearchParams(window.location.search).get('lang') || 'ro';
+    document.getElementById("languageSelect").value = currentLang;
+
+    function applyTranslations(lang) {
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        el.textContent = translations[lang][key];
+      });
+    }
+
+    applyTranslations(currentLang);
+
+    document.getElementById("languageSelect").addEventListener("change", (e) => {
+      const selected = e.target.value;
+      window.location.search = "?lang=" + selected;
+    });
+
+    document.getElementById("backButton").addEventListener("click", () => {
+      window.location.href = "software.html?lang=" + currentLang;
+    });
+  </script>
+</body>
+</html>

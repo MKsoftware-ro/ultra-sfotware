@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang='ro'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+  <title>FreshBooks Blog</title>
+  <link href='https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap' rel='stylesheet'>
+  <style>
+    body{font-family:'DM Sans',sans-serif;margin:0;background:#f9fafb;color:#2f2f55}
+    .topbar{display:flex;justify-content:flex-end;align-items:center;padding:1rem;gap:1rem;background:#fff}
+    .topbar select,.topbar a{padding:.4rem .75rem;font-size:.9rem;border-radius:6px;border:1px solid #ccc;text-decoration:none;color:#000;background:#fff}
+    header{background:url('img/javier-miranda-MrWOCGKFVDg-unsplash.jpg') center/cover no-repeat;padding:4rem 2rem;color:#fff;text-align:center}
+    header h1{font-size:2.5rem;margin-bottom:1rem}
+    header p{max-width:800px;margin:0 auto;font-size:1.1rem}
+    .container{max-width:900px;margin:2rem auto;padding:1rem;background:#fff;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,.05)}
+    .blog-header{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:2rem}
+    .blog-header img{max-height:60px}
+    .blog-header h1{margin:0;font-size:2rem}
+    .story{font-size:1rem;line-height:1.6;margin-bottom:1.5rem}
+    .button-container{text-align:center;margin-top:2rem}
+    a.button{display:inline-block;padding:.6rem 1.4rem;background:#2d9cdb;color:#fff;text-decoration:none;border-radius:8px;font-weight:bold}
+  </style>
+</head>
+<body>
+  <div class='topbar'>
+    <a id='backBtn' href='blog-software.html?lang=ro' data-i18n='back'></a>
+    <a id='blogBtn' href='blog-software.html?lang=ro' data-i18n='blog'></a>
+    <select id='languageSelect'>
+      <option value='ro'>Română</option><option value='en'>English</option>
+      <option value='fr'>Français</option><option value='es'>Español</option>
+      <option value='de'>Deutsch</option><option value='it'>Italiano</option>
+    </select>
+  </div>
+
+  <header>
+    <h1 data-i18n='headerTitle'></h1>
+    <p data-i18n='headerDesc'></p>
+  </header>
+
+  <div class='container'>
+    <div class='blog-header'>
+      <img src='img/freshbooks-logo.png' alt='FreshBooks logo'>
+      <h1 data-i18n='title'></h1>
+    </div>
+
+    <div class='story' data-i18n='story1'></div>
+    <div class='story' data-i18n='story2'></div>
+    <div class='story' data-i18n='story3'></div>
+
+    <div class='button-container'>
+      <a href='https://www.freshbooks.com/affiliates' target='_blank' class='button' data-i18n='affiliateBtn'></a>
+    </div>
+  </div>
+
+<script>
+const t = {
+  ro: {
+    back: "Înapoi", blog: "Blog", title: "FreshBooks Blog", headerTitle: "FreshBooks",
+    headerDesc: "FreshBooks este o platformă de facturare și contabilitate simplificată, creată special pentru freelanceri și afaceri mici.",
+    story1: "Radu, fotograf freelancer din Brașov, folosește FreshBooks pentru a emite facturi clare și profesionale în doar câteva clicuri. De când a trecut la această platformă, își recuperează mai repede plățile și își gestionează mai bine veniturile. În plus, rapoartele lunare l-au ajutat să-și optimizeze taxele.",
+    story2: "O agenție de design din Belgia gestionează peste 50 de clienți activi folosind FreshBooks. Sistemul automat de urmărire a timpului și facturare le-a redus erorile și le-a salvat peste 10 ore pe lună. Echipa apreciază interfața intuitivă și suportul prompt.",
+    story3: "Luisa, contabilă independentă din Italia, recomandă FreshBooks tuturor clienților săi mici. Platforma permite sincronizarea conturilor bancare și urmărirea cheltuielilor. Clienții spun că se simt mai organizați și mai încrezători în propria gestiune financiară.",
+    affiliateBtn: "Vezi afiliere"
+  },
+  en: {
+    back: "Back", blog: "Blog", title: "FreshBooks Blog", headerTitle: "FreshBooks",
+    headerDesc: "FreshBooks is an easy-to-use accounting and invoicing platform tailored for freelancers and small businesses.",
+    story1: "Radu, a freelance photographer from Romania, uses FreshBooks to send professional invoices within minutes. Since switching, he gets paid faster and tracks income more efficiently. The monthly reports help him stay tax-compliant and financially confident.",
+    story2: "A design agency in Belgium manages over 50 clients using FreshBooks. Automatic time tracking and invoicing saved them 10+ hours monthly. The team appreciates its simplicity and fast customer support.",
+    story3: "Luisa, an independent accountant in Italy, recommends FreshBooks to all her small business clients. With bank sync and expense tracking, clients feel empowered and organized.",
+    affiliateBtn: "View Affiliate"
+  },
+  fr: {
+    back: "Retour", blog: "Blog", title: "Blog FreshBooks", headerTitle: "FreshBooks",
+    headerDesc: "FreshBooks est une solution de facturation et de comptabilité simplifiée conçue pour les freelances et les petites entreprises.",
+    story1: "Radu, photographe indépendant en Roumanie, utilise FreshBooks pour envoyer des factures professionnelles. Il est payé plus rapidement et suit mieux ses revenus. Les rapports mensuels l’aident à rester en règle fiscalement.",
+    story2: "Une agence de design en Belgique gère plus de 50 clients avec FreshBooks. Le suivi du temps et la facturation automatique leur font gagner plus de 10 heures par mois.",
+    story3: "Luisa, comptable indépendante en Italie, recommande FreshBooks à ses clients. La synchronisation bancaire et le suivi des dépenses leur apportent sérénité et efficacité.",
+    affiliateBtn: "Voir l'affiliation"
+  },
+  es: {
+    back: "Atrás", blog: "Blog", title: "Blog FreshBooks", headerTitle: "FreshBooks",
+    headerDesc: "FreshBooks es una plataforma de facturación y contabilidad ideal para freelancers y pequeñas empresas.",
+    story1: "Radu, fotógrafo freelance en Rumanía, usa FreshBooks para enviar facturas profesionales rápidamente. Ahora cobra más rápido y lleva mejor sus ingresos.",
+    story2: "Una agencia de diseño en Bélgica administra más de 50 clientes con FreshBooks. Han ahorrado más de 10 horas al mes gracias al seguimiento de tiempo automático.",
+    story3: "Luisa, contadora independiente en Italia, recomienda FreshBooks a sus clientes. Les ayuda a mantenerse organizados y confiados en su contabilidad.",
+    affiliateBtn: "Ver afiliación"
+  },
+  de: {
+    back: "Zurück", blog: "Blog", title: "FreshBooks Blog", headerTitle: "FreshBooks",
+    headerDesc: "FreshBooks ist eine einfache Rechnungs- und Buchhaltungsplattform für Freiberufler und kleine Unternehmen.",
+    story1: "Radu, freiberuflicher Fotograf aus Rumänien, erstellt Rechnungen mit FreshBooks schnell und professionell. Er wird schneller bezahlt und hat bessere Übersicht über seine Einnahmen.",
+    story2: "Eine belgische Designagentur verwaltet über 50 Kunden mit FreshBooks. Dank automatischer Zeiterfassung sparen sie monatlich über 10 Stunden.",
+    story3: "Luisa, selbstständige Buchhalterin in Italien, empfiehlt FreshBooks allen kleinen Unternehmen. Die Bankensynchronisierung und Ausgabenerfassung sind besonders nützlich.",
+    affiliateBtn: "Partnerprogramm ansehen"
+  },
+  it: {
+    back: "Indietro", blog: "Blog", title: "Blog FreshBooks", headerTitle: "FreshBooks",
+    headerDesc: "FreshBooks è una piattaforma semplice per fatturazione e contabilità, pensata per freelance e piccole imprese.",
+    story1: "Radu, fotografo freelance in Romania, usa FreshBooks per inviare fatture professionali in pochi minuti. Ora viene pagato più rapidamente e controlla meglio i guadagni.",
+    story2: "Un’agenzia di design in Belgio gestisce oltre 50 clienti con FreshBooks. Il sistema automatico di tempo e fatturazione fa risparmiare più di 10 ore al mese.",
+    story3: "Luisa, commercialista freelance in Italia, consiglia FreshBooks ai suoi clienti. Li aiuta a sentirsi organizzati e sicuri nella gestione delle finanze.",
+    affiliateBtn: "Visualizza affiliazione"
+  }
+};
+function setLang(lang){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key=el.getAttribute('data-i18n');
+    if(t[lang]&&t[lang][key]) el.textContent=t[lang][key];
+  });
+  document.getElementById('backBtn').href=`blog-software.html?lang=${lang}`;
+  document.getElementById('blogBtn').href=`blog-software.html?lang=${lang}`;
+}
+const lang=new URLSearchParams(location.search).get('lang')||'ro';
+document.getElementById('languageSelect').value=lang;
+setLang(lang);
+document.getElementById('languageSelect').addEventListener('change',e=>{
+  location.search=`?lang=${e.target.value}`;
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kaspersky Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body{font-family:'DM Sans',sans-serif;margin:0;background:#f9fafb;color:#2f2f55}
+    .topbar{display:flex;justify-content:flex-end;align-items:center;padding:1rem;gap:1rem;background:#fff}
+    .topbar select,.topbar a{padding:.4rem .75rem;font-size:.9rem;border-radius:6px;border:1px solid #ccc;text-decoration:none;color:#000;background:#fff}
+    header{background:url('img/javier-miranda-MrWOCGKFVDg-unsplash.jpg') center/cover no-repeat;padding:4rem 2rem;color:#fff;text-align:center}
+    header h1{font-size:2.5rem;margin-bottom:1rem}
+    header p{max-width:800px;margin:0 auto;font-size:1.1rem}
+    .container{max-width:900px;margin:2rem auto;padding:1rem;background:#fff;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,.05)}
+    .blog-header{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:2rem}
+    .blog-header img{max-height:60px}
+    .blog-header h1{margin:0;font-size:2rem}
+    .story{font-size:1rem;line-height:1.6;margin-bottom:1.5rem}
+    .button-container{text-align:center;margin-top:2rem}
+    a.button{display:inline-block;padding:.6rem 1.4rem;background:#caa227;color:#fff;text-decoration:none;border-radius:8px;font-weight:bold}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a id="backBtn" href="blog-software.html?lang=ro" data-i18n="back"></a>
+    <a id="blogBtn" href="blog-software.html?lang=ro" data-i18n="blog"></a>
+    <select id="languageSelect">
+      <option value="ro">Română</option><option value="en">English</option>
+      <option value="fr">Français</option><option value="es">Español</option>
+      <option value="de">Deutsch</option><option value="it">Italiano</option>
+    </select>
+  </div>
+
+  <header>
+    <h1 data-i18n="headerTitle"></h1>
+    <p data-i18n="headerDesc"></p>
+  </header>
+
+  <div class="container">
+    <div class="blog-header">
+      <img src="img/kaspersky-logo.png" alt="Norton logo">
+      <h1 data-i18n="title"></h1>
+    </div>
+
+    <div class="story" data-i18n="story1"></div>
+
+    <div class="story" data-i18n="story2"></div>
+
+    <div class="story" data-i18n="story3"></div>
+
+    <div class="button-container">
+      <a href="https://www.kaspersky.com/partners/affiliate" target="_blank" class="button" data-i18n="affiliateBtn"></a>
+    </div>
+  </div>
+
+
+<script>
+const t={
+  ro:{
+    back:"Înapoi",blog:"Blog",title:"Kaspersky Blog",headerTitle:"Kaspersky",
+    headerDesc:"Kaspersky este un lider global în domeniul securității cibernetice, oferind soluții avansate de protecție pentru utilizatori individuali, companii și instituții. Cu tehnologii premiate de detecție și răspuns, protejează milioane de dispozitive în fața celor mai complexe amenințări digitale.",
+    story1:"Sorin, manager IT într-o instituție publică din România, a implementat Kaspersky Endpoint Security pentru peste 400 de stații. După atacuri repetate cu ransomware în anii anteriori, anul acesta nu s-a înregistrat niciun incident major, iar riscurile au fost semnalate proactiv.",
+    story2:"O rețea de hoteluri din Spania a ales Kaspersky pentru protecția serverelor și a echipamentelor POS. Soluția lor a detectat tentative de acces din IP-uri suspecte și a blocat un atac de tip credential stuffing înainte ca daunele să apară.",
+    story3:"Carla, studentă la informatică în Italia, folosește Kaspersky pe laptopul personal pentru a-și proteja proiectele și datele de autentificare. După un incident cu un keylogger ascuns într-o aplicație freeware, soluția Kaspersky a izolat imediat amenințarea și a oferit un raport detaliat.",
+    affiliateBtn:"Vezi afiliere"
+  },
+  en:{
+    back:"Back",blog:"Blog",title:"Norton Antivirus Blog",headerTitle:"Norton Antivirus",
+    headerDesc:"Norton Antivirus provides award-winning protection against viruses, ransomware, phishing, and other cyber threats. With over 30 years of experience in digital security, Norton uses advanced technology to keep users' devices and data safe.",
+    story1:"Mihai, an accountant from Bucharest, was targeted by a phishing attack that nearly compromised his financial data. After installing Norton 360, all unauthorized access attempts were blocked automatically, and tech support helped him secure his entire system.",
+    story2:"A small IT firm in Germany implemented Norton for its 25 employees. In the first month, the system detected 14 malware files hidden in email attachments. The easy-to-use dashboard allowed the administrator to respond quickly and efficiently.",
+    story3:"Laura, a mother of two, uses Norton to manage her family's online activity. With parental control features, she can limit online time and block inappropriate websites, providing a safe digital experience for her children.",
+    affiliateBtn:"View Affiliate"
+  },
+  fr:{
+    back:"Retour",blog:"Blog",title:"Blog Norton Antivirus",headerTitle:"Norton Antivirus",
+    headerDesc:"Norton Antivirus offre une protection primée contre les virus, les ransomwares, le phishing et d'autres menaces en ligne. Fort de plus de 30 ans d'expérience, Norton utilise une technologie avancée pour sécuriser les appareils et les données des utilisateurs.",
+    story1:"Mihai, comptable à Bucarest, a été victime d'une attaque de phishing qui a failli compromettre ses données financières. Après l'installation de Norton 360, toutes les tentatives d'accès non autorisé ont été automatiquement bloquées, et l'assistance technique l'a aidé à sécuriser son système.",
+    story2:"Une petite entreprise informatique en Allemagne a déployé Norton pour ses 25 employés. En un mois, le système a détecté 14 fichiers malveillants cachés dans des pièces jointes. Le tableau de bord intuitif a permis à l'administrateur de réagir rapidement et efficacement.",
+    story3:"Laura, mère de deux enfants, utilise Norton pour gérer l'activité en ligne de sa famille. Grâce aux fonctions de contrôle parental, elle peut limiter le temps passé en ligne et bloquer les sites inappropriés, offrant ainsi une expérience numérique sécurisée à ses enfants.",
+    affiliateBtn:"Voir l'affiliation"
+  },
+  es:{
+    back:"Atrás",blog:"Blog",title:"Blog de Norton Antivirus",headerTitle:"Norton Antivirus",
+    headerDesc:"Norton Antivirus ofrece protección galardonada contra virus, ransomware, phishing y otras amenazas en línea. Con más de 30 años de experiencia, Norton utiliza tecnología avanzada para mantener seguros los dispositivos y datos de los usuarios.",
+    story1:"Mihai, contador en Bucarest, fue objetivo de un ataque de phishing que casi compromete sus datos financieros. Tras instalar Norton 360, todos los intentos de acceso no autorizado fueron bloqueados automáticamente y el soporte técnico ayudó a asegurar su sistema.",
+    story2:"Una pequeña empresa de TI en Alemania implementó Norton para sus 25 empleados. En el primer mes, el sistema detectó 14 archivos maliciosos ocultos en correos electrónicos. El panel intuitivo permitió al administrador actuar rápidamente.",
+    story3:"Laura, madre de dos hijos, utiliza Norton para gestionar la actividad en línea de su familia. Con funciones de control parental, puede limitar el tiempo de uso y bloquear sitios inapropiados, garantizando una experiencia digital segura.",
+    affiliateBtn:"Ver afiliación"
+  },
+  de:{
+    back:"Zurück",blog:"Blog",title:"Norton Antivirus Blog",headerTitle:"Norton Antivirus",
+    headerDesc:"Norton Antivirus bietet preisgekrönten Schutz vor Viren, Ransomware, Phishing und anderen Online-Bedrohungen. Mit über 30 Jahren Erfahrung nutzt Norton fortschrittliche Technologie, um Geräte und Daten der Nutzer zu schützen.",
+    story1:"Mihai, Buchhalter in Bukarest, wurde Ziel eines Phishing-Angriffs, der beinahe seine Finanzdaten kompromittiert hätte. Nach der Installation von Norton 360 wurden alle unbefugten Zugriffsversuche automatisch blockiert und der Support half, das System zu sichern.",
+    story2:"Ein kleines IT-Unternehmen in Deutschland setzte Norton für 25 Mitarbeiter ein. Im ersten Monat erkannte das System 14 Malware-Dateien in E-Mail-Anhängen. Das benutzerfreundliche Dashboard ermöglichte dem Administrator eine schnelle Reaktion.",
+    story3:"Laura, Mutter von zwei Kindern, verwendet Norton zur Verwaltung der Online-Aktivitäten ihrer Familie. Mit Kindersicherungen kann sie die Bildschirmzeit begrenzen und ungeeignete Websites blockieren, um ein sicheres digitales Erlebnis zu bieten.",
+    affiliateBtn:"Partnerprogramm ansehen"
+  },
+  it:{
+    back:"Indietro",blog:"Blog",title:"Blog Norton Antivirus",headerTitle:"Norton Antivirus",
+    headerDesc:"Norton Antivirus offre una protezione pluripremiata contro virus, ransomware, phishing e altre minacce online. Con oltre 30 anni di esperienza, Norton utilizza tecnologie avanzate per proteggere i dispositivi e i dati degli utenti.",
+    story1:"Mihai, contabile di Bucarest, è stato vittima di un attacco phishing che ha quasi compromesso i suoi dati finanziari. Dopo aver installato Norton 360, tutti i tentativi di accesso non autorizzato sono stati bloccati automaticamente e il supporto tecnico ha aiutato a mettere in sicurezza il sistema.",
+    story2:"Una piccola azienda IT in Germania ha implementato Norton per i suoi 25 dipendenti. Nel primo mese, il sistema ha rilevato 14 file dannosi nascosti in allegati email. Il pannello di controllo intuitivo ha permesso all'amministratore di agire rapidamente.",
+    story3:"Laura, madre di due figli, utilizza Norton per controllare l'attività online della sua famiglia. Con il controllo parentale, può limitare il tempo online e bloccare i siti inappropriati, offrendo un'esperienza digitale sicura ai suoi bambini.",
+    affiliateBtn:"Visualizza affiliazione"
+  }
+};
+function setLang(lang){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key=el.getAttribute('data-i18n');
+    if(t[lang]&&t[lang][key]) el.textContent=t[lang][key];
+  });
+  document.getElementById('backBtn').href=`blog-software.html?lang=${lang}`;
+  document.getElementById('blogBtn').href=`blog-software.html?lang=${lang}`;
+}
+const lang=new URLSearchParams(location.search).get('lang')||'ro';
+document.getElementById('languageSelect').value=lang;
+setLang(lang);
+document.getElementById('languageSelect').addEventListener('change',e=>{
+  location.search=`?lang=${e.target.value}`;
+});
+</script>
+
+</body>
+</html>

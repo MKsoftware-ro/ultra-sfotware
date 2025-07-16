@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grammarly Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body{font-family:'DM Sans',sans-serif;margin:0;background:#f9fafb;color:#2f2f55}
+    .topbar{display:flex;justify-content:flex-end;align-items:center;padding:1rem;gap:1rem;background:#fff}
+    .topbar select,.topbar a{padding:.4rem .75rem;font-size:.9rem;border-radius:6px;border:1px solid #ccc;text-decoration:none;color:#000;background:#fff}
+    header{background:url('img/javier-miranda-MrWOCGKFVDg-unsplash.jpg') center/cover no-repeat;padding:4rem 2rem;color:#fff;text-align:center}
+    header h1{font-size:2.5rem;margin-bottom:1rem}
+    header p{max-width:800px;margin:0 auto;font-size:1.1rem}
+    .container{max-width:900px;margin:2rem auto;padding:1rem;background:#fff;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,.05)}
+    .blog-header{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:2rem}
+    .blog-header img{max-height:60px}
+    .blog-header h1{margin:0;font-size:2rem}
+    .story{font-size:1rem;line-height:1.6;margin-bottom:1.5rem}
+    .button-container{text-align:center;margin-top:2rem}
+    a.button{display:inline-block;padding:.6rem 1.4rem;background:#caa227;color:#fff;text-decoration:none;border-radius:8px;font-weight:bold}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a id="backBtn" href="blog-software.html?lang=ro" data-i18n="back"></a>
+    <a id="blogBtn" href="blog-software.html?lang=ro" data-i18n="blog"></a>
+    <select id="languageSelect">
+      <option value="ro">Română</option><option value="en">English</option>
+      <option value="fr">Français</option><option value="es">Español</option>
+      <option value="de">Deutsch</option><option value="it">Italiano</option>
+    </select>
+  </div>
+
+  <header>
+    <h1 data-i18n="headerTitle"></h1>
+    <p data-i18n="headerDesc"></p>
+  </header>
+
+  <div class="container">
+    <div class="blog-header">
+      <img src="img/grammarly-logo.png" alt="Grammarly logo">
+      <h1 data-i18n="title"></h1>
+    </div>
+
+    <div class="story" data-i18n="story1"></div>
+    <div class="story" data-i18n="story2"></div>
+    <div class="story" data-i18n="story3"></div>
+
+    <div class="button-container">
+      <a href="https://www.grammarly.com/affiliate" target="_blank" class="button" data-i18n="affiliateBtn"></a>
+    </div>
+  </div>
+
+<script>
+const t={
+  ro:{
+    back:"Înapoi",blog:"Blog",title:"Grammarly Blog",headerTitle:"Grammarly",
+    headerDesc:"Grammarly este un instrument avansat de corectare gramaticală şi stilistică, util atât studenţilor, cât şi profesioniştilor care redactează texte în limba engleză şi vor rezultate impecabile.",
+    story1:"Andreea, studentă româncă la master în Belgia, redactează lunar eseuri de peste cinci mii de cuvinte pentru cursurile de ştiinţe sociale. Înainte de a descoperi Grammarly, petrecea ore întregi revizuind fiecare frază. Acum, aplicaţia îi indică instant greşelile de concordanţă, tonul nepotrivit şi frazele ambigue, iar ea economiseşte aproape două zile de lucru pentru fiecare proiect. Profesorii au remarcat progresul şi i‑au acordat burse suplimentare pentru excelenţă academică.",
+    story2:"În Polonia, compania software NextGen a integrat Grammarly Business pentru cei 120 de angajaţi care comunică zilnic cu clienţi din SUA, India şi Australia. După trei luni, rapoartele interne au arătat o scădere cu 30 % a timpului alocat corecturii de e‑mailuri şi o creştere a scorului de satisfacţie a clienţilor. Managerii afirmă că imaginea brandului este acum mult mai profesionistă, iar echipa de vânzări a încheiat două contracte majore datorită prezentărilor impecabile.",
+    story3:"Thomas, freelancer german specializat în content marketing, produce săptămânal articole pentru bloguri din Statele Unite şi Regatul Unit. Grammarly îl ajută să menţină un ton coerent şi să evite repetiţiile subtile care pot scădea impactul textului. În şase luni, rata de retenţie a clienţilor lui Thomas a depăşit 90 %, iar veniturile lunare s‑au dublat, demonstrând că investiţia într‑un instrument de calitate a fost extrem de rentabilă.",
+    affiliateBtn:"Vezi afiliere"
+  },
+  en:{
+    back:"Back",blog:"Blog",title:"Grammarly Blog",headerTitle:"Grammarly",
+    headerDesc:"Grammarly is an advanced grammar and style assistant that helps students and professionals craft flawless English texts and communicate with confidence.",
+    story1:"Andrea, a Romanian master's student in Belgium, submits research essays exceeding five thousand words every month. Before discovering Grammarly, she spent entire weekends proofreading. Now the tool flags agreement issues, awkward tone and unclear clauses in seconds, saving her nearly two full days per project. Professors have noticed the improved quality and granted her additional academic scholarships.",
+    story2:"In Poland, the software firm NextGen rolled out Grammarly Business for 120 employees who email clients across the US, India and Australia. After three months, internal reports showed a 30 percent reduction in time spent on email revisions and higher customer satisfaction scores. Management says the sharper brand image directly helped the sales team land two major contracts.",
+    story3:"Thomas, a German freelance content marketer, produces weekly blog posts for US and UK companies. Grammarly helps him maintain consistent tone and avoid subtle repetition that hurts impact. Within six months, his client retention rate surpassed 90 percent, and his monthly revenue doubled—proof that investing in quality writing tools pays off.",
+    affiliateBtn:"View Affiliate"
+  },
+  fr:{
+    back:"Retour",blog:"Blog",title:"Blog Grammarly",headerTitle:"Grammarly",
+    headerDesc:"Grammarly est un assistant de grammaire et de style sophistiqué qui permet aux étudiants et aux professionnels de rédiger un anglais impeccable et convaincant.",
+    story1:"Andreea, étudiante roumaine en master en Belgique, rédige chaque mois des essais de recherche de plus de cinq mille mots. Avant de connaître Grammarly, elle passait des week‑ends entiers à relire. Désormais, l’outil signale instantanément les erreurs d’accord, le ton inadapté et les tournures ambiguës, lui faisant gagner près de deux jours par projet. Ses professeurs ont salué la qualité et lui ont accordé des bourses supplémentaires.",
+    story2:"En Pologne, la société logicielle NextGen a déployé Grammarly Business pour 120 employés qui échangent quotidiennement avec des clients aux États‑Unis, en Inde et en Australie. En trois mois, les rapports internes ont montré une réduction de 30 % du temps consacré à la relecture des e‑mails et une hausse de la satisfaction client. L’image de marque plus professionnelle a permis de conclure deux contrats majeurs.",
+    story3:"Thomas, rédacteur freelance allemand spécialisé en marketing de contenu, produit chaque semaine des articles pour des entreprises américaines et britanniques. Grammarly l’aide à maintenir une tonalité cohérente et à éviter les répétitions. En six mois, son taux de fidélisation des clients a dépassé 90 %, doublant ainsi ses revenus mensuels.",
+    affiliateBtn:"Voir l'affiliation"
+  },
+  es:{
+    back:"Atrás",blog:"Blog",title:"Blog Grammarly",headerTitle:"Grammarly",
+    headerDesc:"Grammarly es un asistente avanzado de gramática y estilo que ayuda a estudiantes y profesionales a escribir en inglés sin errores y con mayor claridad.",
+    story1:"Andrea, estudiante rumana de posgrado en Bélgica, entrega ensayos de investigación de más de cinco mil palabras cada mes. Antes de descubrir Grammarly, dedicaba fines de semana enteros a corregir. Ahora la herramienta señala problemas de concordancia, tono inadecuado y ambigüedades en segundos, ahorrándole casi dos días por proyecto. Sus profesores han elogiado la calidad y le han concedido becas adicionales.",
+    story2:"En Polonia, la empresa de software NextGen instaló Grammarly Business para 120 empleados que se comunican con clientes de EE. UU., India y Australia. Tras tres meses, los informes internos mostraron un 30 % menos tiempo dedicado a revisar correos y una mayor satisfacción del cliente. La mejor imagen de marca ayudó a cerrar dos contratos importantes.",
+    story3:"Thomas, redactor freelance alemán, escribe cada semana artículos de marketing para clientes de Estados Unidos y Reino Unido. Grammarly le ayuda a mantener un tono coherente y evitar repeticiones sutiles. En seis meses, su tasa de retención superó el 90 % y sus ingresos mensuales se duplicaron.",
+    affiliateBtn:"Ver afiliación"
+  },
+  de:{
+    back:"Zurück",blog:"Blog",title:"Grammarly Blog",headerTitle:"Grammarly",
+    headerDesc:"Grammarly ist ein hochentwickelter Grammatik‑ und Stilassistent, mit dem Studierende und Profis fehlerfreie englische Texte verfassen können.",
+    story1:"Andreea, rumänische Masterstudentin in Belgien, reicht monatlich Forschungsaufsätze mit über fünftausend Wörtern ein. Vor Grammarly verbrachte sie ganze Wochenenden mit Korrektur. Jetzt markiert das Tool sofort Grammatikfehler, unpassenden Ton und Mehrdeutigkeiten und spart ihr fast zwei Tage pro Projekt. Dozenten loben die Qualität und vergaben weitere Stipendien.",
+    story2:"In Polen führte das Softwareunternehmen NextGen Grammarly Business für 120 Mitarbeitende ein, die täglich mit Kunden in den USA, Indien und Australien kommunizieren. Nach drei Monaten zeigte sich eine 30 %ige Reduktion der Überarbeitungszeit von E‑Mails und eine höhere Kundenzufriedenheit. Das professionellere Markenbild trug zu zwei Großaufträgen bei.",
+    story3:"Thomas, deutscher freier Content‑Marketer, erstellt wöchentlich Blogartikel für US‑ und UK‑Kunden. Grammarly unterstützt ihn dabei, einen konsistenten Ton zu wahren und Wiederholungen zu vermeiden. Innerhalb von sechs Monaten stieg seine Kundenbindungsrate auf über 90 % und sein Monatsumsatz verdoppelte sich.",
+    affiliateBtn:"Partnerprogramm ansehen"
+  },
+  it:{
+    back:"Indietro",blog:"Blog",title:"Blog Grammarly",headerTitle:"Grammarly",
+    headerDesc:"Grammarly è un assistente avanzato di grammatica e stile che aiuta studenti e professionisti a scrivere in inglese testi impeccabili e convincenti.",
+    story1:"Andreea, studentessa rumena di master in Belgio, consegna mensilmente saggi di ricerca di oltre cinquemila parole. Prima di scoprire Grammarly passava interi weekend a correggere. Ora lo strumento evidenzia in pochi secondi errori di concordanza, tono inadeguato e frasi ambigue, facendole risparmiare quasi due giorni per progetto. I docenti hanno notato la qualità e le hanno concesso borse aggiuntive.",
+    story2:"In Polonia, l’azienda software NextGen ha implementato Grammarly Business per 120 dipendenti che comunicano con clienti negli Stati Uniti, in India e in Australia. Dopo tre mesi, i report interni hanno mostrato una riduzione del 30 % del tempo speso a rivedere le e‑mail e una maggiore soddisfazione dei clienti. L’immagine di marca più professionale ha contribuito a chiudere due contratti importanti.",
+    story3:"Thomas, copywriter freelance tedesco specializzato in content marketing, produce ogni settimana articoli per aziende britanniche e statunitensi. Grammarly lo aiuta a mantenere un tono coerente ed evitare ripetizioni. In sei mesi il suo tasso di fidelizzazione ha superato il 90 % e il fatturato mensile è raddoppiato.",
+    affiliateBtn:"Visualizza affiliazione"
+  }
+};
+function setLang(lang){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key=el.getAttribute('data-i18n');
+    if(t[lang]&&t[lang][key]) el.textContent=t[lang][key];
+  });
+  document.getElementById('backBtn').href=`blog-software.html?lang=${lang}`;
+  document.getElementById('blogBtn').href=`blog-software.html?lang=${lang}`;
+}
+const lang=new URLSearchParams(location.search).get('lang')||'ro';
+document.getElementById('languageSelect').value=lang;
+setLang(lang);
+document.getElementById('languageSelect').addEventListener('change',e=>{
+  location.search=`?lang=${e.target.value}`;
+});
+</script>
+</body>
+</html>

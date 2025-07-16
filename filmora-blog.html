@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Filmora Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body{font-family:'DM Sans',sans-serif;margin:0;background:#f9fafb;color:#2f2f55}
+    .topbar{display:flex;justify-content:flex-end;align-items:center;padding:1rem;gap:1rem;background:#fff}
+    .topbar select,.topbar a{padding:.4rem .75rem;font-size:.9rem;border-radius:6px;border:1px solid #ccc;text-decoration:none;color:#000;background:#fff}
+    header{background:url('img/javier-miranda-MrWOCGKFVDg-unsplash.jpg') center/cover no-repeat;padding:4rem 2rem;color:#fff;text-align:center}
+    header h1{font-size:2.5rem;margin-bottom:1rem}
+    header p{max-width:800px;margin:0 auto;font-size:1.1rem}
+    .container{max-width:900px;margin:2rem auto;padding:1rem;background:#fff;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,.05)}
+    .blog-header{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:2rem}
+    .blog-header img{max-height:60px}
+    .blog-header h1{margin:0;font-size:2rem}
+    .story{font-size:1rem;line-height:1.6;margin-bottom:1.5rem}
+    .button-container{text-align:center;margin-top:2rem}
+    a.button{display:inline-block;padding:.6rem 1.4rem;background:#caa227;color:#fff;text-decoration:none;border-radius:8px;font-weight:bold}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a id="backBtn" href="blog-software.html?lang=ro" data-i18n="back"></a>
+    <a id="blogBtn" href="blog-software.html?lang=ro" data-i18n="blog"></a>
+    <select id="languageSelect">
+      <option value="ro">Română</option><option value="en">English</option>
+      <option value="fr">Français</option><option value="es">Español</option>
+      <option value="de">Deutsch</option><option value="it">Italiano</option>
+    </select>
+  </div>
+
+  <header>
+    <h1 data-i18n="headerTitle"></h1>
+    <p data-i18n="headerDesc"></p>
+  </header>
+
+  <div class="container">
+    <div class="blog-header">
+      <img src="img/filmora-logo.png" alt="Filmora logo">
+      <h1 data-i18n="title"></h1>
+    </div>
+
+    <div class="story" data-i18n="story1"></div>
+    <div class="story" data-i18n="story2"></div>
+    <div class="story" data-i18n="story3"></div>
+
+    <div class="button-container">
+      <a href="https://filmora.wondershare.com/affiliate.html" target="_blank" class="button" data-i18n="affiliateBtn"></a>
+    </div>
+  </div>
+
+<script>
+const t={
+  ro:{
+    back:"Înapoi",blog:"Blog",title:"Filmora Blog",headerTitle:"Filmora",
+    headerDesc:"Filmora este un software de editare video accesibil și intuitiv, ideal pentru creatori de conținut, educatori și antreprenori care doresc să realizeze materiale video de impact fără experiență tehnică.",
+    story1:"Maria, vlogger din România, editează toate videoclipurile YouTube cu Filmora. Efectele și tranzițiile predefinite îi economisesc ore întregi de muncă.",
+    story2:"Un profesor din Italia folosește Filmora pentru a crea lecții video dinamice. Elevii sunt mai implicați și participativi de când a început să le folosească.",
+    story3:"Carlos, antreprenor din Spania, creează clipuri promoționale pentru afacerea lui locală. Filmora îi oferă un mod profesionist de prezentare fără costuri mari.",
+    affiliateBtn:"Vezi afiliere"
+  },
+  en:{
+    back:"Back",blog:"Blog",title:"Filmora Blog",headerTitle:"Filmora",
+    headerDesc:"Filmora is an accessible, intuitive video editing software perfect for content creators, educators, and entrepreneurs who want to make impactful videos without technical expertise.",
+    story1:"Maria, a vlogger from Romania, edits all her YouTube videos with Filmora. Built-in effects and transitions save her hours of editing time.",
+    story2:"A teacher in Italy uses Filmora to create dynamic video lessons. Students have become more engaged and responsive since.",
+    story3:"Carlos, an entrepreneur in Spain, creates promotional clips for his local business. Filmora gives him a professional presentation style at low cost.",
+    affiliateBtn:"View Affiliate"
+  },
+  fr:{
+    back:"Retour",blog:"Blog",title:"Blog Filmora",headerTitle:"Filmora",
+    headerDesc:"Filmora est un logiciel de montage vidéo simple et intuitif, idéal pour les créateurs, enseignants et entrepreneurs souhaitant produire du contenu impactant sans connaissances techniques.",
+    story1:"Maria, vlogueuse en Roumanie, monte ses vidéos YouTube avec Filmora. Les effets intégrés lui font gagner un temps précieux.",
+    story2:"Un enseignant en Italie utilise Filmora pour créer des cours vidéo dynamiques. Ses élèves sont plus attentifs et motivés.",
+    story3:"Carlos, entrepreneur en Espagne, réalise des clips promotionnels pour son commerce. Filmora lui offre un rendu pro sans coûts élevés.",
+    affiliateBtn:"Voir l'affiliation"
+  },
+  es:{
+    back:"Atrás",blog:"Blog",title:"Blog Filmora",headerTitle:"Filmora",
+    headerDesc:"Filmora es un software de edición de video fácil de usar e intuitivo, perfecto para creadores, docentes y emprendedores que buscan videos de calidad sin complicaciones técnicas.",
+    story1:"María, vlogger en Rumanía, edita sus videos de YouTube con Filmora. Los efectos y transiciones predefinidas le ahorran horas de trabajo.",
+    story2:"Un profesor en Italia usa Filmora para crear lecciones dinámicas. Los estudiantes están más comprometidos desde entonces.",
+    story3:"Carlos, empresario en España, crea clips promocionales para su negocio. Filmora le da un estilo profesional con bajo coste.",
+    affiliateBtn:"Ver afiliación"
+  },
+  de:{
+    back:"Zurück",blog:"Blog",title:"Filmora Blog",headerTitle:"Filmora",
+    headerDesc:"Filmora ist eine benutzerfreundliche Videobearbeitungssoftware – ideal für Content-Creator, Lehrer und Unternehmer, die ohne Vorkenntnisse professionelle Videos erstellen möchten.",
+    story1:"Maria, Vloggerin aus Rumänien, schneidet alle ihre YouTube-Videos mit Filmora. Die fertigen Effekte sparen ihr viel Zeit.",
+    story2:"Ein Lehrer in Italien erstellt mit Filmora dynamische Lernvideos. Seitdem sind seine Schüler aktiver und motivierter.",
+    story3:"Carlos, Unternehmer aus Spanien, produziert Werbevideos für sein lokales Geschäft. Filmora verleiht ihm ein professionelles Auftreten ohne große Kosten.",
+    affiliateBtn:"Partnerprogramm ansehen"
+  },
+  it:{
+    back:"Indietro",blog:"Blog",title:"Blog Filmora",headerTitle:"Filmora",
+    headerDesc:"Filmora è un software di montaggio video semplice e intuitivo, perfetto per creatori, insegnanti e imprenditori che vogliono creare video di qualità senza competenze tecniche.",
+    story1:"Maria, vlogger in Romania, monta tutti i suoi video YouTube con Filmora. Gli effetti integrati le fanno risparmiare ore di lavoro.",
+    story2:"Un insegnante in Italia usa Filmora per realizzare lezioni video coinvolgenti. Gli studenti partecipano con più entusiasmo.",
+    story3:"Carlos, imprenditore spagnolo, crea video promozionali per la sua attività. Filmora gli permette uno stile professionale a costi ridotti.",
+    affiliateBtn:"Visualizza affiliazione"
+  }
+};
+function setLang(lang){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key=el.getAttribute('data-i18n');
+    if(t[lang]&&t[lang][key]) el.textContent=t[lang][key];
+  });
+  document.getElementById('backBtn').href=`blog-software.html?lang=${lang}`;
+  document.getElementById('blogBtn').href=`blog-software.html?lang=${lang}`;
+}
+const lang=new URLSearchParams(location.search).get('lang')||'ro';
+document.getElementById('languageSelect').value=lang;
+setLang(lang);
+document.getElementById('languageSelect').addEventListener('change',e=>{
+  location.search=`?lang=${e.target.value}`;
+});
+</script>
+</body>
+</html>

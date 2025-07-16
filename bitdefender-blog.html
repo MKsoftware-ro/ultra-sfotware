@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bitdefender Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body{font-family:'DM Sans',sans-serif;margin:0;background:#f9fafb;color:#2f2f55}
+    .topbar{display:flex;justify-content:flex-end;align-items:center;padding:1rem;gap:1rem;background:#fff}
+    .topbar select,.topbar a{padding:.4rem .75rem;font-size:.9rem;border-radius:6px;border:1px solid #ccc;text-decoration:none;color:#000;background:#fff}
+    header{background:url('img/javier-miranda-MrWOCGKFVDg-unsplash.jpg') center/cover no-repeat;padding:4rem 2rem;color:#fff;text-align:center}
+    header h1{font-size:2.5rem;margin-bottom:1rem}
+    header p{max-width:800px;margin:0 auto;font-size:1.1rem}
+    .container{max-width:900px;margin:2rem auto;padding:1rem;background:#fff;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,.05)}
+    .story{font-size:1rem;line-height:1.6;margin-bottom:1.5rem}
+    .blog-header{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:2rem}
+    .blog-header img{max-height:60px}
+    .blog-header h1{margin:0;font-size:2rem}
+    .button-container{text-align:center;margin-top:2rem}
+    a.button{display:inline-block;padding:.6rem 1.4rem;background:#caa227;color:#fff;text-decoration:none;border-radius:8px;font-weight:bold}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a id="backBtn" href="blog-software.html?lang=ro" data-i18n="back">Înapoi</a>
+    <a id="blogBtn" href="blog-software.html?lang=ro" data-i18n="blog">Blog</a>
+    <select id="languageSelect">
+      <option value="ro">Română</option><option value="en">English</option>
+      <option value="fr">Français</option><option value="es">Español</option>
+      <option value="de">Deutsch</option><option value="it">Italiano</option>
+    </select>
+  </div>
+
+  <header>
+    <h1 data-i18n="headerTitle">Bitdefender</h1>
+    <p data-i18n="headerDesc">
+      Bitdefender este lider global în securitate cibernetică, oferind protecție de nivel enterprise
+      cu impact minim asupra performanței. Motorul său premiat de detecție, combinat cu inteligența
+      artificială și analiza comportamentală, blochează amenințări cunoscute și necunoscute, ransomware,
+      phishing și atacuri zero‑day pe peste 500 de milioane de device‑uri din 170 de țări.
+    </p>
+  </header>
+
+  <div class="container">
+    <div class="blog-header">
+      <img src="img/bitdefender-logo.png" alt="Bitdefender logo">
+      <h1 data-i18n="title">Bitdefender Blog</h1>
+    </div>
+
+    <div class="story" data-i18n="story1">
+      Andrei, administrator IT din România, gestionează infrastructura unei rețele de 300 de stații
+      într‑un lanț regional de clinici private. După migrarea la Bitdefender GravityZone, a observat
+      că rapoartele lunare indică o scădere de 75 % a tentativelor de phishing și zero cazuri de
+      ransomware. Consola centralizată i‑a redus timpul de patch‑management cu aproape două ore pe
+      săptămână, permițându‑i să se concentreze pe proiecte de modernizare a infrastructurii.
+    </div>
+
+    <div class="story" data-i18n="story2">
+      O companie de comerț electronic din Țările de Jos procesa zilnic mii de plăți card‑not‑present și
+      avea nevoie de certificare PCI‑DSS strictă. Implementând Bitdefender pe serverele din cloud și
+      pe laptopurile remote ale echipei, au obținut auditurile de conformitate fără re‑testări
+      suplimentare. Sistemul de detecție „network attack” a blocat în timp real un botnet care încerca
+      să forțeze parolele de administrare, iar uptime‑ul platformei a rămas la 99,98 % în ultimele
+      șase luni.
+    </div>
+
+    <div class="story" data-i18n="story3">
+      Elena, profesoară universitară din Canada, preda cursuri online de inginerie software și
+      administra un laborator virtual cu mașini Windows și Linux pentru 120 de studenți. După un
+      incident de crypto‑mining detectat târziu de soluția veche, a trecut la Bitdefender. Modulul
+      de Advanced Threat Control a izolat instant mașina compromisă și a generat un raport detaliat
+      pentru cursul său de securitate. Studenții au folosit caz‑real în proiectele academice, iar
+      universitatea a extins licența la toate facultățile.
+    </div>
+
+    <div class="button-container">
+      <a href="https://www.bitdefender.com/affiliates/" target="_blank" class="button" data-i18n="affiliateBtn">
+        Vezi afiliere
+      </a>
+    </div>
+  </div>
+
+<script>
+const t={
+  ro:{back:"Înapoi",blog:"Blog",title:"Bitdefender Blog",headerTitle:"Bitdefender",
+      headerDesc:document.querySelector('[data-i18n=\"headerDesc\"]').textContent,
+      story1:document.querySelector('[data-i18n=\"story1\"]').textContent,
+      story2:document.querySelector('[data-i18n=\"story2\"]').textContent,
+      story3:document.querySelector('[data-i18n=\"story3\"]').textContent,
+      affiliateBtn:"Vezi afiliere"},
+  en:{back:"Back",blog:"Blog",title:"Bitdefender Blog",headerTitle:"Bitdefender",
+      headerDesc:"Bitdefender is a global cybersecurity leader delivering enterprise‑grade protection with minimal system impact. Its award‑winning detection engine, powered by AI and behavioral analytics, blocks known and unknown threats, ransomware, phishing and zero‑day attacks on more than 500 million devices in 170 countries.",
+      story1:"Andrew, an IT administrator from Romania, manages 300 endpoints in a regional chain of private clinics. After moving to Bitdefender GravityZone, monthly reports show a 75 % drop in phishing attempts and zero ransomware cases. The centralized console cut his patch‑management time by nearly two hours a week, letting him focus on infrastructure upgrades.",
+      story2:"An e‑commerce company in the Netherlands handles thousands of card‑not‑present payments daily and needed strict PCI‑DSS certification. Deploying Bitdefender across cloud servers and remote laptops helped them pass audits without re‑tests. The Network Attack Defense module blocked a botnet brute‑force in real time, keeping platform uptime at 99.98 % over the last six months.",
+      story3:"Elena, a university professor in Canada, runs online software‑engineering courses and a virtual lab for 120 students. After a crypto‑mining incident slipped past the old solution, she moved to Bitdefender. Advanced Threat Control instantly quarantined the compromised VM and produced a detailed report used as a real‑world case study. The university has since expanded the license campus‑wide.",
+      affiliateBtn:"View Affiliate"}
+};
+function setLang(lang){
+ document.querySelectorAll('[data-i18n]').forEach(el=>{
+  const key=el.getAttribute('data-i18n');
+  if(t[lang]&&t[lang][key]) el.textContent=t[lang][key];
+ });
+ document.getElementById('backBtn').href=`blog-software.html?lang=${lang}`;
+ document.getElementById('blogBtn').href=`blog-software.html?lang=${lang}`;
+}
+const lang=new URLSearchParams(location.search).get('lang')||'ro';
+document.getElementById('languageSelect').value=lang;
+setLang(lang);
+document.getElementById('languageSelect').addEventListener('change',e=>{
+ location.search=`?lang=${e.target.value}`;
+});
+</script>
+</body>
+</html>

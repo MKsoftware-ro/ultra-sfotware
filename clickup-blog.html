@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang='ro'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+  <title>ClickUp Blog</title>
+  <link href='https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap' rel='stylesheet'>
+  <style>
+    body{font-family:'DM Sans',sans-serif;margin:0;background:#f9fafb;color:#2f2f55}
+    .topbar{display:flex;justify-content:flex-end;align-items:center;padding:1rem;gap:1rem;background:#fff}
+    .topbar select,.topbar a{padding:.4rem .75rem;font-size:.9rem;border-radius:6px;border:1px solid #ccc;text-decoration:none;color:#000;background:#fff}
+    header{background:url('img/javier-miranda-MrWOCGKFVDg-unsplash.jpg') center/cover no-repeat;padding:4rem 2rem;color:#fff;text-align:center}
+    header h1{font-size:2.5rem;margin-bottom:1rem}
+    header p{max-width:800px;margin:0 auto;font-size:1.1rem}
+    .container{max-width:900px;margin:2rem auto;padding:1rem;background:#fff;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,.05)}
+    .blog-header{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:2rem}
+    .blog-header img{max-height:60px}
+    .blog-header h1{margin:0;font-size:2rem}
+    .story{font-size:1rem;line-height:1.6;margin-bottom:1.5rem}
+    .button-container{text-align:center;margin-top:2rem}
+    a.button{display:inline-block;padding:.6rem 1.4rem;background:#7c4dff;color:#fff;text-decoration:none;border-radius:8px;font-weight:bold}
+  </style>
+</head>
+<body>
+  <div class='topbar'>
+    <a id='backBtn' href='blog-software.html?lang=ro' data-i18n='back'></a>
+    <a id='blogBtn' href='blog-software.html?lang=ro' data-i18n='blog'></a>
+    <select id='languageSelect'>
+      <option value='ro'>Română</option><option value='en'>English</option>
+      <option value='fr'>Français</option><option value='es'>Español</option>
+      <option value='de'>Deutsch</option><option value='it'>Italiano</option>
+    </select>
+  </div>
+
+  <header>
+    <h1 data-i18n='headerTitle'></h1>
+    <p data-i18n='headerDesc'></p>
+  </header>
+
+  <div class='container'>
+    <div class='blog-header'>
+      <img src='img/clickup-logo.png' alt='ClickUp logo'>
+      <h1 data-i18n='title'></h1>
+    </div>
+
+    <div class='story' data-i18n='story1'></div>
+    <div class='story' data-i18n='story2'></div>
+    <div class='story' data-i18n='story3'></div>
+
+    <div class='button-container'>
+      <a href='https://clickup.com/partners' target='_blank' class='button' data-i18n='affiliateBtn'></a>
+    </div>
+  </div>
+
+<script>
+const t = {
+  ro: {
+    back: "Înapoi", blog: "Blog", title: "ClickUp Blog", headerTitle: "ClickUp",
+    headerDesc: "ClickUp este o platformă puternică de management al proiectelor și sarcinilor, utilizată de echipe din întreaga lume pentru a colabora eficient și a livra mai rapid.",
+    story1: "Elena, manager de echipă într-un startup tech din România, a integrat ClickUp pentru a centraliza toate sarcinile, proiectele și rapoartele săptămânale. În mai puțin de două luni, timpul petrecut pe coordonări și status-uri a scăzut cu 40%, iar echipa s-a declarat mai implicată și mai clar orientată către obiective.",
+    story2: "Un birou de arhitectură din Germania folosește ClickUp pentru a planifica fiecare etapă a proiectelor rezidențiale. De la aprobări și schițe până la execuție, totul este urmărit în timp real. Echipa a redus întârzierile cu peste 25% într-un singur trimestru.",
+    story3: "Giulia, consultantă de business în Italia, utilizează ClickUp pentru a gestiona peste 20 de clienți activi, fiecare cu propriile deadline-uri, note și taskuri recurente. Cu dashboard-urile personalizate, reușește să prioritizeze eficient și să nu rateze niciun livrabil.",
+    affiliateBtn: "Vezi afiliere"
+  },
+  en: {
+    back: "Back", blog: "Blog", title: "ClickUp Blog", headerTitle: "ClickUp",
+    headerDesc: "ClickUp is a powerful task and project management platform used by global teams to collaborate, plan and deliver work efficiently.",
+    story1: "Elena, a team manager at a Romanian tech startup, implemented ClickUp to centralize all tasks, goals, and weekly check-ins. Within two months, meeting times dropped by 40%, and the team reported better focus and alignment toward objectives.",
+    story2: "An architecture office in Germany uses ClickUp to plan every stage of residential projects. From approvals to sketches to execution, all progress is tracked in real-time. They reduced project delays by over 25% in a single quarter.",
+    story3: "Giulia, a business consultant in Italy, manages 20+ active clients using ClickUp to track deadlines, notes and recurring tasks. With custom dashboards, she stays organized and never misses a delivery.",
+    affiliateBtn: "View Affiliate"
+  },
+  fr: {
+    back: "Retour", blog: "Blog", title: "Blog ClickUp", headerTitle: "ClickUp",
+    headerDesc: "ClickUp est une plateforme puissante de gestion des tâches et projets, utilisée par des équipes dans le monde entier pour planifier et collaborer efficacement.",
+    story1: "Elena, responsable d’équipe dans une startup tech roumaine, a mis en place ClickUp pour centraliser les tâches, objectifs et points hebdomadaires. En moins de deux mois, les réunions ont été réduites de 40% et l’équipe a gagné en clarté et efficacité.",
+    story2: "Un cabinet d’architecture en Allemagne utilise ClickUp pour planifier chaque étape de ses projets résidentiels. L’ensemble du processus est suivi en temps réel. Les retards ont été réduits de plus de 25% en un trimestre.",
+    story3: "Giulia, consultante italienne en gestion, suit plus de 20 clients actifs dans ClickUp, avec des tableaux de bord personnalisés pour ne rien oublier. Les livrables sont toujours à temps.",
+    affiliateBtn: "Voir l'affiliation"
+  },
+  es: {
+    back: "Atrás", blog: "Blog", title: "Blog ClickUp", headerTitle: "ClickUp",
+    headerDesc: "ClickUp es una plataforma de gestión de proyectos y tareas potente, usada por equipos en todo el mundo para planificar y trabajar en equipo.",
+    story1: "Elena, líder de equipo en una startup rumana, implementó ClickUp para centralizar las tareas y metas. En solo dos meses, redujo el tiempo de reuniones y mejoró la productividad del equipo.",
+    story2: "Un estudio de arquitectura en Alemania utiliza ClickUp para gestionar cada fase del proyecto, desde bocetos hasta ejecución. Han logrado reducir retrasos en más de un 25% en un trimestre.",
+    story3: "Giulia, consultora italiana, administra más de 20 clientes con ClickUp. Gracias a los tableros personalizados, nunca pierde una fecha límite.",
+    affiliateBtn: "Ver afiliación"
+  },
+  de: {
+    back: "Zurück", blog: "Blog", title: "ClickUp Blog", headerTitle: "ClickUp",
+    headerDesc: "ClickUp ist eine leistungsstarke Plattform für Aufgaben- und Projektmanagement, die weltweit von Teams zur besseren Zusammenarbeit genutzt wird.",
+    story1: "Elena, Teamleiterin in einem rumänischen Start-up, setzte ClickUp ein, um Aufgaben, Ziele und Meetings zu bündeln. Nach zwei Monaten wurde die Meetingzeit um 40% reduziert.",
+    story2: "Ein Architekturbüro in Deutschland plant alle Bauphasen mit ClickUp. Dank Echtzeit-Tracking wurden Projektverzögerungen um 25% reduziert.",
+    story3: "Giulia, Unternehmensberaterin aus Italien, betreut über 20 Kunden mit ClickUp. Durch individuelle Dashboards behält sie stets den Überblick.",
+    affiliateBtn: "Partnerprogramm ansehen"
+  },
+  it: {
+    back: "Indietro", blog: "Blog", title: "Blog ClickUp", headerTitle: "ClickUp",
+    headerDesc: "ClickUp è una potente piattaforma per la gestione di attività e progetti, usata in tutto il mondo da team che vogliono lavorare in modo smart.",
+    story1: "Elena, manager in una startup tecnologica rumena, ha implementato ClickUp per centralizzare le attività e gli obiettivi. In due mesi ha ridotto del 40% il tempo delle riunioni settimanali.",
+    story2: "Uno studio di architettura in Germania usa ClickUp per pianificare ogni fase dei progetti residenziali. Grazie alla tracciabilità, i ritardi si sono ridotti del 25%.",
+    story3: "Giulia, consulente d’azienda in Italia, gestisce oltre 20 clienti attivi con ClickUp, sfruttando dashboard personalizzati e promemoria automatici per consegne puntuali.",
+    affiliateBtn: "Visualizza affiliazione"
+  }
+};
+function setLang(lang){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key=el.getAttribute('data-i18n');
+    if(t[lang]&&t[lang][key]) el.textContent=t[lang][key];
+  });
+  document.getElementById('backBtn').href=`blog-software.html?lang=${lang}`;
+  document.getElementById('blogBtn').href=`blog-software.html?lang=${lang}`;
+}
+const lang=new URLSearchParams(location.search).get('lang')||'ro';
+document.getElementById('languageSelect').value=lang;
+setLang(lang);
+document.getElementById('languageSelect').addEventListener('change',e=>{
+  location.search=`?lang=${e.target.value}`;
+});
+</script>
+</body>
+</html>

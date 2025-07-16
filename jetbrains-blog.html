@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang='ro'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+  <title>JetBrains Blog</title>
+  <link href='https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap' rel='stylesheet'>
+  <style>
+    body{font-family:'DM Sans',sans-serif;margin:0;background:#f9fafb;color:#2f2f55}
+    .topbar{display:flex;justify-content:flex-end;align-items:center;padding:1rem;gap:1rem;background:#fff}
+    .topbar select,.topbar a{padding:.4rem .75rem;font-size:.9rem;border-radius:6px;border:1px solid #ccc;text-decoration:none;color:#000;background:#fff}
+    header{background:url('img/javier-miranda-MrWOCGKFVDg-unsplash.jpg') center/cover no-repeat;padding:4rem 2rem;color:#fff;text-align:center}
+    header h1{font-size:2.5rem;margin-bottom:1rem}
+    header p{max-width:800px;margin:0 auto;font-size:1.1rem}
+    .container{max-width:900px;margin:2rem auto;padding:1rem;background:#fff;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,.05)}
+    .blog-header{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:2rem}
+    .blog-header img{max-height:60px}
+    .blog-header h1{margin:0;font-size:2rem}
+    .story{font-size:1rem;line-height:1.6;margin-bottom:1.5rem}
+    .button-container{text-align:center;margin-top:2rem}
+    a.button{display:inline-block;padding:.6rem 1.4rem;background:#ff6600;color:#fff;text-decoration:none;border-radius:8px;font-weight:bold}
+  </style>
+</head>
+<body>
+  <div class='topbar'>
+    <a id='backBtn' href='blog-software.html?lang=ro' data-i18n='back'></a>
+    <a id='blogBtn' href='blog-software.html?lang=ro' data-i18n='blog'></a>
+    <select id='languageSelect'>
+      <option value='ro'>Română</option><option value='en'>English</option>
+      <option value='fr'>Français</option><option value='es'>Español</option>
+      <option value='de'>Deutsch</option><option value='it'>Italiano</option>
+    </select>
+  </div>
+
+  <header>
+    <h1 data-i18n='headerTitle'></h1>
+    <p data-i18n='headerDesc'></p>
+  </header>
+
+  <div class='container'>
+    <div class='blog-header'>
+      <img src='img/jetbrains-logo.png' alt='JetBrains logo'>
+      <h1 data-i18n='title'></h1>
+    </div>
+
+    <div class='story' data-i18n='story1'></div>
+    <div class='story' data-i18n='story2'></div>
+    <div class='story' data-i18n='story3'></div>
+
+    <div class='button-container'>
+      <a href='https://www.jetbrains.com/store/partners' target='_blank' class='button' data-i18n='affiliateBtn'></a>
+    </div>
+  </div>
+
+<script>
+const t = {
+  ro: {
+    back: "Înapoi", blog: "Blog", title: "JetBrains Blog", headerTitle: "JetBrains",
+    headerDesc: "JetBrains este compania din spatele unor IDE-uri celebre precum IntelliJ IDEA, PyCharm sau WebStorm – unelte esențiale pentru dezvoltatori moderni.",
+    story1: "Mihai, dezvoltator Java din București, folosește IntelliJ IDEA de la JetBrains de peste 4 ani. Spune că funcțiile inteligente de completare și integrarea perfectă cu Maven îi economisesc zilnic ore de lucru. De când a trecut la JetBrains, codul său e mai curat și mai bine organizat.",
+    story2: "O echipă de dezvoltare web din Germania utilizează WebStorm pentru toate proiectele frontend. Prin integrarea cu Git și suportul complet pentru TypeScript și React, reușesc să mențină un standard de calitate ridicat și un flux de lucru fluent.",
+    story3: "Laura, studentă la informatică în Cluj, a început să folosească PyCharm pentru proiectele ei Python. A fost impresionată de debuggerul integrat și de suportul pentru environment-uri virtuale. Acum se simte mult mai încrezătoare în lucrul cu proiecte complexe.",
+    affiliateBtn: "Vezi afiliere"
+  },
+  en: {
+    back: "Back", blog: "Blog", title: "JetBrains Blog", headerTitle: "JetBrains",
+    headerDesc: "JetBrains creates powerful IDEs like IntelliJ IDEA, PyCharm, WebStorm and more — tools that empower modern developers.",
+    story1: "Mihai, a Java developer in Romania, has been using IntelliJ IDEA for over 4 years. He credits JetBrains for cleaner code and faster development, thanks to smart autocomplete and Maven integration.",
+    story2: "A web team in Germany uses WebStorm for all frontend work. With Git integration and full TypeScript support, they streamline development and ensure high-quality standards.",
+    story3: "Laura, a CS student in Cluj, uses PyCharm for her Python coursework. She loves the built-in debugger and virtualenv support. It gave her confidence to tackle real-world apps.",
+    affiliateBtn: "View Affiliate"
+  },
+  fr: {
+    back: "Retour", blog: "Blog", title: "Blog JetBrains", headerTitle: "JetBrains",
+    headerDesc: "JetBrains propose des IDE puissants tels que IntelliJ IDEA, PyCharm ou WebStorm, appréciés des développeurs du monde entier.",
+    story1: "Mihai, développeur Java en Roumanie, utilise IntelliJ IDEA depuis des années. Il apprécie la productivité accrue qu’offre JetBrains.",
+    story2: "Une équipe allemande développe tous ses frontends sous WebStorm. L'intégration Git est un plus précieux.",
+    story3: "Laura, étudiante à Cluj, a amélioré ses projets Python grâce à PyCharm. Elle se sent désormais plus à l’aise avec le code.",
+    affiliateBtn: "Voir l'affiliation"
+  },
+  es: {
+    back: "Atrás", blog: "Blog", title: "Blog JetBrains", headerTitle: "JetBrains",
+    headerDesc: "JetBrains desarrolla herramientas de desarrollo como IntelliJ, PyCharm y WebStorm, esenciales para muchos programadores.",
+    story1: "Mihai, programador en Rumanía, usa IntelliJ IDEA desde hace años. Dice que le ahorra mucho tiempo y mejora su código.",
+    story2: "Un equipo alemán usa WebStorm para frontend. Gracias a JetBrains, el flujo de trabajo es eficiente y ordenado.",
+    story3: "Laura, estudiante en Cluj, empezó con PyCharm para sus prácticas de Python. Ahora programa con más seguridad.",
+    affiliateBtn: "Ver afiliación"
+  },
+  de: {
+    back: "Zurück", blog: "Blog", title: "JetBrains Blog", headerTitle: "JetBrains",
+    headerDesc: "JetBrains entwickelt beliebte Entwicklungsumgebungen wie IntelliJ IDEA, PyCharm und WebStorm.",
+    story1: "Mihai aus Rumänien nutzt IntelliJ für Java-Projekte. Er spart täglich Zeit durch intelligente Funktionen.",
+    story2: "Ein Webteam aus Deutschland verwendet WebStorm für React-Projekte. Die Integration mit Git spart Aufwand.",
+    story3: "Laura, Informatikstudentin aus Cluj, nutzt PyCharm für ihre Python-Aufgaben. Debugging ist nun einfacher denn je.",
+    affiliateBtn: "Partnerprogramm ansehen"
+  },
+  it: {
+    back: "Indietro", blog: "Blog", title: "Blog JetBrains", headerTitle: "JetBrains",
+    headerDesc: "JetBrains sviluppa IDE avanzati come IntelliJ IDEA, WebStorm, PyCharm e altri strumenti per programmatori moderni.",
+    story1: "Mihai, sviluppatore Java, utilizza IntelliJ da anni. Dice che migliora la qualità e velocità del suo lavoro.",
+    story2: "Un team tedesco lavora con WebStorm. L'integrazione con Git è perfetta per progetti TypeScript.",
+    story3: "Laura, studentessa a Cluj, ha scelto PyCharm per i suoi progetti Python. L’IDE l’ha aiutata a imparare più in fretta.",
+    affiliateBtn: "Visualizza affiliazione"
+  }
+};
+function setLang(lang){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key=el.getAttribute('data-i18n');
+    if(t[lang]&&t[lang][key]) el.textContent=t[lang][key];
+  });
+  document.getElementById('backBtn').href=`blog-software.html?lang=${lang}`;
+  document.getElementById('blogBtn').href=`blog-software.html?lang=${lang}`;
+}
+const lang=new URLSearchParams(location.search).get('lang')||'ro';
+document.getElementById('languageSelect').value=lang;
+setLang(lang);
+document.getElementById('languageSelect').addEventListener('change',e=>{
+  location.search=`?lang=${e.target.value}`;
+});
+</script>
+</body>
+</html>

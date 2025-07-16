@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Evernote Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body{font-family:'DM Sans',sans-serif;margin:0;background:#f9fafb;color:#2f2f55}
+    .topbar{display:flex;justify-content:flex-end;align-items:center;padding:1rem;gap:1rem;background:#fff}
+    .topbar select,.topbar a{padding:.4rem .75rem;font-size:.9rem;border-radius:6px;border:1px solid #ccc;text-decoration:none;color:#000;background:#fff}
+    header{background:url('img/javier-miranda-MrWOCGKFVDg-unsplash.jpg') center/cover no-repeat;padding:4rem 2rem;color:#fff;text-align:center}
+    header h1{font-size:2.5rem;margin-bottom:1rem}
+    header p{max-width:800px;margin:0 auto;font-size:1.1rem}
+    .container{max-width:900px;margin:2rem auto;padding:1rem;background:#fff;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,.05)}
+    .blog-header{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:2rem}
+    .blog-header img{max-height:60px}
+    .blog-header h1{margin:0;font-size:2rem}
+    .story{font-size:1rem;line-height:1.6;margin-bottom:1.5rem}
+    .button-container{text-align:center;margin-top:2rem}
+    a.button{display:inline-block;padding:.6rem 1.4rem;background:#2dbe60;color:#fff;text-decoration:none;border-radius:8px;font-weight:bold}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a id="backBtn" href="blog-software.html?lang=ro" data-i18n="back"></a>
+    <a id="blogBtn" href="blog-software.html?lang=ro" data-i18n="blog"></a>
+    <select id="languageSelect">
+      <option value="ro">Română</option><option value="en">English</option>
+      <option value="fr">Français</option><option value="es">Español</option>
+      <option value="de">Deutsch</option><option value="it">Italiano</option>
+    </select>
+  </div>
+
+  <header>
+    <h1 data-i18n="headerTitle"></h1>
+    <p data-i18n="headerDesc"></p>
+  </header>
+
+  <div class="container">
+    <div class="blog-header">
+      <img src="img/evernote-logo.png" alt="Evernote logo">
+      <h1 data-i18n="title"></h1>
+    </div>
+
+    <div class="story" data-i18n="story1"></div>
+    <div class="story" data-i18n="story2"></div>
+    <div class="story" data-i18n="story3"></div>
+
+    <div class="button-container">
+      <a href="https://evernote.com/partners/affiliates" target="_blank" class="button" data-i18n="affiliateBtn"></a>
+    </div>
+  </div>
+
+<script>
+const t={
+  ro:{
+    back:"Înapoi",blog:"Blog",title:"Evernote Blog",headerTitle:"Evernote",
+    headerDesc:"Evernote este aplicația ideală pentru notițe digitale, organizare personală și gestionarea sarcinilor. Este folosit de milioane de persoane pentru a-și structura ideile, proiectele și viața.",
+    story1:"Bianca, o arhitectă din România, folosește Evernote pentru a documenta ședințele cu clienții, a aduna inspirații vizuale și a-și organiza schițele. De când a integrat Evernote în fluxul de lucru, nu a mai pierdut niciun detaliu important, iar clienții apreciază livrările clare și bine structurate.",
+    story2:"Un profesor universitar din Italia își planifică cursurile și cercetările științifice în Evernote. Folosește etichetele pentru a organiza articolele, iar funcția de căutare rapidă îl ajută să găsească imediat citările sau notițele vechi din arhivă.",
+    story3:"Carlos, antreprenor din Spania, își gestionează întreaga activitate zilnică în Evernote – de la listele de sarcini, la note vocale, chitanțe scanate și planuri de afaceri. Spune că fără Evernote ar uita jumătate din ideile care i-au adus succesul.",
+    affiliateBtn:"Vezi afiliere"
+  },
+  en:{
+    back:"Back",blog:"Blog",title:"Evernote Blog",headerTitle:"Evernote",
+    headerDesc:"Evernote is the ultimate digital notebook for note-taking, personal organization, and task management. Millions rely on it to organize their thoughts, projects, and lives.",
+    story1:"Bianca, an architect from Romania, uses Evernote to document client meetings, gather visual inspiration, and organize her sketches. Since integrating it into her workflow, she hasn’t missed a single key detail, and her clients praise her for her well-organized project delivery.",
+    story2:"A university professor in Italy plans courses and scientific research inside Evernote. He tags articles meticulously and uses the fast search to retrieve old citations and notes within seconds.",
+    story3:"Carlos, an entrepreneur from Spain, manages his entire day inside Evernote—from to-do lists to scanned receipts and business strategies. He says Evernote helps him remember the ideas that built his company.",
+    affiliateBtn:"View Affiliate"
+  },
+  fr:{
+    back:"Retour",blog:"Blog",title:"Blog Evernote",headerTitle:"Evernote",
+    headerDesc:"Evernote est l’outil parfait pour la prise de notes, l’organisation personnelle et la gestion de tâches. Des millions d’utilisateurs s’en servent pour structurer leurs idées, projets et vie quotidienne.",
+    story1:"Bianca, architecte en Roumanie, utilise Evernote pour prendre des notes de réunions, rassembler des inspirations visuelles et organiser ses esquisses. Depuis l'intégration de l'app, elle ne rate aucun détail et ses clients louent sa rigueur.",
+    story2:"Un professeur d’université en Italie planifie ses cours et ses recherches dans Evernote. Il étiquette soigneusement ses articles et retrouve ses anciennes citations en quelques secondes grâce à la recherche rapide.",
+    story3:"Carlos, entrepreneur espagnol, gère toute son activité dans Evernote : listes, reçus scannés, stratégies. Il affirme qu’Evernote l’aide à ne jamais perdre les idées qui font avancer son entreprise.",
+    affiliateBtn:"Voir l'affiliation"
+  },
+  es:{
+    back:"Atrás",blog:"Blog",title:"Blog Evernote",headerTitle:"Evernote",
+    headerDesc:"Evernote es la mejor aplicación para tomar notas, organizar ideas y gestionar tareas. Millones la usan para estructurar proyectos y vida personal.",
+    story1:"Bianca, arquitecta rumana, usa Evernote para registrar reuniones, guardar referencias visuales y organizar bocetos. Desde que lo integró, sus entregas son impecables y sus clientes están encantados.",
+    story2:"Un profesor universitario en Italia planifica sus clases e investigaciones dentro de Evernote. Las etiquetas y la búsqueda rápida le permiten encontrar notas antiguas al instante.",
+    story3:"Carlos, empresario español, organiza su día completo en Evernote: tareas, facturas escaneadas, grabaciones. Dice que Evernote es su memoria externa para el éxito.",
+    affiliateBtn:"Ver afiliación"
+  },
+  de:{
+    back:"Zurück",blog:"Blog",title:"Evernote Blog",headerTitle:"Evernote",
+    headerDesc:"Evernote ist die ideale App für digitale Notizen, Aufgabenorganisation und persönliches Wissensmanagement. Millionen Menschen nutzen sie für Arbeit und Alltag.",
+    story1:"Bianca, Architektin aus Rumänien, dokumentiert mit Evernote Kundenbesprechungen, sammelt visuelle Inspirationen und strukturiert ihre Skizzen. Ihre Projekte sind besser organisiert und werden von Kunden hoch geschätzt.",
+    story2:"Ein Universitätsprofessor in Italien plant seine Vorlesungen und Forschungsprojekte mit Evernote. Dank Schlagwörtern und Schnellsuche findet er Zitate und Notizen in Sekundenschnelle.",
+    story3:"Carlos, Unternehmer aus Spanien, organisiert mit Evernote seine gesamte Arbeitswoche: Aufgabenlisten, Belege, Sprachnotizen und Businesspläne. Ohne die App, sagt er, wären viele seiner Ideen verloren gegangen.",
+    affiliateBtn:"Partnerprogramm ansehen"
+  },
+  it:{
+    back:"Indietro",blog:"Blog",title:"Blog Evernote",headerTitle:"Evernote",
+    headerDesc:"Evernote è l’app ideale per prendere appunti, gestire compiti e organizzare pensieri e progetti. Milioni di utenti la usano ogni giorno.",
+    story1:"Bianca, architetta rumena, usa Evernote per prendere appunti in riunione, raccogliere ispirazioni e organizzare schizzi. Da quando lo usa, le sue consegne sono impeccabili e i clienti soddisfatti.",
+    story2:"Un professore universitario in Italia prepara lezioni e ricerche in Evernote. Con etichette e ricerca veloce trova citazioni e note in pochi istanti.",
+    story3:"Carlos, imprenditore spagnolo, gestisce tutto con Evernote: liste, ricevute, note vocali, piani. Dice che Evernote ha salvato molte idee che l’hanno portato al successo.",
+    affiliateBtn:"Visualizza affiliazione"
+  }
+};
+function setLang(lang){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key=el.getAttribute('data-i18n');
+    if(t[lang]&&t[lang][key]) el.textContent=t[lang][key];
+  });
+  document.getElementById('backBtn').href=`blog-software.html?lang=${lang}`;
+  document.getElementById('blogBtn').href=`blog-software.html?lang=${lang}`;
+}
+const lang=new URLSearchParams(location.search).get('lang')||'ro';
+document.getElementById('languageSelect').value=lang;
+setLang(lang);
+document.getElementById('languageSelect').addEventListener('change',e=>{
+  location.search=`?lang=${e.target.value}`;
+});
+</script>
+</body>
+</html>

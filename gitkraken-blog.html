@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang='ro'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+  <title>GitKraken Blog</title>
+  <link href='https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap' rel='stylesheet'>
+  <style>
+    body{font-family:'DM Sans',sans-serif;margin:0;background:#f9fafb;color:#2f2f55}
+    .topbar{display:flex;justify-content:flex-end;align-items:center;padding:1rem;gap:1rem;background:#fff}
+    .topbar select,.topbar a{padding:.4rem .75rem;font-size:.9rem;border-radius:6px;border:1px solid #ccc;text-decoration:none;color:#000;background:#fff}
+    header{background:url('img/javier-miranda-MrWOCGKFVDg-unsplash.jpg') center/cover no-repeat;padding:4rem 2rem;color:#fff;text-align:center}
+    header h1{font-size:2.5rem;margin-bottom:1rem}
+    header p{max-width:800px;margin:0 auto;font-size:1.1rem}
+    .container{max-width:900px;margin:2rem auto;padding:1rem;background:#fff;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,.05)}
+    .blog-header{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:2rem}
+    .blog-header img{max-height:60px}
+    .blog-header h1{margin:0;font-size:2rem}
+    .story{font-size:1rem;line-height:1.6;margin-bottom:1.5rem}
+    .button-container{text-align:center;margin-top:2rem}
+    a.button{display:inline-block;padding:.6rem 1.4rem;background:#5c2d91;color:#fff;text-decoration:none;border-radius:8px;font-weight:bold}
+  </style>
+</head>
+<body>
+  <div class='topbar'>
+    <a id='backBtn' href='blog-software.html?lang=ro' data-i18n='back'></a>
+    <a id='blogBtn' href='blog-software.html?lang=ro' data-i18n='blog'></a>
+    <select id='languageSelect'>
+      <option value='ro'>Română</option><option value='en'>English</option>
+      <option value='fr'>Français</option><option value='es'>Español</option>
+      <option value='de'>Deutsch</option><option value='it'>Italiano</option>
+    </select>
+  </div>
+
+  <header>
+    <h1 data-i18n='headerTitle'></h1>
+    <p data-i18n='headerDesc'></p>
+  </header>
+
+  <div class='container'>
+    <div class='blog-header'>
+      <img src='img/gitkraken-logo.png' alt='GitKraken logo'>
+      <h1 data-i18n='title'></h1>
+    </div>
+
+    <div class='story' data-i18n='story1'></div>
+    <div class='story' data-i18n='story2'></div>
+    <div class='story' data-i18n='story3'></div>
+
+    <div class='button-container'>
+      <a href='https://www.gitkraken.com/affiliate-program' target='_blank' class='button' data-i18n='affiliateBtn'></a>
+    </div>
+  </div>
+
+<script>
+const t = {
+  ro: {
+    back: "Înapoi", blog: "Blog", title: "GitKraken Blog", headerTitle: "GitKraken",
+    headerDesc: "GitKraken este un client Git vizual extrem de apreciat, creat pentru dezvoltatori care vor să gestioneze proiecte într-un mod intuitiv și eficient.",
+    story1: "Vlad, dezvoltator full-stack din Iași, folosește GitKraken pentru a gestiona ramificările și colaborarea în proiecte open-source. Interfața grafică îl ajută să vizualizeze clar istoricul commit-urilor. De când a trecut la GitKraken, spune că timpul petrecut în rezolvarea conflictelor de versiune s-a redus cu peste 30%.",
+    story2: "O echipă de startup din Franța a implementat GitKraken pentru toți inginerii lor. Cu integrarea Jira și GitHub, procesele dev sunt mai clare și mai bine documentate. Onboarding-ul noilor membri este mai rapid, iar echipa raportează o creștere a productivității cu 15%.",
+    story3: "Elisa, studentă la informatică în Milano, a descoperit GitKraken printr-un hackathon. Acum îl folosește pentru toate proiectele academice, colaborând ușor cu colegii. Spune că a învățat mai bine Git datorită vizualizării ramurilor și fluxului clar.",
+    affiliateBtn: "Vezi afiliere"
+  },
+  en: {
+    back: "Back", blog: "Blog", title: "GitKraken Blog", headerTitle: "GitKraken",
+    headerDesc: "GitKraken is a powerful visual Git client designed for developers who want a clean, intuitive way to manage version control.",
+    story1: "Vlad, a full-stack developer in Romania, uses GitKraken to manage branches and work on open-source projects. The clear visual interface helps him avoid merge errors and saves him 30% of the time normally spent resolving conflicts.",
+    story2: "A French startup rolled out GitKraken across their dev team. Integration with Jira and GitHub has made workflows smoother and easier to track. New hires onboard faster and productivity is visibly improved.",
+    story3: "Elisa, a computer science student in Milan, discovered GitKraken at a hackathon. She now uses it for academic projects and says it helped her truly understand Git by visualizing branches clearly.",
+    affiliateBtn: "View Affiliate"
+  },
+  fr: {
+    back: "Retour", blog: "Blog", title: "Blog GitKraken", headerTitle: "GitKraken",
+    headerDesc: "GitKraken est un client Git visuel destiné aux développeurs souhaitant une gestion intuitive du code source.",
+    story1: "Vlad, développeur full-stack, utilise GitKraken pour visualiser les branches et gérer les conflits. Il gagne du temps chaque semaine.",
+    story2: "Une startup en France a intégré GitKraken pour sa compatibilité avec GitHub et Jira. Les nouveaux employés l’adoptent rapidement.",
+    story3: "Elisa, étudiante en informatique à Milan, a appris Git grâce à GitKraken. L’interface visuelle l’aide à mieux comprendre les flux.",
+    affiliateBtn: "Voir l'affiliation"
+  },
+  es: {
+    back: "Atrás", blog: "Blog", title: "Blog GitKraken", headerTitle: "GitKraken",
+    headerDesc: "GitKraken es un cliente Git visual intuitivo para desarrolladores que buscan claridad en el control de versiones.",
+    story1: "Vlad, desarrollador en Rumanía, usa GitKraken para ramas y conflictos. Dice que ahorra mucho tiempo con su interfaz clara.",
+    story2: "Una startup francesa adoptó GitKraken por su integración con GitHub y Jira. Mejora el trabajo en equipo y el seguimiento.",
+    story3: "Elisa, estudiante en Milán, aprendió Git visualmente con GitKraken. Le ayuda en todos sus proyectos académicos.",
+    affiliateBtn: "Ver afiliación"
+  },
+  de: {
+    back: "Zurück", blog: "Blog", title: "GitKraken Blog", headerTitle: "GitKraken",
+    headerDesc: "GitKraken ist ein visueller Git-Client, der Entwicklern hilft, Codeversionen intuitiv zu verwalten.",
+    story1: "Vlad, Fullstack-Entwickler aus Rumänien, nutzt GitKraken, um Branches zu verwalten. Er spart über 30 % Zeit bei Merge-Konflikten.",
+    story2: "Ein französisches Startup setzt auf GitKraken. Dank Jira- und GitHub-Integration läuft das Dev-Team strukturierter.",
+    story3: "Elisa, Informatikstudentin aus Mailand, hat Git besser verstanden, seit sie GitKraken im Studium verwendet.",
+    affiliateBtn: "Partnerprogramm ansehen"
+  },
+  it: {
+    back: "Indietro", blog: "Blog", title: "Blog GitKraken", headerTitle: "GitKraken",
+    headerDesc: "GitKraken è un client Git visivo per gestire progetti in modo chiaro e collaborativo.",
+    story1: "Vlad, sviluppatore rumeno, usa GitKraken per risparmiare tempo nella gestione delle ramificazioni e dei conflitti.",
+    story2: "Una startup in Francia ha scelto GitKraken per la sua integrazione con Jira. Il team lavora con maggiore ordine.",
+    story3: "Elisa, studentessa a Milano, ha scoperto GitKraken in un hackathon. Lo usa per ogni progetto universitario.",
+    affiliateBtn: "Visualizza affiliazione"
+  }
+};
+function setLang(lang){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key=el.getAttribute('data-i18n');
+    if(t[lang]&&t[lang][key]) el.textContent=t[lang][key];
+  });
+  document.getElementById('backBtn').href=`blog-software.html?lang=${lang}`;
+  document.getElementById('blogBtn').href=`blog-software.html?lang=${lang}`;
+}
+const lang=new URLSearchParams(location.search).get('lang')||'ro';
+document.getElementById('languageSelect').value=lang;
+setLang(lang);
+document.getElementById('languageSelect').addEventListener('change',e=>{
+  location.search=`?lang=${e.target.value}`;
+});
+</script>
+</body>
+</html>

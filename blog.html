@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog</title>
+ <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+    }
+    header {
+      background-image: url('img/javier-miranda-MrWOCGKFVDg-unsplash.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .topbar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+    .topbar select, .topbar button {
+      margin-left: 10px;
+      padding: 6px 10px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    h1 {
+      font-size: 36px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    .entry {
+      background: #fff;
+      padding: 15px 20px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      border-left: 5px solid #0077cc;
+    }
+    .entry a {
+      font-size: 18px;
+      text-decoration: none;
+      color: #0077cc;
+    }
+    .entry a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<div class="topbar">
+  <a id="mainLink" class="main-btn" href="pagina-afiliere.html?lang=ro">⬅️ <span data-i18n="back">Înapoi</span></a>
+  <select id="languageSelect">
+    <option value="ro">Română</option>
+    <option value="en">English</option>
+    <option value="fr">Français</option>
+    <option value="es">Español</option>
+    <option value="de">Deutsch</option>
+    <option value="it">Italiano</option>
+  </select>
+</div>
+
+<header>
+  <h1 data-i18n="blogTitle">Blog</h1>
+  <p data-i18n="blogSubtitle">Articole despre cele mai bune tool-uri AI pe care le promovăm.</p>
+</header>
+
+<div class="container">
+  <div class="entry"><a href="notion-blog.html?lang=ro" class="blog-link">Notion AI</a></div>
+  <div class="entry"><a href="pictory-blog.html?lang=ro" class="blog-link">Pictory AI</a></div>
+  <div class="entry"><a href="sudowrite-blog.html?lang=ro" class="blog-link">Sudowrite</a></div>
+  <div class="entry"><a href="cleve-blog.html?lang=ro" class="blog-link">Cleve AI</a></div>
+  <div class="entry"><a href="taskade-blog.html?lang=ro" class="blog-link">Taskade</a></div>
+  <div class="entry"><a href="frase-blog.html?lang=ro" class="blog-link">Frase AI</a></div>
+  <div class="entry"><a href="notis-blog.html?lang=ro" class="blog-link">Notis AI</a></div>
+</div>
+
+<script>
+  const translations = {
+    ro: {
+      blogTitle: "Blog",
+      blogSubtitle: "Articole despre cele mai bune tool-uri AI pe care le promovăm.",
+      back: "Înapoi"
+    },
+    en: {
+      blogTitle: "Blog",
+      blogSubtitle: "Articles about the best AI tools we promote.",
+      back: "Back"
+    },
+    fr: {
+      blogTitle: "Blog",
+      blogSubtitle: "Articles sur les meilleurs outils IA que nous promouvons.",
+      back: "Retour"
+    },
+    de: {
+      blogTitle: "Blog",
+      blogSubtitle: "Artikel über die besten KI-Tools, die wir empfehlen.",
+      back: "Zurück"
+    },
+    es: {
+      blogTitle: "Blog",
+      blogSubtitle: "Artículos sobre las mejores herramientas IA que promovemos.",
+      back: "Volver"
+    },
+    it: {
+      blogTitle: "Blog",
+      blogSubtitle: "Articoli sui migliori strumenti AI che promuoviamo.",
+      back: "Indietro"
+    }
+  };
+
+  function updateLanguage(lang) {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (translations[lang][key]) {
+        el.textContent = translations[lang][key];
+      }
+    });
+
+    const mainLink = document.getElementById("mainLink");
+    mainLink.href = `pagina-afiliere.html?lang=${lang}`;
+
+    document.querySelectorAll(".blog-link").forEach(link => {
+      const href = new URL(link.href);
+      href.searchParams.set("lang", lang);
+      link.href = href.toString();
+    });
+  }
+
+  const currentLang = new URLSearchParams(window.location.search).get('lang') || 'ro';
+  document.getElementById("languageSelect").value = currentLang;
+  updateLanguage(currentLang);
+
+  document.getElementById("languageSelect").addEventListener("change", (e) => {
+    const selected = e.target.value;
+    const url = new URL(window.location.href);
+    url.searchParams.set("lang", selected);
+    window.location.href = url.toString();
+  });
+</script>
+
+</body>
+</html>

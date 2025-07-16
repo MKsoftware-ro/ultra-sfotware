@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CorelDRAW Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'DM Sans', sans-serif; margin: 0; background: #f9fafb; color: #2f2f55; }
+    .topbar { display: flex; justify-content: flex-end; align-items: center; padding: 1rem; gap: 1rem; background: #fff; }
+    .topbar select, .topbar a { padding: 0.4rem 0.75rem; font-size: 0.9rem; border-radius: 6px; border: 1px solid #ccc; text-decoration: none; color: #000; background: #fff; }
+    header { background: url('img/javier-miranda-MrWOCGKFVDg-unsplash.jpg') center/cover no-repeat; padding: 4rem 2rem; color: white; text-align: center; }
+    header h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    header p { max-width: 800px; margin: 0 auto; font-size: 1.1rem; }
+    .container { max-width: 900px; margin: 2rem auto; padding: 1rem; background: #fff; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .story { font-size: 1rem; line-height: 1.6; margin-bottom: 1.5rem; }
+    .blog-header { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 2rem; }
+    .blog-header img { max-height: 60px; }
+    .blog-header h1 { margin: 0; font-size: 2rem; }
+    .button-container { text-align: center; margin-top: 2rem; }
+    a.button { display: inline-block; padding: 0.6rem 1.4rem; background: #caa227; color: #fff; text-decoration: none; border-radius: 8px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a id="backBtn" href="blog-software.html?lang=ro" data-i18n="back">Înapoi</a>
+    <a id="blogBtn" href="blog-software.html?lang=ro" data-i18n="blog">Blog</a>
+    <select id="languageSelect">
+      <option value="ro">Română</option>
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+      <option value="es">Español</option>
+      <option value="de">Deutsch</option>
+      <option value="it">Italiano</option>
+    </select>
+  </div>
+
+  <header>
+    <h1 data-i18n="headerTitle">CorelDRAW</h1>
+    <p data-i18n="headerDesc">
+      CorelDRAW este un software de design grafic versatil, folosit pentru ilustrații vectoriale, layout-uri, tipărire și proiecte comerciale. Creat pentru profesioniști, oferă unelte avansate pentru precizie și control creativ deplin.
+    </p>
+  </header>
+
+  <div class="container">
+    <div class="blog-header">
+      <img src="img/coreldraw-logo.png" alt="CorelDRAW Logo" />
+      <h1 data-i18n="title">CorelDRAW Blog</h1>
+    </div>
+
+    <div class="story" data-i18n="story1">
+      Andreea, o ilustratoare din România, a descoperit CorelDRAW în timp ce căuta o soluție profesională pentru desen vectorial. Acum, toate materialele promoționale pe care le creează pentru clienți sunt realizate cu o precizie remarcabilă. Cu funcțiile de layout și tipărire integrate, a câștigat clienți constanți în industria publicitară.
+    </div>
+
+    <div class="story" data-i18n="story2">
+      O agenție de branding din Italia a adoptat CorelDRAW ca instrument principal în realizarea identităților vizuale. Designerii pot colabora pe fișiere complexe, optimizând fluxul de lucru și păstrând consistența vizuală în toate materialele. Proiectele de logo, broșuri și bannere sunt realizate rapid, fără a compromite calitatea.
+    </div>
+
+    <div class="story" data-i18n="story3">
+      Mihnea, un freelancer, a crescut cu 60% numărul de comenzi după ce a început să livreze proiecte în format CorelDRAW editabil. Clienții apreciază libertatea de a adapta ulterior designurile, iar el a devenit preferatul firmelor mici și startup-urilor care caută flexibilitate și control total asupra materialelor grafice.
+    </div>
+
+    <div class="button-container">
+      <a href="https://www.coreldraw.com/en/pages/affiliates/" class="button" target="_blank" data-i18n="affiliateBtn">Vezi afiliere</a>
+    </div>
+  </div>
+
+<script>
+
+const translations = {
+  ro: {
+    back: "Înapoi",
+    blog: "Blog",
+    title: "CorelDRAW Blog",
+    headerTitle: "CorelDRAW",
+    headerDesc: "CorelDRAW este un software de design grafic versatil, folosit pentru ilustrații vectoriale, layout-uri, tipărire și proiecte comerciale. Creat pentru profesioniști, oferă unelte avansate pentru precizie și control creativ deplin.",
+    story1: "Andreea, o ilustratoare din România, a descoperit CorelDRAW în timp ce căuta o soluție profesională pentru desen vectorial. Acum, toate materialele promoționale pe care le creează pentru clienți sunt realizate cu o precizie remarcabilă. Cu funcțiile de layout și tipărire integrate, a câștigat clienți constanți în industria publicitară.",
+    story2: "O agenție de branding din Italia a adoptat CorelDRAW ca instrument principal în realizarea identităților vizuale. Designerii pot colabora pe fișiere complexe, optimizând fluxul de lucru și păstrând consistența vizuală în toate materialele. Proiectele de logo, broșuri și bannere sunt realizate rapid, fără a compromite calitatea.",
+    story3: "Mihnea, un freelancer, a crescut cu 60% numărul de comenzi după ce a început să livreze proiecte în format CorelDRAW editabil. Clienții apreciază libertatea de a adapta ulterior designurile, iar el a devenit preferatul firmelor mici și startup-urilor care caută flexibilitate și control total asupra materialelor grafice.",
+    affiliateBtn: "Vezi afiliere"
+  },
+  en: {
+    back: "Back",
+    blog: "Blog",
+    title: "CorelDRAW Blog",
+    headerTitle: "CorelDRAW",
+    headerDesc: "CorelDRAW is a versatile graphic design software used for vector illustration, layout, printing, and commercial projects. Built for professionals, it offers advanced tools for precision and full creative control.",
+    story1: "Andreea, an illustrator from România, discovered CorelDRAW while searching for a professional vector drawing solution. All her promotional materials now stand out with exceptional precision. With integrated layout and print tools, she secured loyal clients in the advertising industry.",
+    story2: "A branding agency from Italy adopted CorelDRAW as its main tool for building visual identities. Designers collaborate on complex files efficiently, keeping visual consistency across all deliverables. Logos, brochures, and banners are created faster—without sacrificing quality.",
+    story3: "Mihnea, a freelancer, increased his orders by 60% after delivering projects in editable CorelDRAW format. Clients appreciate the flexibility to adjust designs, making him the go-to designer for startups and small businesses.",
+    affiliateBtn: "View Affiliate"
+  },
+  fr: {
+    back: "Retour",
+    blog: "Blog",
+    title: "Blog CorelDRAW",
+    headerTitle: "CorelDRAW",
+    headerDesc: "CorelDRAW est un logiciel de design graphique polyvalent, utilisé pour les illustrations vectorielles, les mises en page, l’impression et les projets commerciaux. Conçu pour les professionnels, il offre des outils avancés pour un contrôle créatif total.",
+    story1: "Andreea, illustratrice à România, a découvert CorelDRAW en cherchant une solution de dessin vectoriel professionnelle. Ses supports publicitaires sont désormais réalisés avec une grande précision. Grâce aux outils intégrés, elle a fidélisé des clients dans la publicité.",
+    story2: "Une agence de branding en Italie utilise CorelDRAW pour créer des identités visuelles. Les designers collaborent efficacement sur des fichiers complexes, maintenant la cohérence visuelle sur tous les supports. Logos, brochures et affiches sont produits rapidement et avec qualité.",
+    story3: "Mihnea, freelance, a augmenté ses commandes de 60 % en livrant des projets modifiables sous CorelDRAW. Ses clients apprécient cette liberté, et il est désormais très demandé par les jeunes entreprises.",
+    affiliateBtn: "Voir l'affiliation"
+  },
+  de: {
+    back: "Zurück",
+    blog: "Blog",
+    title: "CorelDRAW Blog",
+    headerTitle: "CorelDRAW",
+    headerDesc: "CorelDRAW ist eine vielseitige Grafikdesign-Software für Vektorgrafiken, Layout, Druck und kommerzielle Projekte. Für Profis entwickelt, bietet sie präzise Werkzeuge und kreative Kontrolle.",
+    story1: "Andreea, Illustratorin aus România, entdeckte CorelDRAW bei der Suche nach einer professionellen Vektorgrafik-Lösung. Ihre Werbematerialien zeichnen sich nun durch hohe Präzision aus.",
+    story2: "Eine Branding-Agentur in Italien setzt CorelDRAW zur Entwicklung visueller Identitäten ein. Die Designer arbeiten effizient zusammen und sorgen für visuelle Einheitlichkeit.",
+    story3: "Mihnea, ein Freelancer, steigerte seine Aufträge um 60 %, nachdem er bearbeitbare Dateien mit CorelDRAW lieferte. Kunden schätzen die Flexibilität.",
+    affiliateBtn: "Partnerlink ansehen"
+  },
+  es: {
+    back: "Atrás",
+    blog: "Blog",
+    title: "Blog de CorelDRAW",
+    headerTitle: "CorelDRAW",
+    headerDesc: "CorelDRAW es un software de diseño gráfico versátil utilizado para ilustraciones vectoriales, maquetación e impresión profesional. Ofrece herramientas precisas y control total para diseñadores.",
+    story1: "Andreea, ilustradora en România, encontró en CorelDRAW una solución ideal para su trabajo vectorial. Su precisión le ha abierto puertas en el mundo de la publicidad.",
+    story2: "Una agencia de marca en Italia trabaja con CorelDRAW para diseñar logotipos y catálogos. La eficiencia y coherencia visual aumentaron notablemente.",
+    story3: "Mihnea, diseñador independiente, aumentó sus pedidos un 60 % gracias a los archivos editables en CorelDRAW. Los clientes valoran su flexibilidad.",
+    affiliateBtn: "Ver afiliado"
+  },
+  it: {
+    back: "Indietro",
+    blog: "Blog",
+    title: "Blog CorelDRAW",
+    headerTitle: "CorelDRAW",
+    headerDesc: "CorelDRAW è un software di grafica vettoriale completo e flessibile, ideale per impaginazioni, stampe e progetti commerciali. Offre controllo e precisione ai professionisti.",
+    story1: "Andreea, illustratrice di România, ha scoperto CorelDRAW cercando una soluzione professionale. I suoi materiali sono ora precisi e di alta qualità.",
+    story2: "Uno studio di branding in Italia usa CorelDRAW per tutte le identità visive. I designer collaborano con fluidità su progetti complessi.",
+    story3: "Mihnea, freelancer, ha aumentato gli ordini del 60% offrendo file modificabili in CorelDRAW. I clienti apprezzano questa libertà.",
+    affiliateBtn: "Vedi affiliazione"
+  }
+};
+
+
+function applyTranslations(lang) {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang] && translations[lang][key]) {
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+        el.placeholder = translations[lang][key];
+      } else {
+        el.textContent = translations[lang][key];
+      }
+    }
+  });
+  document.getElementById('backBtn').href = `blog-software.html?lang=${lang}`;
+  document.getElementById('blogBtn').href = `blog-software.html?lang=${lang}`;
+}
+
+const currentLang = new URLSearchParams(window.location.search).get('lang') || 'ro';
+document.getElementById('languageSelect').value = currentLang;
+applyTranslations(currentLang);
+
+document.getElementById('languageSelect').addEventListener('change', e => {
+  const url = new URL(window.location.href);
+  url.searchParams.set('lang', e.target.value);
+  window.location.href = url.toString();
+});
+
+</script>
+</body>
+</html>
