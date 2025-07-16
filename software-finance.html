@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Financiar</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      margin: 0;
+      background-color: #f9fafb;
+      color: #2f2f55;
+    }
+    .topbar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 1rem;
+      gap: 1rem;
+      background-color: #fff;
+    }
+    .topbar select, .topbar a {
+      padding: 0.4rem 0.75rem;
+      font-size: 0.9rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      text-decoration: none;
+      color: #000000;
+      background-color: #fff;
+    }
+    header {
+      background: url('img/javier-miranda-MrWOCGKFVDg-unsplash.jpg') no-repeat center/cover;
+      color: white;
+      padding: 5rem 1rem 3rem;
+      text-align: center;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      background: rgba(0,0,0,0.45);
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 0;
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+      color: white;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      overflow: hidden;
+      text-align: center;
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: contain;
+      background: #f0f0f0;
+    }
+    .card h3 {
+      margin: 1rem 0 0.5rem;
+    }
+    .card a {
+      display: inline-block;
+      margin: 1rem auto 2rem;
+      padding: 0.5rem 1.2rem;
+      background-color: #caa227;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a id="backBtn" href="software.html?lang=ro" data-i18n="back">Înapoi</a>
+    <a id="blogBtn" href="blog-software.html?lang=ro" data-i18n="blog">Blog</a>
+    <select id="languageSelect">
+      <option value="ro">Română</option>
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+      <option value="es">Español</option>
+      <option value="de">Deutsch</option>
+      <option value="it">Italiano</option>
+    </select>
+  </div>
+
+  <header>
+    <h1 data-i18n="finance_title">Software Financiar / Contabilitate</h1>
+    <p data-i18n="finance_subtitle">Instrumente inteligente pentru gestionarea banilor și a afacerilor mici</p>
+  </header>
+
+  <div class="container">
+    <div class="grid">
+      <div class="card">
+        <img src="img/freshbooks-logo.png" alt="FreshBooks" />
+        <h3>FreshBooks</h3>
+        <a href="freshbooks.html?lang=ro">FreshBooks</a>
+      </div>
+      <div class="card">
+        <img src="img/quickbooks-logo.png" alt="QuickBooks" />
+        <h3>QuickBooks</h3>
+        <a href="quickbooks.html?lang=ro">QuickBooks</a>
+      </div>
+      <div class="card">
+        <img src="img/xero-logo.png" alt="Xero" />
+        <h3>Xero</h3>
+        <a href="xero.html?lang=ro">Xero</a>
+      </div>
+      <div class="card">
+        <img src="img/wave-logo.png" alt="Wave Accounting" />
+        <h3>Wave</h3>
+        <a href="wave.html?lang=ro">Wave</a>
+      </div>
+      <div class="card">
+        <img src="img/payoneer-logo.png" alt="Payoneer" />
+        <h3>Payoneer</h3>
+        <a href="payoneer.html?lang=ro">Payoneer</a>
+      </div>
+    </div>
+  </div>
+
+<script>
+  const translations = {
+    ro: {
+      back: "Înapoi",
+      blog: "Blog",
+      finance_title: "Software Financiar / Contabilitate",
+      finance_subtitle: "Instrumente inteligente pentru gestionarea banilor și a afacerilor mici",
+      affiliateBtn: "Vezi afiliere"
+    },
+    en: {
+      back: "Back",
+      blog: "Blog",
+      finance_title: "Finance / Accounting Software",
+      finance_subtitle: "Smart tools for managing money and small business finances",
+      affiliateBtn: "View Affiliate"
+    },
+    fr: {
+      back: "Retour",
+      blog: "Blog",
+      finance_title: "Logiciels de Finance / Comptabilité",
+      finance_subtitle: "Outils intelligents pour la gestion financière des petites entreprises",
+      affiliateBtn: "Voir l'affiliation"
+    },
+    de: {
+      back: "Zurück",
+      blog: "Blog",
+      finance_title: "Finanz- & Buchhaltungssoftware",
+      finance_subtitle: "Intelligente Werkzeuge zur Verwaltung von Finanzen und kleinen Unternehmen",
+      affiliateBtn: "Partnerlink ansehen"
+    },
+    es: {
+      back: "Atrás",
+      blog: "Blog",
+      finance_title: "Software de Finanzas y Contabilidad",
+      finance_subtitle: "Herramientas inteligentes para gestionar finanzas y negocios pequeños",
+      affiliateBtn: "Ver afiliado"
+    },
+    it: {
+      back: "Indietro",
+      blog: "Blog",
+      finance_title: "Software Finanziario e Contabile",
+      finance_subtitle: "Strumenti intelligenti per la gestione del denaro e delle piccole imprese",
+      affiliateBtn: "Vedi affiliazione"
+    }
+  };
+
+  function updateLanguage(lang) {
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if (translations[lang] && translations[lang][key]) {
+        el.textContent = translations[lang][key];
+      }
+    });
+
+    document.getElementById("backBtn").href = `software.html?lang=${lang}`;
+    document.getElementById("blogBtn").href = `blog-software.html?lang=${lang}`;
+  }
+
+  const currentLang = new URLSearchParams(window.location.search).get("lang") || "ro";
+  document.getElementById("languageSelect").value = currentLang;
+  updateLanguage(currentLang);
+
+  document.getElementById("languageSelect").addEventListener("change", (e) => {
+    const selected = e.target.value;
+    const url = new URL(window.location.href);
+    url.searchParams.set("lang", selected);
+    window.location.href = url.toString();
+  });
+</script>
+</body>
+</html>

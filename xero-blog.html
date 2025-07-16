@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang='ro'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+  <title>Xero Blog</title>
+  <link href='https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap' rel='stylesheet'>
+  <style>
+    body{font-family:'DM Sans',sans-serif;margin:0;background:#f9fafb;color:#2f2f55}
+    .topbar{display:flex;justify-content:flex-end;align-items:center;padding:1rem;gap:1rem;background:#fff}
+    .topbar select,.topbar a{padding:.4rem .75rem;font-size:.9rem;border-radius:6px;border:1px solid #ccc;text-decoration:none;color:#000;background:#fff}
+    header{background:url('img/javier-miranda-MrWOCGKFVDg-unsplash.jpg') center/cover no-repeat;padding:4rem 2rem;color:#fff;text-align:center}
+    header h1{font-size:2.5rem;margin-bottom:1rem}
+    header p{max-width:800px;margin:0 auto;font-size:1.1rem}
+    .container{max-width:900px;margin:2rem auto;padding:1rem;background:#fff;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,.05)}
+    .blog-header{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:2rem}
+    .blog-header img{max-height:60px}
+    .blog-header h1{margin:0;font-size:2rem}
+    .story{font-size:1rem;line-height:1.6;margin-bottom:1.5rem}
+    .button-container{text-align:center;margin-top:2rem}
+    a.button{display:inline-block;padding:.6rem 1.4rem;background:#13b5ea;color:#fff;text-decoration:none;border-radius:8px;font-weight:bold}
+  </style>
+</head>
+<body>
+  <div class='topbar'>
+    <a id='backBtn' href='blog-software.html?lang=ro' data-i18n='back'></a>
+    <a id='blogBtn' href='blog-software.html?lang=ro' data-i18n='blog'></a>
+    <select id='languageSelect'>
+      <option value='ro'>Română</option><option value='en'>English</option>
+      <option value='fr'>Français</option><option value='es'>Español</option>
+      <option value='de'>Deutsch</option><option value='it'>Italiano</option>
+    </select>
+  </div>
+
+  <header>
+    <h1 data-i18n='headerTitle'></h1>
+    <p data-i18n='headerDesc'></p>
+  </header>
+
+  <div class='container'>
+    <div class='blog-header'>
+      <img src='img/xero-logo.png' alt='Xero logo'>
+      <h1 data-i18n='title'></h1>
+    </div>
+
+    <div class='story' data-i18n='story1'></div>
+    <div class='story' data-i18n='story2'></div>
+    <div class='story' data-i18n='story3'></div>
+
+    <div class='button-container'>
+      <a href='https://www.xero.com/partners/' target='_blank' class='button' data-i18n='affiliateBtn'></a>
+    </div>
+  </div>
+
+<script>
+const t = {
+  ro: {
+    back: "Înapoi", blog: "Blog", title: "Xero Blog", headerTitle: "Xero",
+    headerDesc: "Xero este o platformă de contabilitate în cloud destinată afacerilor mici și contabililor moderni, ușor de folosit și accesibilă de oriunde.",
+    story1: "Ioana, fondatoare a unei agenții de social media din România, folosește Xero pentru a urmări veniturile și plățile colaboratorilor. Datorită integrării cu banca, are mereu o imagine clară asupra cashflow-ului. Spune că de când folosește Xero, nu a mai ratat niciun termen de plată.",
+    story2: "O firmă de consultanță din Germania gestionează în Xero peste 70 de clienți. Echipa apreciază funcțiile inteligente de reconciliere bancară și generarea automată a rapoartelor fiscale. Lucrul colaborativ este fluent, iar clienții pot accesa informațiile în timp real.",
+    story3: "Giulia, contabilă din Italia, a înlocuit vechile fișiere Excel cu Xero. Poate crea facturi în câteva secunde, trimite notificări automate și generează rapoarte profesionale. A reușit să economisească până la 8 ore pe săptămână.",
+    affiliateBtn: "Vezi afiliere"
+  },
+  en: {
+    back: "Back", blog: "Blog", title: "Xero Blog", headerTitle: "Xero",
+    headerDesc: "Xero is a cloud-based accounting platform built for small businesses and accountants who need real-time access and simple automation.",
+    story1: "Ioana, founder of a social media agency in Romania, uses Xero to monitor income and payments to contractors. The bank integration gives her real-time visibility and confidence in financial planning.",
+    story2: "A consulting firm in Germany handles 70+ clients in Xero. They love the smart bank reconciliation and live reports. Clients always have access to updated data.",
+    story3: "Giulia, an accountant in Italy, switched from Excel to Xero. She now creates invoices faster, automates reminders, and saves over 8 hours weekly on routine tasks.",
+    affiliateBtn: "View Affiliate"
+  },
+  fr: {
+    back: "Retour", blog: "Blog", title: "Blog Xero", headerTitle: "Xero",
+    headerDesc: "Xero est une plateforme de comptabilité cloud pensée pour les petites entreprises et les cabinets modernes.",
+    story1: "Ioana, fondatrice d’une agence en Roumanie, suit ses paiements et revenus via Xero. L’intégration bancaire lui permet une vue d’ensemble claire.",
+    story2: "Une société de conseil allemande utilise Xero pour 70+ clients. Les fonctions automatisées leur font gagner un temps précieux.",
+    story3: "Giulia, comptable en Italie, a remplacé Excel par Xero. Elle facture plus vite et suit ses clients avec des alertes automatiques.",
+    affiliateBtn: "Voir l'affiliation"
+  },
+  es: {
+    back: "Atrás", blog: "Blog", title: "Blog Xero", headerTitle: "Xero",
+    headerDesc: "Xero es una plataforma contable en la nube para pequeñas empresas y contadores modernos.",
+    story1: "Ioana, dueña de una agencia de redes sociales en Rumanía, gestiona pagos y flujos de ingresos en Xero con gran claridad.",
+    story2: "Una consultora alemana trabaja con Xero para más de 70 clientes. Les encanta la conciliación bancaria y los reportes automáticos.",
+    story3: "Giulia, contadora en Italia, dejó Excel y ahora usa Xero para automatizar tareas y ahorrar horas cada semana.",
+    affiliateBtn: "Ver afiliación"
+  },
+  de: {
+    back: "Zurück", blog: "Blog", title: "Xero Blog", headerTitle: "Xero",
+    headerDesc: "Xero ist eine cloudbasierte Buchhaltungssoftware für kleine Unternehmen und moderne Buchhalter.",
+    story1: "Ioana, Gründerin einer Agentur in Rumänien, nutzt Xero zur Verwaltung von Einnahmen und Ausgaben. Sie sieht ihren Cashflow live.",
+    story2: "Ein deutsches Beratungsunternehmen verwaltet über 70 Kunden mit Xero. Automatisierte Funktionen sparen viel Zeit.",
+    story3: "Giulia, Buchhalterin in Italien, hat Excel durch Xero ersetzt. Sie arbeitet schneller und spart 8 Stunden pro Woche.",
+    affiliateBtn: "Partnerprogramm ansehen"
+  },
+  it: {
+    back: "Indietro", blog: "Blog", title: "Blog Xero", headerTitle: "Xero",
+    headerDesc: "Xero è una piattaforma di contabilità online per piccole imprese e contabili moderni.",
+    story1: "Ioana, fondatrice di un'agenzia in Romania, usa Xero per monitorare entrate e pagamenti. Ha sempre una visione aggiornata.",
+    story2: "Un’azienda tedesca usa Xero per gestire più di 70 clienti. I report automatici e la sincronizzazione bancaria migliorano l’efficienza.",
+    story3: "Giulia, contabile italiana, ha sostituito Excel con Xero. Ora fattura in pochi clic e risparmia oltre 8 ore a settimana.",
+    affiliateBtn: "Visualizza affiliazione"
+  }
+};
+function setLang(lang){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key=el.getAttribute('data-i18n');
+    if(t[lang]&&t[lang][key]) el.textContent=t[lang][key];
+  });
+  document.getElementById('backBtn').href=`blog-software.html?lang=${lang}`;
+  document.getElementById('blogBtn').href=`blog-software.html?lang=${lang}`;
+}
+const lang=new URLSearchParams(location.search).get('lang')||'ro';
+document.getElementById('languageSelect').value=lang;
+setLang(lang);
+document.getElementById('languageSelect').addEventListener('change',e=>{
+  location.search=`?lang=${e.target.value}`;
+});
+</script>
+</body>
+</html>

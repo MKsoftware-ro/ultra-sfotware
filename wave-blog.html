@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang='ro'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+  <title>Wave Blog</title>
+  <link href='https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap' rel='stylesheet'>
+  <style>
+    body{font-family:'DM Sans',sans-serif;margin:0;background:#f9fafb;color:#2f2f55}
+    .topbar{display:flex;justify-content:flex-end;align-items:center;padding:1rem;gap:1rem;background:#fff}
+    .topbar select,.topbar a{padding:.4rem .75rem;font-size:.9rem;border-radius:6px;border:1px solid #ccc;text-decoration:none;color:#000;background:#fff}
+    header{background:url('img/javier-miranda-MrWOCGKFVDg-unsplash.jpg') center/cover no-repeat;padding:4rem 2rem;color:#fff;text-align:center}
+    header h1{font-size:2.5rem;margin-bottom:1rem}
+    header p{max-width:800px;margin:0 auto;font-size:1.1rem}
+    .container{max-width:900px;margin:2rem auto;padding:1rem;background:#fff;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,.05)}
+    .blog-header{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:2rem}
+    .blog-header img{max-height:60px}
+    .blog-header h1{margin:0;font-size:2rem}
+    .story{font-size:1rem;line-height:1.6;margin-bottom:1.5rem}
+    .button-container{text-align:center;margin-top:2rem}
+    a.button{display:inline-block;padding:.6rem 1.4rem;background:#3e83f8;color:#fff;text-decoration:none;border-radius:8px;font-weight:bold}
+  </style>
+</head>
+<body>
+  <div class='topbar'>
+    <a id='backBtn' href='blog-software.html?lang=ro' data-i18n='back'></a>
+    <a id='blogBtn' href='blog-software.html?lang=ro' data-i18n='blog'></a>
+    <select id='languageSelect'>
+      <option value='ro'>Română</option><option value='en'>English</option>
+      <option value='fr'>Français</option><option value='es'>Español</option>
+      <option value='de'>Deutsch</option><option value='it'>Italiano</option>
+    </select>
+  </div>
+
+  <header>
+    <h1 data-i18n='headerTitle'></h1>
+    <p data-i18n='headerDesc'></p>
+  </header>
+
+  <div class='container'>
+    <div class='blog-header'>
+      <img src='img/wave-logo.png' alt='Wave logo'>
+      <h1 data-i18n='title'></h1>
+    </div>
+
+    <div class='story' data-i18n='story1'></div>
+    <div class='story' data-i18n='story2'></div>
+    <div class='story' data-i18n='story3'></div>
+
+    <div class='button-container'>
+      <a href='https://www.waveapps.com/partners' target='_blank' class='button' data-i18n='affiliateBtn'></a>
+    </div>
+  </div>
+
+<script>
+const t = {
+  ro: {
+    back: "Înapoi", blog: "Blog", title: "Wave Blog", headerTitle: "Wave",
+    headerDesc: "Wave este o platformă de contabilitate gratuită, ideală pentru freelanceri și afaceri mici ce au nevoie de un sistem simplu și eficient.",
+    story1: "Mihai, dezvoltator web freelance din Timișoara, folosește Wave pentru a emite facturi și a urmări plățile primite. Spune că faptul că este gratuit și ușor de folosit îl ajută să se concentreze pe cod, nu pe contabilitate. De când folosește Wave, relația cu clienții săi e mai organizată.",
+    story2: "O ilustratoare din Spania își gestionează activitatea independentă în Wave. Cu rapoarte lunare clare și integrare bancară, a reușit să elimine haosul chitanțelor și să înțeleagă unde se duc banii. În plus, nu mai plătește software de facturare separat.",
+    story3: "Thomas, consultant în Belgia, recomandă Wave startupurilor care nu au buget mare la început. Le oferă o soluție simplă, dar eficientă, pentru facturare și urmărirea cheltuielilor. Spune că majoritatea clienților sunt mulțumiți de ușurința în utilizare.",
+    affiliateBtn: "Vezi afiliere"
+  },
+  en: {
+    back: "Back", blog: "Blog", title: "Wave Blog", headerTitle: "Wave",
+    headerDesc: "Wave is a free accounting platform designed for freelancers and small businesses seeking a simple and powerful solution.",
+    story1: "Mihai, a freelance web developer from Romania, uses Wave to send invoices and track payments. He loves that it's free and intuitive, allowing him to focus on development instead of paperwork. Wave helps him stay professional with his clients.",
+    story2: "A freelance illustrator from Spain manages her finances using Wave. The automatic reports and bank sync features helped her gain control over her spending and eliminated paper chaos.",
+    story3: "Thomas, a consultant in Belgium, recommends Wave to early-stage startups. It offers essential tools for invoicing and expense tracking without upfront costs. Clients love its ease of use.",
+    affiliateBtn: "View Affiliate"
+  },
+  fr: {
+    back: "Retour", blog: "Blog", title: "Blog Wave", headerTitle: "Wave",
+    headerDesc: "Wave est une plateforme de comptabilité gratuite, idéale pour les freelances et petites entreprises.",
+    story1: "Mihai, développeur freelance en Roumanie, utilise Wave pour ses factures et paiements. Il apprécie sa simplicité et sa gratuité.",
+    story2: "Une illustratrice en Espagne suit ses finances dans Wave. Elle n’a plus besoin de feuilles Excel et comprend mieux ses dépenses.",
+    story3: "Thomas, consultant en Belgique, conseille Wave aux startups sans budget. Il le trouve efficace et facile à utiliser.",
+    affiliateBtn: "Voir l'affiliation"
+  },
+  es: {
+    back: "Atrás", blog: "Blog", title: "Blog Wave", headerTitle: "Wave",
+    headerDesc: "Wave es una herramienta de contabilidad gratuita, ideal para freelancers y pequeños negocios.",
+    story1: "Mihai, desarrollador freelance en Rumanía, usa Wave para facturar y recibir pagos. Le permite enfocarse en el desarrollo y no en tareas administrativas.",
+    story2: "Una ilustradora española controla su flujo financiero con Wave. Sus reportes automáticos y sincronización bancaria le ahorran tiempo.",
+    story3: "Thomas, consultor en Bélgica, recomienda Wave a startups nuevas. Es gratuita, clara y funcional desde el primer día.",
+    affiliateBtn: "Ver afiliación"
+  },
+  de: {
+    back: "Zurück", blog: "Blog", title: "Wave Blog", headerTitle: "Wave",
+    headerDesc: "Wave ist eine kostenlose Buchhaltungssoftware für Freiberufler und kleine Unternehmen.",
+    story1: "Mihai, Webentwickler aus Rumänien, erstellt Rechnungen mit Wave. Es ist einfach, gratis und spart ihm Zeit.",
+    story2: "Eine Illustratorin in Spanien nutzt Wave für ihre Finanzen. Sie schätzt die Klarheit der Berichte.",
+    story3: "Thomas, Berater in Belgien, empfiehlt Wave für kleine Startups. Es bietet alles Notwendige ohne zusätzliche Kosten.",
+    affiliateBtn: "Partnerprogramm ansehen"
+  },
+  it: {
+    back: "Indietro", blog: "Blog", title: "Blog Wave", headerTitle: "Wave",
+    headerDesc: "Wave è una piattaforma gratuita per la contabilità, pensata per freelance e piccole imprese.",
+    story1: "Mihai, sviluppatore web freelance in Romania, utilizza Wave per fatture e pagamenti. È semplice, gratuito e professionale.",
+    story2: "Un’illustratrice in Spagna gestisce le sue finanze in Wave. Ora ha più controllo e meno confusione nei documenti.",
+    story3: "Thomas, consulente in Belgio, suggerisce Wave alle startup. È efficace, chiaro e senza costi iniziali.",
+    affiliateBtn: "Visualizza affiliazione"
+  }
+};
+function setLang(lang){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key=el.getAttribute('data-i18n');
+    if(t[lang]&&t[lang][key]) el.textContent=t[lang][key];
+  });
+  document.getElementById('backBtn').href=`blog-software.html?lang=${lang}`;
+  document.getElementById('blogBtn').href=`blog-software.html?lang=${lang}`;
+}
+const lang=new URLSearchParams(location.search).get('lang')||'ro';
+document.getElementById('languageSelect').value=lang;
+setLang(lang);
+document.getElementById('languageSelect').addEventListener('change',e=>{
+  location.search=`?lang=${e.target.value}`;
+});
+</script>
+</body>
+</html>

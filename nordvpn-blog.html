@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NordVPN Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'DM Sans', sans-serif; margin: 0; background: #f9fafb; color: #2f2f55; }
+    .topbar { display: flex; justify-content: flex-end; align-items: center; padding: 1rem; gap: 1rem; background: #fff; }
+    .topbar select, .topbar a { padding: 0.4rem 0.75rem; font-size: 0.9rem; border-radius: 6px; border: 1px solid #ccc; text-decoration: none; color: #000; background: #fff; }
+    header { background: url('img/javier-miranda-MrWOCGKFVDg-unsplash.jpg') center/cover no-repeat; padding: 4rem 2rem; color: white; text-align: center; }
+    header h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    header p { max-width: 800px; margin: 0 auto; font-size: 1.1rem; }
+    .container { max-width: 900px; margin: 2rem auto; padding: 1rem; background: #fff; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .story { font-size: 1rem; line-height: 1.6; margin-bottom: 1.5rem; }
+    .blog-header { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 2rem; }
+    .blog-header img { max-height: 60px; }
+    .blog-header h1 { margin: 0; font-size: 2rem; }
+    .button-container { text-align: center; margin-top: 2rem; }
+    a.button { display: inline-block; padding: 0.6rem 1.4rem; background: #caa227; color: #fff; text-decoration: none; border-radius: 8px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a id="backBtn" href="blog-software.html?lang=ro" data-i18n="back">Înapoi</a>
+    <a id="blogBtn" href="blog-software.html?lang=ro" data-i18n="blog">Blog</a>
+    <select id="languageSelect">
+      <option value="ro">Română</option>
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+      <option value="es">Español</option>
+      <option value="de">Deutsch</option>
+      <option value="it">Italiano</option>
+    </select>
+  </div>
+
+  <header>
+    <h1 data-i18n="headerTitle">NordVPN</h1>
+    <p data-i18n="headerDesc">NordVPN este unul dintre cele mai sigure și rapide servicii VPN disponibile, ideal pentru utilizatorii care doresc să își protejeze datele și identitatea online. Cu criptare de nivel militar, servere în peste 60 de țări și suport simultan pentru 6 dispozitive, NordVPN este soluția perfectă pentru streaming, navigare fără restricții și protecție cibernetică avansată.</p>
+  </header>
+
+  <div class="container">
+    <div class="blog-header">
+      <img src="img/nordvpn-logo.png" alt="NordVPN Logo" />
+      <h1 data-i18n="title">NordVPN Blog</h1>
+    </div>
+
+    <div class="story" data-i18n="story1">Andrei, utilizator din România, folosește NordVPN pentru a accesa platforme de streaming din Statele Unite și a-și proteja traficul pe rețele Wi‑Fi publice. De când a început să-l folosească, a evitat atacuri de tip phishing și a putut viziona serialele preferate, anterior blocate. Consideră NordVPN o investiție esențială în siguranța digitală.</div>
+    <div class="story" data-i18n="story2">O agenție de marketing digital din Spania a instalat NordVPN pe toate laptopurile angajaților, asigurând criptarea datelor clienților și protecția comunicării. Rezultatul: zero breșe de securitate și viteze de lucru constante, chiar și în deplasare.</div>
+    <div class="story" data-i18n="story3">Lena, freelancer din Germania, colaborează cu clienți din întreaga lume și avea nevoie de conexiuni stabile și sigure. NordVPN i-a permis să lucreze fără teamă de interceptare și a redus numărul reclamelor targetate, îmbunătățindu-i productivitatea.</div>
+
+    <div class="button-container">
+      <a href="https://nordvpn.com/affiliates" class="button" target="_blank" data-i18n="affiliateBtn">Vezi afiliere</a>
+    </div>
+  </div>
+
+<script>
+const translations = {"ro": {"back": "Înapoi", "blog": "Blog", "title": "NordVPN Blog", "headerTitle": "NordVPN", "headerDesc": "NordVPN este unul dintre cele mai sigure și rapide servicii VPN disponibile, ideal pentru utilizatorii care doresc să își protejeze datele și identitatea online. Cu criptare de nivel militar, servere în peste 60 de țări și suport simultan pentru 6 dispozitive, NordVPN este soluția perfectă pentru streaming, navigare fără restricții și protecție cibernetică avansată.", "story1": "Andrei, utilizator din România, folosește NordVPN pentru a accesa platforme de streaming din Statele Unite și a-și proteja traficul pe rețele Wi‑Fi publice. De când a început să-l folosească, a evitat atacuri de tip phishing și a putut viziona serialele preferate, anterior blocate. Consideră NordVPN o investiție esențială în siguranța digitală.", "story2": "O agenție de marketing digital din Spania a instalat NordVPN pe toate laptopurile angajaților, asigurând criptarea datelor clienților și protecția comunicării. Rezultatul: zero breșe de securitate și viteze de lucru constante, chiar și în deplasare.", "story3": "Lena, freelancer din Germania, colaborează cu clienți din întreaga lume și avea nevoie de conexiuni stabile și sigure. NordVPN i-a permis să lucreze fără teamă de interceptare și a redus numărul reclamelor targetate, îmbunătățindu-i productivitatea.", "affiliateBtn": "Vezi afiliere"}, "en": {"back": "Back", "blog": "Blog", "title": "NordVPN Blog", "headerTitle": "NordVPN", "headerDesc": "NordVPN is one of the most secure and fastest VPN services available, perfect for users who want to protect their data and online identity. With military‑grade encryption, servers in 60+ countries, and support for up to 6 devices simultaneously, NordVPN is the ideal choice for streaming, unrestricted browsing, and advanced cybersecurity.", "story1": "Andrei, a user from Romania, uses NordVPN to access U.S. streaming libraries and stay protected on public Wi‑Fi. Since adopting it, he’s avoided phishing attempts and unlocked his favorite shows. He sees NordVPN as an essential investment in digital safety.", "story2": "A digital marketing agency in Spain rolled out NordVPN on every employee laptop, encrypting client communications and data. The outcome: zero security breaches and consistent speeds, even while traveling.", "story3": "Lena, a freelancer from Germany, works with clients worldwide and needs secure, stable connections. NordVPN let her collaborate without fear of interception and reduced targeted ads, boosting productivity.", "affiliateBtn": "View Affiliate"}, "fr": {"back": "Retour", "blog": "Blog", "title": "Blog NordVPN", "headerTitle": "NordVPN", "headerDesc": "NordVPN est l’un des VPN les plus rapides et sécurisés, idéal pour protéger vos données et votre identité en ligne. Avec un chiffrement de niveau militaire, des serveurs dans plus de 60 pays et la prise en charge de 6 appareils, NordVPN est parfait pour le streaming et la navigation sans limites.", "story1": "Andrei, utilisateur en Roumanie, utilise NordVPN pour accéder aux bibliothèques de streaming américaines et se protéger sur les réseaux Wi‑Fi publics. Depuis, il évite le phishing et regarde ses séries favorites. NordVPN est pour lui un investissement essentiel en cybersécurité.", "story2": "Une agence de marketing numérique en Espagne a déployé NordVPN sur tous les ordinateurs portables afin de chiffrer les données clients. Résultat : aucune faille de sécurité et des vitesses constantes, même en déplacement.", "story3": "Lena, freelance en Allemagne, collabore avec des clients dans le monde entier. NordVPN lui offre des connexions stables et sécurisées et réduit les publicités ciblées, améliorant sa productivité.", "affiliateBtn": "Voir l'affiliation"}, "de": {"back": "Zurück", "blog": "Blog", "title": "NordVPN Blog", "headerTitle": "NordVPN", "headerDesc": "NordVPN ist einer der sichersten und schnellsten VPN‑Dienste, ideal zum Schutz Ihrer Daten und Online‑Identität. Mit militärischer Verschlüsselung, Servern in über 60 Ländern und Unterstützung für 6 Geräte gleichzeitig ist NordVPN die perfekte Wahl für Streaming, uneingeschränktes Surfen und Cybersicherheit.", "story1": "Andrei aus Rumänien nutzt NordVPN, um US‑Streaminginhalte zu sehen und sich im öffentlichen WLAN zu schützen. Seitdem hat er Phishing‑Angriffe vermieden und seine Lieblingsserien freigeschaltet.", "story2": "Eine Digitalagentur in Spanien hat NordVPN auf allen Mitarbeiter‑Laptops installiert, um Kundendaten zu verschlüsseln. Ergebnis: keine Sicherheitsverletzungen und konstante Geschwindigkeiten.", "story3": "Lena, Freelancerin aus Deutschland, arbeitet weltweit mit Kunden. NordVPN bietet stabile, sichere Verbindungen und weniger personalisierte Werbung, was ihre Produktivität steigert.", "affiliateBtn": "Partnerlink ansehen"}, "es": {"back": "Atrás", "blog": "Blog", "title": "Blog de NordVPN", "headerTitle": "NordVPN", "headerDesc": "NordVPN es uno de los servicios VPN más rápidos y seguros, ideal para proteger tus datos e identidad en línea. Con cifrado de nivel militar, servidores en más de 60 países y soporte para 6 dispositivos, es la opción perfecta para streaming, navegación sin restricciones y ciberseguridad avanzada.", "story1": "Andrei, de Rumanía, usa NordVPN para acceder a catálogos de streaming de Estados Unidos y protegerse en Wi‑Fi público. Ha evitado ataques de phishing y desbloqueó sus series preferidas.", "story2": "Una agencia de marketing digital en España instaló NordVPN en todos los portátiles, cifrando los datos de los clientes. Resultado: cero brechas y velocidades estables.", "story3": "Lena, autónoma en Alemania, trabaja con clientes globales. NordVPN le proporciona conexiones seguras y menos anuncios dirigidos, aumentando su productividad.", "affiliateBtn": "Ver afiliado"}, "it": {"back": "Indietro", "blog": "Blog", "title": "Blog NordVPN", "headerTitle": "NordVPN", "headerDesc": "NordVPN è uno dei servizi VPN più veloci e sicuri disponibili, ideale per proteggere dati e identità online. Con crittografia di livello militare, server in oltre 60 paesi e supporto per 6 dispositivi, NordVPN è la scelta perfetta per streaming, navigazione senza limiti e sicurezza avanzata.", "story1": "Andrei, dalla Romania, usa NordVPN per accedere a contenuti statunitensi in streaming e proteggersi sulle reti Wi‑Fi pubbliche. Ha evitato il phishing e guarda le sue serie preferite.", "story2": "Un’agenzia di marketing digitale in Spagna ha installato NordVPN su tutti i laptop, criptando i dati dei clienti. Nessuna violazione e velocità stabili anche in viaggio.", "story3": "Lena, freelance in Germania, lavora con clienti di tutto il mondo. NordVPN garantisce connessioni sicure e meno pubblicità mirata, migliorando la produttività.", "affiliateBtn": "Vedi affiliazione"}};
+
+function applyTranslations(lang) {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang] && translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+  document.getElementById('backBtn').href = `blog-software.html?lang=${lang}`;
+  document.getElementById('blogBtn').href = `blog-software.html?lang=${lang}`;
+}
+
+const currentLang = new URLSearchParams(window.location.search).get('lang') || 'ro';
+document.getElementById('languageSelect').value = currentLang;
+applyTranslations(currentLang);
+
+document.getElementById('languageSelect').addEventListener('change', e => {
+  const url = new URL(window.location.href);
+  url.searchParams.set('lang', e.target.value);
+  window.location.href = url.toString();
+});
+</script>
+</body>
+</html>

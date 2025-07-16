@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notis AI – Note și idei inteligente</title>
+  <meta name="description" content="Organizează, notează și planifică eficient cu Notis AI. Note mai clare, idei mai rapide.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f5f6fa;
+    }
+    .topbar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: white;
+    }
+    select {
+      font-size: 1rem;
+      padding: 0.4rem;
+      border-radius: 6px;
+      margin-right: 1rem;
+    }
+    .main-btn {
+      background-color: #caa227;
+      color: white;
+      padding: 0.4rem 1rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    header {
+      background: url('img/javier-miranda-MrWOCGKFVDg-unsplash.jpg') no-repeat center center;
+      background-size: cover;
+      padding: 4rem 2rem;
+      color: white;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    .container {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+    .back-btn {
+      margin-top: 2rem;
+      display: inline-block;
+      background-color: #2f2f55;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .blog-text {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #2a2a2a;
+    }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <select id="languageSelect">
+    <option value="ro">Română</option>
+    <option value="en">English</option>
+    <option value="fr">Français</option>
+    <option value="de">Deutsch</option>
+    <option value="es">Español</option>
+    <option value="it">Italiano</option>
+  </select>
+</div>
+
+<header>
+  <h1 id="title">Notis AI – Note și idei inteligente</h1>
+  <p id="subtitle">Scrii mai clar, gândești mai bine, reții mai mult.</p>
+</header>
+
+<div class="container">
+  <p class="blog-text" id="content">
+    Notis AI nu este doar un carnet digital. Este un spațiu inteligent în care ideile tale prind viață. Cu ajutorul inteligenței artificiale, notezi mai repede, structurezi mai bine și găsești ușor tot ce ai scris. Notis te însoțește la birou, acasă sau în călătorii. Îți amintește, îți ordonează și îți oferă claritate. Nu mai pierzi timp cu haosul. Scrii, salvezi, revii – totul fluid. Pentru oameni activi, gânditori sau creativi.
+  </p>
+
+  <a id="backButton" class="back-btn" href="notis.html?lang=ro">Înapoi la Notis</a>
+</div>
+
+<script>
+  const lang = new URLSearchParams(window.location.search).get('lang') || 'ro';
+  const contentMap = {
+    ro: {
+      title: "Notis AI – Note și idei inteligente",
+      subtitle: "Scrii mai clar, gândești mai bine, reții mai mult.",
+      content: "Notis AI nu este doar un carnet digital. Este un spațiu inteligent în care ideile tale prind viață. Cu ajutorul inteligenței artificiale, notezi mai repede, structurezi mai bine și găsești ușor tot ce ai scris. Notis te însoțește la birou, acasă sau în călătorii. Îți amintește, îți ordonează și îți oferă claritate. Nu mai pierzi timp cu haosul. Scrii, salvezi, revii – totul fluid. Pentru oameni activi, gânditori sau creativi.",
+      back: "Înapoi la Notis"
+    },
+    en: {
+      title: "Notis AI – Smart Notes and Ideas",
+      subtitle: "Write clearly, think better, remember more.",
+      content: "Notis AI is more than a digital notebook. It's a smart space where your ideas come alive. With AI support, you jot down faster, organize better, and recall easier. At work or home, Notis is your tidy mental desk. It saves time and clears your thoughts. Ideal for thinkers, professionals and creatives.",
+      back: "Back to Notis"
+    },
+    fr: {
+      title: "Notis AI – Prise de notes intelligente",
+      subtitle: "Écrivez plus clairement, pensez mieux, retenez plus.",
+      content: "Notis AI est plus qu’un carnet numérique. C’est un espace intelligent où vos idées prennent vie. Grâce à l’IA, prenez des notes plus rapidement, structurez mieux et retrouvez tout en un instant. Gagnez du temps, restez concentré. Pour professionnels et créatifs exigeants.",
+      back: "Retour à Notis"
+    },
+    de: {
+      title: "Notis AI – Intelligente Notizen und Ideen",
+      subtitle: "Klar schreiben, besser denken, mehr behalten.",
+      content: "Notis AI ist mehr als ein digitales Notizbuch. Es ist ein intelligenter Ort für deine Gedanken. Dank KI schreibst du schneller, organisierst effektiver und findest deine Notizen im Handumdrehen. Ideal für Kreative und Planer.",
+      back: "Zurück zu Notis"
+    },
+    es: {
+      title: "Notis AI – Notas e ideas inteligentes",
+      subtitle: "Escribe con claridad, piensa mejor y recuerda más.",
+      content: "Notis AI no es solo una libreta digital. Es un espacio donde tus ideas toman forma. Con IA, tomas notas más rápido, estructuras mejor y recuperas con facilidad. Ahorra tiempo, piensa en orden. Para creativos y profesionales modernos.",
+      back: "Volver a Notis"
+    },
+    it: {
+      title: "Notis AI – Note intelligenti",
+      subtitle: "Scrivi meglio, pensa più chiaro, ricorda tutto.",
+      content: "Notis AI è più di un taccuino digitale. È uno spazio dove le idee si organizzano e si potenziano con l’intelligenza artificiale. Scrivi in modo più veloce e ritrovi tutto subito. Perfetto per professionisti, studenti e pensatori.",
+      back: "Torna a Notis"
+    }
+  };
+
+  const t = contentMap[lang];
+  document.getElementById("languageSelect").value = lang;
+  document.getElementById("title").innerText = t.title;
+  document.getElementById("subtitle").innerText = t.subtitle;
+  document.getElementById("content").innerText = t.content;
+  document.getElementById("backButton").innerText = t.back;
+  document.getElementById("backButton").href = `notis.html?lang=${lang}`;
+  document.getElementById("languageSelect").addEventListener("change", (e) => {
+    const newLang = e.target.value;
+    const url = new URL(window.location.href);
+    url.searchParams.set("lang", newLang);
+    window.location.href = url.toString();
+  });
+</script>
+
+</body>
+</html>

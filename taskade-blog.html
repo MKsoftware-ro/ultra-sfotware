@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taskade – Colaborare inteligentă în echipă</title>
+  <meta name="description" content="Taskade îți oferă o modalitate modernă de a lucra în echipă, cu organizare vizuală, AI și productivitate sporită.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background-color: #f8f8fc;
+      color: #2a2a2a;
+    }
+    .topbar {
+      background-color: #ffffff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+    }
+    .topbar select, .topbar a {
+      font-size: 1rem;
+      padding: 0.4rem 1rem;
+      border-radius: 6px;
+      border: none;
+      font-weight: bold;
+    }
+    .topbar a {
+      background-color: #caa227;
+      color: white;
+      text-decoration: none;
+    }
+    header {
+      background: url('img/javier-miranda-MrWOCGKFVDg-unsplash.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+    p {
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <a id="backButton" href="#">Înapoi la Taskade</a>
+  <select id="languageSelect">
+    <option value="ro">Română</option>
+    <option value="en">English</option>
+    <option value="fr">Français</option>
+    <option value="de">Deutsch</option>
+    <option value="es">Español</option>
+    <option value="it">Italiano</option>
+  </select>
+</div>
+
+<header>
+  <h1 id="pageTitle">Taskade – Colaborare inteligentă în echipă</h1>
+</header>
+
+<main id="content">
+  <p>
+    Taskade nu este doar un planner sau o aplicație de to-do list – este un spațiu viu de colaborare pentru echipe dinamice.
+    Cu funcții de chat, video, organizare vizuală și suport AI, Taskade transformă modul în care lucrezi cu colegii tăi.
+    Este ideal pentru startupuri, freelanceri sau echipe distribuite care vor claritate și ritm.
+    Când fiecare membru are o voce și totul e conectat într-un singur loc, magia colaborării devine realitate.
+  </p>
+</main>
+
+<script>
+  const translations = {
+    ro: {
+      title: "Taskade – Colaborare inteligentă în echipă",
+      content: `Taskade nu este doar un planner sau o aplicație de to-do list – este un spațiu viu de colaborare pentru echipe dinamice.
+        Cu funcții de chat, video, organizare vizuală și suport AI, Taskade transformă modul în care lucrezi cu colegii tăi.
+        Este ideal pentru startupuri, freelanceri sau echipe distribuite care vor claritate și ritm.
+        Când fiecare membru are o voce și totul e conectat într-un singur loc, magia colaborării devine realitate.`,
+      back: "Înapoi la Taskade"
+    },
+    en: {
+      title: "Taskade – Smart Team Collaboration",
+      content: `Taskade is more than a to-do app – it's a living workspace for creative teams.
+        With chat, video, visual organization and AI assistance, Taskade changes the way teams build, think and collaborate.
+        It’s perfect for remote squads, freelancers, and fast-paced organizations.`,
+      back: "Back to Taskade"
+    },
+    fr: {
+      title: "Taskade – Collaboration d'équipe intelligente",
+      content: `Taskade n’est pas qu’un gestionnaire de tâches – c’est un espace de travail vivant pour les équipes modernes.
+        Grâce à la vidéo, au chat et à l'IA, tout le monde reste connecté, créatif et productif.`,
+      back: "Retour à Taskade"
+    },
+    de: {
+      title: "Taskade – Intelligente Team-Zusammenarbeit",
+      content: `Taskade ist mehr als eine Aufgabenliste – es ist ein smarter Arbeitsplatz für moderne Teams.
+        Mit KI, Video und Struktur für alle, egal wo sie sind.`,
+      back: "Zurück zu Taskade"
+    },
+    es: {
+      title: "Taskade – Colaboración inteligente en equipo",
+      content: `Taskade es un espacio de colaboración con IA, perfecto para equipos remotos y creadores ágiles.
+        Chatea, organiza y avanza más rápido – todo en una sola herramienta.`,
+      back: "Volver a Taskade"
+    },
+    it: {
+      title: "Taskade – Collaborazione intelligente in team",
+      content: `Taskade è uno spazio di lavoro dinamico con AI, videochiamate e chat integrati.
+        Perfetto per team moderni e distribuiti che vogliono essere sempre sincronizzati.`,
+      back: "Torna a Taskade"
+    }
+  };
+
+  const currentLang = new URLSearchParams(window.location.search).get("lang") || "ro";
+  const t = translations[currentLang];
+  document.getElementById("languageSelect").value = currentLang;
+  document.getElementById("pageTitle").innerText = t.title;
+  document.getElementById("content").innerHTML = `<p>${t.content}</p>`;
+  document.getElementById("backButton").innerText = t.back;
+  document.getElementById("backButton").href = `taskade.html?lang=${currentLang}`;
+
+  document.getElementById("languageSelect").addEventListener("change", function (e) {
+    const newLang = e.target.value;
+    const url = new URL(window.location.href);
+    url.searchParams.set("lang", newLang);
+    window.location.href = url.toString();
+  });
+</script>
+
+</body>
+</html>

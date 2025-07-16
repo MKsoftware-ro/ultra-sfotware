@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notion AI – Organizare inteligentă</title>
+  <meta name="description" content="Descoperă cum Notion AI transformă modul în care lucrezi, îți organizezi gândurile și îți economisești timp. Un asistent digital real.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f5f6fa;
+    }
+    .topbar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: white;
+    }
+    select {
+      font-size: 1rem;
+      padding: 0.4rem;
+      border-radius: 6px;
+      margin-right: 1rem;
+    }
+    .main-btn {
+      background-color: #caa227;
+      color: white;
+      padding: 0.4rem 1rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    header {
+      background: url('img/javier-miranda-MrWOCGKFVDg-unsplash.jpg') no-repeat center center;
+      background-size: cover;
+      padding: 4rem 2rem;
+      color: white;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    .container {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+    .back-btn {
+      margin-top: 2rem;
+      display: inline-block;
+      background-color: #2f2f55;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .blog-text {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #2a2a2a;
+    }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <select id="languageSelect">
+    <option value="ro">Română</option>
+    <option value="en">English</option>
+    <option value="fr">Français</option>
+    <option value="de">Deutsch</option>
+    <option value="es">Español</option>
+    <option value="it">Italiano</option>
+  </select>
+</div>
+
+<header>
+  <h1 id="title">Notion AI – Organizare inteligentă</h1>
+  <p id="subtitle">Un aliat digital care îți înțelege ritmul de lucru.</p>
+</header>
+
+<div class="container">
+  <p class="blog-text" id="content">
+    Notion AI este mai mult decât un instrument de productivitate – este ca un partener care te ajută să scrii, să structurezi idei și să economisești timp real. Dacă te-ai simțit vreodată copleșit de zeci de idei sau liste, Notion AI vine ca un colac de salvare. Îți completează frazele, îți propune alternative mai bune și chiar îți generează rezumate automat. Cu el, nu doar că lucrezi mai bine – simți că ești cu un pas înainte. Este potrivit pentru studenți, freelanceri, antreprenori sau oricine vrea ordine într-o lume haotică.
+  </p>
+
+  <a id="backButton" class="back-btn" href="notion.html?lang=ro">Înapoi la Notion</a>
+</div>
+
+<script>
+  const lang = new URLSearchParams(window.location.search).get('lang') || 'ro';
+  const contentMap = {
+    ro: {
+      title: "Notion AI – Organizare inteligentă",
+      subtitle: "Un aliat digital care îți înțelege ritmul de lucru.",
+      content: "Notion AI este mai mult decât un instrument de productivitate – este ca un partener care te ajută să scrii, să structurezi idei și să economisești timp real. Dacă te-ai simțit vreodată copleșit de zeci de idei sau liste, Notion AI vine ca un colac de salvare. Îți completează frazele, îți propune alternative mai bune și chiar îți generează rezumate automat. Cu el, nu doar că lucrezi mai bine – simți că ești cu un pas înainte. Este potrivit pentru studenți, freelanceri, antreprenori sau oricine vrea ordine într-o lume haotică.",
+      back: "Înapoi la Notion"
+    },
+    en: {
+      title: "Notion AI – Smart Organization",
+      subtitle: "A digital ally that understands your workflow.",
+      content: "Notion AI isn’t just a productivity tool – it’s like a teammate helping you write, structure ideas, and save real time. If you've ever felt overwhelmed by dozens of thoughts or lists, Notion AI is your life raft. It completes your sentences, suggests better phrasing, and can even summarize content for you. With it, you don’t just work better – you feel one step ahead. Perfect for students, freelancers, entrepreneurs, or anyone seeking order in a chaotic world.",
+      back: "Back to Notion"
+    },
+    fr: {
+      title: "Notion AI – Organisation intelligente",
+      subtitle: "Un allié numérique qui comprend votre rythme de travail.",
+      content: "Notion AI est plus qu'un outil de productivité – c'est un partenaire qui vous aide à écrire, structurer vos idées et gagner un temps précieux. Si vous vous êtes déjà senti dépassé par des dizaines d’idées ou de listes, Notion AI est votre bouée de sauvetage. Il complète vos phrases, propose de meilleures formulations et résume automatiquement le contenu. Idéal pour les étudiants, freelances, entrepreneurs ou toute personne cherchant de la clarté dans un monde chaotique.",
+      back: "Retour à Notion"
+    },
+    de: {
+      title: "Notion AI – Intelligente Organisation",
+      subtitle: "Ein digitaler Partner, der deinen Arbeitsrhythmus versteht.",
+      content: "Notion AI ist mehr als ein Produktivitätstool – es ist wie ein Kollege, der dir beim Schreiben hilft, Ideen strukturiert und dir echte Zeit spart. Wenn du dich jemals von Gedanken oder Listen überfordert gefühlt hast, ist Notion AI dein Rettungsanker. Es vervollständigt deine Sätze, schlägt bessere Formulierungen vor und fasst Inhalte zusammen. Ideal für Studierende, Freiberufler, Unternehmer oder alle, die Ordnung im Chaos suchen.",
+      back: "Zurück zu Notion"
+    },
+    es: {
+      title: "Notion AI – Organización inteligente",
+      subtitle: "Un aliado digital que entiende tu ritmo de trabajo.",
+      content: "Notion AI es más que una herramienta de productividad: es como un compañero que te ayuda a escribir, estructurar ideas y ahorrar tiempo real. Si alguna vez te has sentido abrumado por ideas o listas, Notion AI es tu salvavidas. Completa tus frases, sugiere mejores versiones y hasta resume contenidos por ti. Ideal para estudiantes, freelancers, emprendedores o cualquier persona que busque orden en un mundo caótico.",
+      back: "Volver a Notion"
+    },
+    it: {
+      title: "Notion AI – Organizzazione intelligente",
+      subtitle: "Un alleato digitale che capisce il tuo flusso di lavoro.",
+      content: "Notion AI è più di uno strumento di produttività – è come un compagno che ti aiuta a scrivere, organizzare idee e risparmiare tempo. Se ti sei mai sentito sopraffatto da pensieri o liste, Notion AI è la tua àncora di salvezza. Completa le frasi, suggerisce alternative migliori e crea riassunti automatici. Perfetto per studenti, freelance, imprenditori o chiunque desideri ordine nel caos.",
+      back: "Torna a Notion"
+    }
+  };
+
+  const t = contentMap[lang];
+  document.getElementById("languageSelect").value = lang;
+  document.getElementById("title").innerText = t.title;
+  document.getElementById("subtitle").innerText = t.subtitle;
+  document.getElementById("content").innerText = t.content;
+  document.getElementById("backButton").innerText = t.back;
+  document.getElementById("backButton").href = `notion.html?lang=${lang}`;
+  document.getElementById("languageSelect").addEventListener("change", (e) => {
+    const newLang = e.target.value;
+    const url = new URL(window.location.href);
+    url.searchParams.set("lang", newLang);
+    window.location.href = url.toString();
+  });
+</script>
+
+</body>
+</html>

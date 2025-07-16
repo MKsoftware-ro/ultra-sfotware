@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pictory AI – Transformă textul în video</title>
+  <meta name="description" content="Cu Pictory, creezi conținut video captivant din texte sau articole, ideal pentru social media și marketing vizual.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f5f6fa;
+    }
+    .topbar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: white;
+    }
+    select {
+      font-size: 1rem;
+      padding: 0.4rem;
+      border-radius: 6px;
+      margin-right: 1rem;
+    }
+    .main-btn {
+      background-color: #caa227;
+      color: white;
+      padding: 0.4rem 1rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    header {
+      background: url('img/javier-miranda-MrWOCGKFVDg-unsplash.jpg') no-repeat center center;
+      background-size: cover;
+      padding: 4rem 2rem;
+      color: white;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    .container {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+    .back-btn {
+      margin-top: 2rem;
+      display: inline-block;
+      background-color: #2f2f55;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .blog-text {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #2a2a2a;
+    }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <select id="languageSelect">
+    <option value="ro">Română</option>
+    <option value="en">English</option>
+    <option value="fr">Français</option>
+    <option value="de">Deutsch</option>
+    <option value="es">Español</option>
+    <option value="it">Italiano</option>
+  </select>
+</div>
+
+<header>
+  <h1 id="title">Pictory AI – Transformă textul în video</h1>
+  <p id="subtitle">Creează clipuri video impresionante din conținut scris, automat.</p>
+</header>
+
+<div class="container">
+  <p class="blog-text" id="content">
+    Pictory AI este soluția perfectă pentru cei care vor să transforme ideile scrise în conținut vizual atrăgător. Dacă ai un articol, o postare de blog sau pur și simplu un text lung, Pictory îl transformă în clipuri video dinamice cu doar câteva clickuri. Este ideal pentru marketing, rețele sociale și prezentări. Te ajută să te exprimi mai ușor și să ajungi la audiențe vizuale. Nu ai nevoie de experiență în editare video – AI-ul se ocupă de tot!
+  </p>
+
+  <a id="backButton" class="back-btn" href="pictory.html?lang=ro">Înapoi la Pictory</a>
+</div>
+
+<script>
+  const lang = new URLSearchParams(window.location.search).get('lang') || 'ro';
+  const contentMap = {
+    ro: {
+      title: "Pictory AI – Transformă textul în video",
+      subtitle: "Creează clipuri video impresionante din conținut scris, automat.",
+      content: "Pictory AI este soluția perfectă pentru cei care vor să transforme ideile scrise în conținut vizual atrăgător. Dacă ai un articol, o postare de blog sau pur și simplu un text lung, Pictory îl transformă în clipuri video dinamice cu doar câteva clickuri. Este ideal pentru marketing, rețele sociale și prezentări. Te ajută să te exprimi mai ușor și să ajungi la audiențe vizuale. Nu ai nevoie de experiență în editare video – AI-ul se ocupă de tot!",
+      back: "Înapoi la Pictory"
+    },
+    en: {
+      title: "Pictory AI – Turn text into video",
+      subtitle: "Create stunning videos from written content, automatically.",
+      content: "Pictory AI is the perfect solution for turning your written ideas into engaging visual content. Whether it’s a blog post, article, or long piece of text, Pictory transforms it into dynamic videos in just a few clicks. It’s ideal for marketing, social media, and presentations. You don’t need any video editing skills – the AI handles everything. Great for brands and creators who want to stand out.",
+      back: "Back to Pictory"
+    },
+    fr: {
+      title: "Pictory AI – Transformez le texte en vidéo",
+      subtitle: "Créez automatiquement des vidéos impressionnantes à partir de contenu écrit.",
+      content: "Pictory AI est la solution idéale pour transformer vos idées écrites en contenu visuel captivant. Que ce soit un article de blog ou un long texte, il le convertit en vidéos dynamiques en quelques clics. Parfait pour le marketing, les réseaux sociaux et les présentations. Aucune compétence en montage n’est requise – l’IA s’occupe de tout.",
+      back: "Retour à Pictory"
+    },
+    de: {
+      title: "Pictory AI – Text in Video umwandeln",
+      subtitle: "Erstelle automatisch beeindruckende Videos aus geschriebenem Inhalt.",
+      content: "Pictory AI ist die perfekte Lösung, um geschriebene Ideen in visuelle Inhalte umzuwandeln. Blogartikel, Texte oder Beiträge werden in wenigen Klicks in dynamische Videos verwandelt. Ideal für Marketing, soziale Medien und Präsentationen. Du brauchst keine Erfahrung im Videoschnitt – die KI erledigt alles.",
+      back: "Zurück zu Pictory"
+    },
+    es: {
+      title: "Pictory AI – Convierte texto en video",
+      subtitle: "Crea videos atractivos automáticamente a partir de contenido escrito.",
+      content: "Pictory AI es la herramienta ideal para convertir tus ideas escritas en videos visuales impactantes. Desde artículos hasta publicaciones largas, transforma texto en video con solo unos clics. Perfecto para marketing, redes sociales y presentaciones. No necesitas habilidades técnicas: la IA lo hace por ti.",
+      back: "Volver a Pictory"
+    },
+    it: {
+      title: "Pictory AI – Trasforma il testo in video",
+      subtitle: "Crea automaticamente video accattivanti da contenuti scritti.",
+      content: "Pictory AI è la soluzione perfetta per trasformare idee scritte in contenuti visivi coinvolgenti. Che si tratti di articoli, testi lunghi o post, Pictory crea video dinamici in pochi clic. È ideale per il marketing, i social e le presentazioni. Nessuna esperienza richiesta – ci pensa l’IA.",
+      back: "Torna a Pictory"
+    }
+  };
+
+  const t = contentMap[lang];
+  document.getElementById("languageSelect").value = lang;
+  document.getElementById("title").innerText = t.title;
+  document.getElementById("subtitle").innerText = t.subtitle;
+  document.getElementById("content").innerText = t.content;
+  document.getElementById("backButton").innerText = t.back;
+  document.getElementById("backButton").href = `pictory.html?lang=${lang}`;
+  document.getElementById("languageSelect").addEventListener("change", (e) => {
+    const newLang = e.target.value;
+    const url = new URL(window.location.href);
+    url.searchParams.set("lang", newLang);
+    window.location.href = url.toString();
+  });
+</script>
+
+</body>
+</html>

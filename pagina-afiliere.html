@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pagina Afiliere</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+     body {
+      font-family: 'DM Sans', sans-serif;
+      margin: 0;
+      background-color: #f9fafb;
+      color: #2f2f55;
+    }
+    .topbar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: white;
+    }
+    select {
+      font-size: 1rem;
+      padding: 0.4rem;
+      border-radius: 6px;
+      margin-right: 1rem;
+    }
+    .blog-btn {
+      background-color: white;
+      color: black;
+      padding: 0.4rem 1rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    header {
+  position: relative;
+  background: url('img/javier-miranda-MrWOCGKFVDg-unsplash.jpg') center/cover no-repeat;
+  text-align: center;
+  color: white;
+  padding: 5rem 1rem;
+  overflow: hidden;
+}
+  position: relative;
+  overflow: hidden;
+}
+header::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+header h1 {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+}
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+      background: url('img/javier-miranda-MrWOCGKFVDg-unsplash.jpg') no-repeat center center;
+      background-size: cover;
+      padding: 5rem 1rem 3rem;
+      text-align: center;
+      position: relative;
+    }
+    header h1 {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+}
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+       color: white; 
+    }
+    header p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: auto;
+       color: white; 
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
+      background-color: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      background: #f0f0f0;
+    }
+    .card h3 {
+      font-size: 1.25rem;
+      margin: 1rem;
+      text-align: center;
+      color: #1c1c3b;
+    }
+    .card a {
+      display: block;
+      margin: 1rem auto 2rem;
+      width: fit-content;
+      padding: 0.5rem 1.2rem;
+      background-color: #caa227;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <select id="languageSelect">
+      <option value="ro">Română</option>
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+      <option value="es">Español</option>
+      <option value="it">Italiano</option>
+    </select>
+    <a id="homeLink" class="blog-btn" href="index.html?lang=ro" data-i18n="home">Acasă</a>
+    <a id="blogLink" class="blog-btn" href="blog.html?lang=ro" data-i18n="blog">Blog</a>
+  </div>
+
+  <header>
+    <h1 id="mainTitle">Tool-uri AI pentru creativitate și productivitate</h1>
+    <p id="mainSubtitle">Explorează și promovează cele mai bune aplicații AI. Începe să câștigi cu afilierea inteligentă.</p>
+  </header>
+
+  <div class="grid">
+    <div class="card">
+      <img src="img/notion-logo.png" alt="Notion AI" />
+      <h3>Notion AI</h3>
+      <a id="link-notion" href="notion.html?lang=ro">Află mai multe</a>
+    </div>
+    <div class="card">
+      <img src="img/pictory-logo.png" alt="Pictory AI" />
+      <h3>Pictory</h3>
+      <a id="link-pictory" href="pictory.html?lang=ro">Află mai multe</a>
+    </div>
+    <div class="card">
+      <img src="img/sudowrite-logo.png" alt="Sudowrite" />
+      <h3>Sudowrite</h3>
+      <a id="link-sudowrite" href="sudowrite.html?lang=ro">Află mai multe</a>
+    </div>
+    <div class="card">
+      <img src="img/notis-logo.png" alt="Notis AI" />
+      <h3>Notis AI</h3>
+      <a id="link-notis" href="notis.html?lang=ro">Află mai multe</a>
+    </div>
+    <div class="card">
+      <img src="img/cleve-logo.png" alt="Cleve AI" />
+      <h3>Cleve AI</h3>
+      <a id="link-cleve" href="cleve.html?lang=ro">Află mai multe</a>
+    </div>
+    <div class="card">
+      <img src="img/taskade-logo.png" alt="Taskade" />
+      <h3>Taskade</h3>
+      <a id="link-taskade" href="taskade.html?lang=ro">Află mai multe</a>
+    </div>
+    <div class="card">
+      <img src="img/frase-logo.png" alt="Frase.io" />
+      <h3>Frase.io</h3>
+      <a id="link-frase" href="frase.html?lang=ro">Află mai multe</a>
+    </div>
+  </div>
+
+<script>
+  const translations = {
+    ro: {
+      home: "Acasă",
+      blog: "Blog",
+      mainTitle: "Tool-uri AI pentru creativitate și productivitate",
+      mainSubtitle: "Explorează și promovează cele mai bune aplicații AI. Începe să câștigi cu afilierea inteligentă.",
+      more: "Explorează"
+    },
+    en: {
+      home: "Home",
+      blog: "Blog",
+      mainTitle: "AI Tools for Creativity and Productivity",
+      mainSubtitle: "Explore and promote the best AI apps. Start earning with smart affiliation.",
+      more: "Explore"
+    },
+    fr: {
+      home: "Accueil",
+      blog: "Blog",
+      mainTitle: "Outils IA pour la créativité et la productivité",
+      mainSubtitle: "Découvrez et partagez les meilleures apps IA. Gagnez avec l'affiliation intelligente.",
+      more: "Explorer"
+    },
+    de: {
+      home: "Startseite",
+      blog: "Blog",
+      mainTitle: "KI-Tools für Kreativität und Produktivität",
+      mainSubtitle: "Entdecke die besten KI-Tools. Verdiene mit intelligenter Affiliate-Werbung.",
+      more: "Entdecken"
+    },
+    es: {
+      home: "Inicio",
+      blog: "Blog",
+      mainTitle: "Herramientas de IA para creatividad y productividad",
+      mainSubtitle: "Explora y promueve las mejores apps de IA. Gana con afiliación inteligente.",
+      more: "Explorar"
+    },
+    it: {
+      home: "Home",
+      blog: "Blog",
+      mainTitle: "Strumenti AI per creatività e produttività",
+      mainSubtitle: "Esplora e promuovi le migliori app AI. Guadagna con affiliazione smart.",
+      more: "Esplora"
+    }
+  };
+
+  function updateLanguage(lang) {
+    document.getElementById("mainTitle").innerText = translations[lang].mainTitle;
+    document.getElementById("mainSubtitle").innerText = translations[lang].mainSubtitle;
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (translations[lang][key]) {
+        el.textContent = translations[lang][key];
+      }
+    });
+
+    document.getElementById("homeLink").href = `index.html?lang=${lang}`;
+    document.getElementById("blogLink").href = `blog.html?lang=${lang}`;
+
+    const tools = ["notion", "pictory", "sudowrite", "notis", "cleve", "taskade", "frase"];
+    tools.forEach(id => {
+      document.getElementById(`link-${id}`).href = `${id}.html?lang=${lang}`;
+      document.getElementById(`link-${id}`).innerText = translations[lang].more;
+    });
+  }
+
+  const currentLang = new URLSearchParams(window.location.search).get('lang') || 'ro';
+  document.getElementById("languageSelect").value = currentLang;
+  updateLanguage(currentLang);
+  document.getElementById("languageSelect").addEventListener("change", (e) => {
+    const selected = e.target.value;
+    const url = new URL(window.location.href);
+    url.searchParams.set("lang", selected);
+    window.location.href = url.toString();
+  });
+</script>
+
+</body>
+</html>

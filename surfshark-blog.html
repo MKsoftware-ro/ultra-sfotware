@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Surfshark Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'DM Sans', sans-serif; margin: 0; background: #f9fafb; color: #2f2f55; }
+    .topbar { display: flex; justify-content: flex-end; align-items: center; padding: 1rem; gap: 1rem; background: #fff; }
+    .topbar select, .topbar a { padding: 0.4rem 0.75rem; font-size: 0.9rem; border-radius: 6px; border: 1px solid #ccc; text-decoration: none; color: #000; background: #fff; }
+    header { background: url('img/javier-miranda-MrWOCGKFVDg-unsplash.jpg') center/cover no-repeat; padding: 4rem 2rem; color: white; text-align: center; }
+    header h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    header p { max-width: 800px; margin: 0 auto; font-size: 1.1rem; }
+    .container { max-width: 900px; margin: 2rem auto; padding: 1rem; background: #fff; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .story { font-size: 1rem; line-height: 1.6; margin-bottom: 1.5rem; }
+    .blog-header { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 2rem; }
+    .blog-header img { max-height: 60px; }
+    .blog-header h1 { margin: 0; font-size: 2rem; }
+    .button-container { text-align: center; margin-top: 2rem; }
+    a.button { display: inline-block; padding: 0.6rem 1.4rem; background: #caa227; color: #fff; text-decoration: none; border-radius: 8px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a id="backBtn" href="blog-software.html?lang=ro" data-i18n="back">Înapoi</a>
+    <a id="blogBtn" href="blog-software.html?lang=ro" data-i18n="blog">Blog</a>
+    <select id="languageSelect">
+      <option value="ro">Română</option>
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+      <option value="es">Español</option>
+      <option value="de">Deutsch</option>
+      <option value="it">Italiano</option>
+    </select>
+  </div>
+
+  <header>
+    <h1 data-i18n="headerTitle">Surfshark</h1>
+    <p data-i18n="headerDesc">Surfshark este unul dintre cele mai sigure și rapide servicii VPN disponibile, ideal pentru utilizatorii care doresc să își protejeze datele și identitatea online. Cu criptare de nivel militar, servere în peste 60 de țări și suport simultan pentru 6 dispozitive, Surfshark este soluția perfectă pentru streaming, navigare fără restricții și protecție cibernetică avansată.</p>
+  </header>
+
+  <div class="container">
+    <div class="blog-header">
+      <img src="img/surfshark-logo.png" alt="Surfshark Logo" />
+      <h1 data-i18n="title">Surfshark Blog</h1>
+    </div>
+
+    <div class="story" data-i18n="story1">Andrei, utilizator din România, folosește Surfshark pentru a accesa platforme de streaming din Statele Unite și a-și proteja traficul pe rețele Wi‑Fi publice. De când a început să-l folosească, a evitat atacuri de tip phishing și a putut viziona serialele preferate, anterior blocate. Consideră Surfshark o investiție esențială în siguranța digitală.</div>
+    <div class="story" data-i18n="story2">O agenție de marketing digital din Spania a instalat Surfshark pe toate laptopurile angajaților, asigurând criptarea datelor clienților și protecția comunicării. Rezultatul: zero breșe de securitate și viteze de lucru constante, chiar și în deplasare.</div>
+    <div class="story" data-i18n="story3">Lena, freelancer din Germania, colaborează cu clienți din întreaga lume și avea nevoie de conexiuni stabile și sigure. Surfshark i-a permis să lucreze fără teamă de interceptare și a redus numărul reclamelor targetate, îmbunătățindu-i productivitatea.</div>
+
+    <div class="button-container">
+      <a href="https://surfshark.com/affiliates" class="button" target="_blank" data-i18n="affiliateBtn">Vezi afiliere</a>
+    </div>
+  </div>
+
+<script>
+const translations = {
+  "ro": {
+    "back": "Înapoi",
+    "blog": "Blog",
+    "title": "Surfshark Blog",
+    "headerTitle": "Surfshark",
+    "headerDesc": "Surfshark este un serviciu VPN modern și accesibil, perfect pentru utilizatorii care caută confidențialitate completă, viteze excelente și funcții avansate precum CleanWeb și MultiHop. Cu servere în peste 100 de locații și suport nelimitat pentru dispozitive, Surfshark devine alegerea ideală pentru streaming, muncă la distanță și protecție digitală.",
+    "story1": "Mihai, din România, a ales Surfshark pentru a urmări seriale Netflix din alte regiuni și a evita reclamele agresive online. Funcția CleanWeb l-a ajutat să elimine majoritatea reclamelor și a linkurilor periculoase. Se declară impresionat de viteza și simplitatea aplicației.",
+    "story2": "O companie tech din Italia a implementat Surfshark pe toate dispozitivele echipei pentru a securiza conexiunile remote. Datorită suportului nelimitat pentru dispozitive și criptării AES-256, au obținut o rețea sigură fără costuri ridicate.",
+    "story3": "Laura, freelancer din Spania, utilizează Surfshark pentru a lucra de la distanță din diverse locații. Datorită funcției MultiHop, are un plus de protecție când accesează conturi bancare sau platforme profesionale din străinătate.",
+    "affiliateBtn": "Vezi afiliere"
+  },
+  "en": {
+    "back": "Back",
+    "blog": "Blog",
+    "title": "Surfshark Blog",
+    "headerTitle": "Surfshark",
+    "headerDesc": "Surfshark is a modern, affordable VPN service, perfect for users seeking complete privacy, fast speeds, and advanced features like CleanWeb and MultiHop. With servers in over 100 locations and unlimited device support, it's the ideal choice for streaming, remote work, and digital protection.",
+    "story1": "Mihai from Romania chose Surfshark to watch Netflix shows from other countries and block aggressive ads. CleanWeb helped eliminate most ads and dangerous links. He’s impressed by the app’s speed and simplicity.",
+    "story2": "A tech company in Italy deployed Surfshark across all team devices to secure remote connections. Thanks to unlimited device support and AES‑256 encryption, they built a secure network at low cost.",
+    "story3": "Laura, a freelancer from Spain, uses Surfshark to work remotely from various locations. MultiHop adds protection when she accesses bank accounts or client platforms abroad.",
+    "affiliateBtn": "View Affiliate"
+  },
+  "fr": {
+    "back": "Retour",
+    "blog": "Blog",
+    "title": "Blog Surfshark",
+    "headerTitle": "Surfshark",
+    "headerDesc": "Surfshark est un VPN moderne et abordable, parfait pour ceux qui veulent une confidentialité totale, des vitesses rapides et des fonctions avancées comme CleanWeb ou MultiHop. Il propose des serveurs dans plus de 100 pays et une prise en charge illimitée des appareils.",
+    "story1": "Mihai, en Roumanie, utilise Surfshark pour accéder aux catalogues Netflix étrangers et bloquer les pubs en ligne. La fonction CleanWeb supprime les liens dangereux et améliore la navigation. Il apprécie sa simplicité.",
+    "story2": "Une entreprise tech en Italie a installé Surfshark sur tous les appareils pour protéger ses connexions. Avec un coût réduit, elle a sécurisé son réseau interne.",
+    "story3": "Laura, freelance en Espagne, utilise Surfshark lors de ses déplacements pour sécuriser ses données sur les plateformes bancaires ou professionnelles.",
+    "affiliateBtn": "Voir l'affiliation"
+  },
+  "de": {
+    "back": "Zurück",
+    "blog": "Blog",
+    "title": "Surfshark Blog",
+    "headerTitle": "Surfshark",
+    "headerDesc": "Surfshark ist ein moderner und preiswerter VPN‑Dienst für vollständige Privatsphäre, hohe Geschwindigkeit und Funktionen wie CleanWeb oder MultiHop. Mit über 100 Serverstandorten und unbegrenzten Geräten ist er ideal für Streaming und Arbeit.",
+    "story1": "Mihai aus Rumänien nutzt Surfshark, um Netflix aus dem Ausland zu sehen und Werbung zu blockieren. CleanWeb filtert schädliche Links effektiv.",
+    "story2": "Ein Tech-Unternehmen in Italien setzt Surfshark auf allen Geräten ein – sicher, flexibel und günstig für Remote-Arbeit.",
+    "story3": "Laura, Freelancerin aus Spanien, arbeitet unterwegs mit Surfshark und nutzt MultiHop für zusätzlichen Schutz bei sensiblen Daten.",
+    "affiliateBtn": "Partnerlink ansehen"
+  },
+  "es": {
+    "back": "Atrás",
+    "blog": "Blog",
+    "title": "Blog de Surfshark",
+    "headerTitle": "Surfshark",
+    "headerDesc": "Surfshark es un servicio VPN moderno y económico que ofrece privacidad total, velocidad alta y funciones como CleanWeb y MultiHop. Con servidores en más de 100 ubicaciones y soporte ilimitado de dispositivos, es ideal para streaming y trabajo remoto.",
+    "story1": "Mihai, de Rumanía, usa Surfshark para ver Netflix global y bloquear publicidad agresiva. CleanWeb mejora su seguridad online.",
+    "story2": "Una empresa tecnológica en Italia implementó Surfshark para proteger a su equipo remoto. Cifrado seguro y múltiples dispositivos incluidos.",
+    "story3": "Laura, freelancer de España, utiliza MultiHop en Surfshark para mayor privacidad en plataformas financieras y de clientes.",
+    "affiliateBtn": "Ver afiliado"
+  },
+  "it": {
+    "back": "Indietro",
+    "blog": "Blog",
+    "title": "Blog Surfshark",
+    "headerTitle": "Surfshark",
+    "headerDesc": "Surfshark è un VPN moderno e conveniente, perfetto per chi cerca privacy totale, alte prestazioni e funzioni avanzate come CleanWeb e MultiHop. Con server in oltre 100 località e supporto illimitato per dispositivi, è l’ideale per streaming e lavoro a distanza.",
+    "story1": "Mihai, dalla Romania, ha scelto Surfshark per guardare Netflix da altre regioni e bloccare pubblicità invasive. CleanWeb funziona perfettamente.",
+    "story2": "Un’azienda tech in Italia ha attivato Surfshark per tutti i dispositivi: rete sicura, costi contenuti e privacy garantita.",
+    "story3": "Laura, freelance in Spagna, usa Surfshark per lavorare ovunque. MultiHop le dà un livello extra di protezione per operazioni delicate.",
+    "affiliateBtn": "Vedi affiliazione"
+  }
+};
+
+function applyTranslations(lang) {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang] && translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+  document.getElementById('backBtn').href = `blog-software.html?lang=${lang}`;
+  document.getElementById('blogBtn').href = `blog-software.html?lang=${lang}`;
+}
+
+const currentLang = new URLSearchParams(window.location.search).get('lang') || 'ro';
+document.getElementById('languageSelect').value = currentLang;
+applyTranslations(currentLang);
+
+document.getElementById('languageSelect').addEventListener('change', e => {
+  const url = new URL(window.location.href);
+  url.searchParams.set('lang', e.target.value);
+  window.location.href = url.toString();
+});
+</script>
+</body>
+</html>

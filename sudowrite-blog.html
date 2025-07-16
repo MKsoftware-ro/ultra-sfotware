@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sudowrite – Scrie creativ cu AI</title>
+  <meta name="description" content="Sudowrite este companionul perfect pentru scriitori. Creează, editează și inspiră-te cu ajutorul inteligenței artificiale.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f5f6fa;
+    }
+    .topbar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: white;
+    }
+    select {
+      font-size: 1rem;
+      padding: 0.4rem;
+      border-radius: 6px;
+      margin-right: 1rem;
+    }
+    .main-btn {
+      background-color: #caa227;
+      color: white;
+      padding: 0.4rem 1rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    header {
+      background: url('img/javier-miranda-MrWOCGKFVDg-unsplash.jpg') no-repeat center center;
+      background-size: cover;
+      padding: 4rem 2rem;
+      color: white;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    .container {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+    .back-btn {
+      margin-top: 2rem;
+      display: inline-block;
+      background-color: #2f2f55;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .blog-text {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #2a2a2a;
+    }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <select id="languageSelect">
+    <option value="ro">Română</option>
+    <option value="en">English</option>
+    <option value="fr">Français</option>
+    <option value="de">Deutsch</option>
+    <option value="es">Español</option>
+    <option value="it">Italiano</option>
+  </select>
+</div>
+
+<header>
+  <h1 id="title">Sudowrite – Scrie creativ cu AI</h1>
+  <p id="subtitle">Descoperă un partener inteligent pentru fiecare poveste pe care o scrii.</p>
+</header>
+
+<div class="container">
+  <p class="blog-text" id="content">
+    Sudowrite nu este doar un editor – este ca un coleg de scris care nu obosește niciodată. Te ajută să depășești blocajele, să adaugi profunzime personajelor și să scrii texte captivante. Folosit de autori profesioniști și pasionați de ficțiune, Sudowrite învață stilul tău și îți propune idei care par că vin din propria ta imaginație. Nu este un înlocuitor al creativității, ci un catalizator. O unealtă esențială pentru scriitorii moderni.
+  </p>
+
+  <a id="backButton" class="back-btn" href="sudowrite.html?lang=ro">Înapoi la Sudowrite</a>
+</div>
+
+<script>
+  const lang = new URLSearchParams(window.location.search).get('lang') || 'ro';
+  const contentMap = {
+    ro: {
+      title: "Sudowrite – Scrie creativ cu AI",
+      subtitle: "Descoperă un partener inteligent pentru fiecare poveste pe care o scrii.",
+      content: "Sudowrite nu este doar un editor – este ca un coleg de scris care nu obosește niciodată. Te ajută să depășești blocajele, să adaugi profunzime personajelor și să scrii texte captivante. Folosit de autori profesioniști și pasionați de ficțiune, Sudowrite învață stilul tău și îți propune idei care par că vin din propria ta imaginație. Nu este un înlocuitor al creativității, ci un catalizator. O unealtă esențială pentru scriitorii moderni.",
+      back: "Înapoi la Sudowrite"
+    },
+    en: {
+      title: "Sudowrite – Write creatively with AI",
+      subtitle: "Discover an intelligent partner for every story you tell.",
+      content: "Sudowrite is more than just an editor – it’s like a writing buddy that never sleeps. It helps you break through writer’s block, develop characters and create engaging scenes. Loved by authors and fiction lovers, it learns your style and offers suggestions that feel natural. It’s not replacing your creativity – it enhances it.",
+      back: "Back to Sudowrite"
+    },
+    fr: {
+      title: "Sudowrite – Écrivez de façon créative avec l’IA",
+      subtitle: "Découvrez un partenaire intelligent pour chaque histoire.",
+      content: "Sudowrite n’est pas juste un éditeur – c’est un collègue de plume infatigable. Il vous aide à surmonter les blocages créatifs, à approfondir vos personnages et à écrire des scènes captivantes. Utilisé par des auteurs professionnels, il s’adapte à votre style et vous inspire avec des idées naturelles. Il amplifie votre créativité.",
+      back: "Retour à Sudowrite"
+    },
+    de: {
+      title: "Sudowrite – Kreativ schreiben mit KI",
+      subtitle: "Ein intelligenter Partner für jede Geschichte.",
+      content: "Sudowrite ist mehr als ein Texteditor – es ist ein unermüdlicher Schreibpartner. Es hilft dir beim Überwinden von Schreibblockaden, beim Entwickeln von Figuren und beim Verfassen spannender Szenen. Es lernt deinen Stil und schlägt dir passende Ideen vor – wie ein Co-Autor.",
+      back: "Zurück zu Sudowrite"
+    },
+    es: {
+      title: "Sudowrite – Escribe con creatividad usando IA",
+      subtitle: "Un socio inteligente para cada historia.",
+      content: "Sudowrite es más que un editor: es como un compañero de escritura incansable. Te ayuda a superar bloqueos creativos, desarrollar personajes y crear escenas cautivadoras. Aprende tu estilo y te ofrece ideas como si fueran tuyas. Potencia tu creatividad.",
+      back: "Volver a Sudowrite"
+    },
+    it: {
+      title: "Sudowrite – Scrivi in modo creativo con l’IA",
+      subtitle: "Scopri un partner intelligente per ogni storia.",
+      content: "Sudowrite è più di un editor: è un compagno di scrittura instancabile. Ti aiuta a superare i blocchi, approfondire i personaggi e creare scene coinvolgenti. Apprende il tuo stile e suggerisce idee naturali. Amplifica la tua creatività.",
+      back: "Torna a Sudowrite"
+    }
+  };
+
+  const t = contentMap[lang];
+  document.getElementById("languageSelect").value = lang;
+  document.getElementById("title").innerText = t.title;
+  document.getElementById("subtitle").innerText = t.subtitle;
+  document.getElementById("content").innerText = t.content;
+  document.getElementById("backButton").innerText = t.back;
+  document.getElementById("backButton").href = `sudowrite.html?lang=${lang}`;
+  document.getElementById("languageSelect").addEventListener("change", (e) => {
+    const newLang = e.target.value;
+    const url = new URL(window.location.href);
+    url.searchParams.set("lang", newLang);
+    window.location.href = url.toString();
+  });
+</script>
+
+</body>
+</html>
